@@ -1,0 +1,19 @@
+{
+  "name": "ocular-web-app-portfolio",
+  "version": "0.0.1",
+  "description": "Back-end Node server for front-end React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinMcCarthy/ocular-web-app-portfolio.git"
+  },
+  "author": "QuentinMcCarhy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuentinMcCarthy/ocular-web-app-portfolio/issues"
+  },
+  "homepage": "https://github.com/QuentinMcCarthy/ocular-web-app-portfolio#readme"
+}
