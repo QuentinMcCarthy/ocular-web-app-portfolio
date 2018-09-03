@@ -4,7 +4,8 @@
   "description": "Back-end Node server for front-end React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "nodemon -L index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/QuentinMcCarthy/ocular-web-app-portfolio/issues"
   },
-  "homepage": "https://github.com/QuentinMcCarthy/ocular-web-app-portfolio#readme"
+  "homepage": "https://github.com/QuentinMcCarthy/ocular-web-app-portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
 }
