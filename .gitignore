@@ -10,6 +10,7 @@ react/coverage
 react/build
 
 # misc
+.sass-cache
 .DS_Store
 .env.local
 .env.development.local
