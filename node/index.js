@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 
 const app = express();
@@ -7,6 +8,12 @@ app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
 	next();
 });
+
+// Routes for the node_modules
+app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
+app.use(`/gcharts`, express.static(path.join(__dirname, `node_modules/google-charts/googleCharts.js`)));
+app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
+app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
 
 app.set(`port`, (process.env.PORT || 4000));
 
