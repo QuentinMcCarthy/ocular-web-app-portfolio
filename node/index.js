@@ -1,9 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const path = require('path');
+const Behance = require('Behance');
 const bodyParser = require('body-parser');
-
 const app = express();
+
+
+var client = new Behance ({
+	apiKey: config.API_KEY
+});
 
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
@@ -11,10 +16,7 @@ app.use(function(req,res,next){
 });
 
 app.use(bodyParser.json());
-
-app.post('/', function(req, res) {
-   console.log(req.body);
-});
+app.use(express.static('./'));
 
 
 app.set(`port`, (process.env.PORT || 4000));
