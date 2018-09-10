@@ -10,6 +10,11 @@ app.use(function(req,res,next){
 	next();
 });
 
+app.get(`/`, function(req,res){
+	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
+	res.end();
+});
+
 // Routes for the node_modules
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
 app.use(`/gcharts`, express.static(path.join(__dirname, `node_modules/google-charts/googleCharts.js`)));
