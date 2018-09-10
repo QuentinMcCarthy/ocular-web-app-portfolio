@@ -7,6 +7,7 @@ const config = require("./config");
 
 const app = express();
 
+// Behance module setup
 const behance = new Behance({"client_id": `${config.behanceKey}`});
 Behance.initOptions();
 
@@ -15,11 +16,13 @@ app.use(function(req,res,next){
 	next();
 });
 
+// Redirect to the React server
 app.get(`/`, function(req,res){
 	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
 	res.end();
 });
 
+// Behance request for userdata
 app.get(`/behance/user/:user`, function(req,res){
 	behance.get({
 		api: Behance.APIS.GET_USER,
@@ -27,6 +30,7 @@ app.get(`/behance/user/:user`, function(req,res){
 			user: req.params.user
 		}
 	}, function(err, response){
+		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
 			res.send(JSON.stringify(err));
@@ -36,6 +40,7 @@ app.get(`/behance/user/:user`, function(req,res){
 	})
 });
 
+// Behance request for user project data
 app.get(`/behance/user/:user/projects`, function(req,res){
 	behance.get({
 		api: Behance.APIS.GET_USER_PRODUCT,
@@ -43,6 +48,7 @@ app.get(`/behance/user/:user/projects`, function(req,res){
 			user: req.params.user
 		}
 	}, function(err, response){
+		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
 			res.send(JSON.stringify(err));
@@ -52,6 +58,7 @@ app.get(`/behance/user/:user/projects`, function(req,res){
 	})
 });
 
+// Behance request for project comments data
 app.get(`/behance/project/:project/comments/:page`, function(req,res){
 	behance.get({
 		api: Behance.APIS.GET_PRODUCT_COMMENTS,
@@ -60,6 +67,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 			page: req.params.page
 		}
 	}, function(err, response){
+		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
 			res.send(JSON.stringify(err));
