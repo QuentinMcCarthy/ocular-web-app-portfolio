@@ -10,6 +10,10 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="http://192.168.33.10:4000/bootstrap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="contact.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,7 +29,29 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root">
+    </div>
+    <main>
+    	<div class="contact-wrapper">
+			<div class="contact">
+				<h2>CONTACT US</h2>
+				<hr>
+			</div>
+			<div class="contact-details">
+				<p id="contactInfoP"> Unit 7/68 Kingsford Smith Street <br>Lyall Bay <br>Welligton <br><br>04 920 2208 <br>stevo@ocular.co.nz</p>
+				<div class="contact-icons">
+					<i class="fab fa-facebook-square"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin"></i>
+					<i class="fab fa-youtube"></i>
+
+				</div>
+			</div>
+    	</div>
+		<div class="contact-map">
+			<a href="https://placeholder.com"><img src="https://via.placeholder.com/770x450"></a>
+		</div>
+    </main>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,4 +63,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script src="http://192.168.33.10:4000/jquery"></script>
+  <script src="http://192.168.33.10:4000/gcharts"></script>
+  <script src="http://192.168.33.10:4000/gmaps"></script>
+  <script src="js/script.js"></script>
 </html>
