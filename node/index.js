@@ -5,6 +5,11 @@ const config = require("./config");
 
 const app = express();
 
+
+var client = new Behance ({
+	apiKey: config.API_KEY
+});
+
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
 	next();
@@ -18,4 +23,4 @@ app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist
 
 app.set(`port`, (process.env.PORT || 4000));
 
-app.listen(app.get(`port`), () => { console.log(`Server is running on port ${app.get(`port`)}`) });
+app.listen(app.get(`port`), () => { console.log(`Server is running on port ${app.get(`port`)}`) }
