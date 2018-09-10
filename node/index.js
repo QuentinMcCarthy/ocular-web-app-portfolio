@@ -27,6 +27,7 @@ app.get(`/behance/user/:user`, function(req,res){
 			user: req.params.user
 		}
 	}, function(err, response){
+		res.setHeader("Content-Type", "application/json");
 		if(err){
 			res.send(JSON.stringify(err));
 		} else{
@@ -34,6 +35,39 @@ app.get(`/behance/user/:user`, function(req,res){
 		}
 	})
 });
+
+app.get(`/behance/user/:user/projects`, function(req,res){
+	behance.get({
+		api: Behance.APIS.GET_USER_PRODUCT,
+		params: {
+			user: req.params.user
+		}
+	}, function(err, response){
+		res.setHeader("Content-Type", "application/json");
+		if(err){
+			res.send(JSON.stringify(err));
+		} else{
+			res.send(JSON.stringify(response));
+		}
+	})
+});
+
+app.get(`/behance/project/:project/comments/:page`, function(req,res){
+	behance.get({
+		api: Behance.APIS.GET_PRODUCT_COMMENTS,
+		params: {
+			project_id: req.params.project,
+			page: req.params.page
+		}
+	}, function(err, response){
+		res.setHeader("Content-Type", "application/json");
+		if(err){
+			res.send(JSON.stringify(err));
+		} else{
+			res.send(JSON.stringify(response));
+		}
+	});
+})
 
 // Routes for the node_modules
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
