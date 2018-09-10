@@ -1,9 +1,14 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const request = require("request");
+const Behance = require("node-behance-api");
 const config = require("./config");
 
 const app = express();
+
+const behance = new Behance({"client_id": `${config.behanceKey}`});
+Behance.initOptions();
 
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
@@ -13,6 +18,21 @@ app.use(function(req,res,next){
 app.get(`/`, function(req,res){
 	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
 	res.end();
+});
+
+app.get(`/behance/user/:user`, function(req,res){
+	behance.get({
+		api: Behance.APIS.GET_USER,
+		params: {
+			user: req.params.user
+		}
+	}, function(err, response){
+		if(err){
+			res.send(JSON.stringify(err));
+		} else{
+			res.send(JSON.stringify(response));
+		}
+	})
 });
 
 // Routes for the node_modules
