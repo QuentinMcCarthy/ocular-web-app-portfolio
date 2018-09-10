@@ -1,45 +1,67 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		sass: {
-			dist: {
+			public: {
 				files: {
-					"../react/src/master.css": "../react/src/sass/master.scss"
+					"../react/public/css/master.css": "../react/public/sass/master.scss"
 				}
+			},
+			src: {
+				files: [{
+					expand: true,
+					cwd: "../react/src/sass",
+					src: ["*.scss"],
+					dest: "../react/src/css",
+					ext: ".css"
+				}]
 			}
 		},
 		cssmin: {
-			target: {
+			public: {
+				files: {
+					"../react/public/css/master.min.css": "../react/public/css/master.css"
+				}
+			},
+			src: {
 				files: [{
 					expand: true,
-					cwd: '../react/src/',
-					src: ['*.css', '!*.min.css'],
-					dest: '../react/src/',
-					ext: '.min.css'
+					cwd: "../react/src/css",
+					src: ["*.css", "!*.min.css"],
+					dest: "../react/src/css",
+					ext: ".min.css"
 				}]
 			}
 		},
 		jshint: {
-			all: ["../react/public/js/script.js"]
+			public: ["../react/public/js/script.js"]
 		},
 		uglify: {
-			my_target: {
+			public: {
 				files: {
 					"../react/public/js/script.min.js": ["../react/public/js/script.js"]
 				}
 			}
 		},
 		watch: {
-			sass: {
-				files: ["../react/src/sass/master.scss"],
-				tasks: ["sass"]
+			pubsass: {
+				files: ["../react/public/sass/master.scss"],
+				tasks: ["sass:public"]
 			},
-			css: {
-				files: ["../react/src/master.css"],
-				tasks: ["csslint", "cssmin"]
+			srcsass: {
+				files: ["../react/src/sass/*.scss"],
+				tasks: ["sass:src"]
 			},
-			js: {
+			pubcss: {
+				files: ["../react/public/css/master.css"],
+				tasks: ["cssmin:public"]
+			},
+			srccss: {
+				files: ["../react/src/css/*.css", "!../react/src/css/*.min.css"],
+				tasks: ["cssmin:src"]
+			},
+			pubjs: {
 				files: ["../react/public/js/script.js"],
-				tasks: ["jshint", "uglify"]
+				tasks: ["jshint:public", "uglify:public"]
 			}
 		}
 	});
