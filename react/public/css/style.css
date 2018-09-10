@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-bar {
+    overflow: auto;
+    padding: 1em;
+}
+
+.logo {
+    padding: 10%;
+    float: left;
+    clear: both;
+}
+
+.menu-btn {
+    background-color: white;
+    border: white;
+    font-weight: 300;
+    /* margin-right: 1.5em; */
+    text-transform: uppercase;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: none;
+    font-weight: 700;
+    float: right;
+    clear:both;
+    list-style: none;
+    width: 100%;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    padding: 1em;
+}
