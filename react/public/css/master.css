@@ -5,6 +5,7 @@
   font-family: 'Open Sans', sans-serif; }
 
 .header-bar {
+  color: white;
   overflow: auto;
   padding: 0.5em 1em; }
 
@@ -41,7 +42,7 @@
 
 .main-image {
   height: 100vh;
-  background-image: url("img/mainImage.png");
+  background-image: url("../img/mainImage.png");
   background-position: center;
   background-size: cover; }
 
@@ -51,8 +52,16 @@
   background-color: black;
   opacity: .5; }
 
-.title {
+.banner-content {
+  position: absolute;
+  top: 32%;
+  right: 10%;
+  width: 80%; }
+
+.banner-title {
+  color: white;
   font-size: 1.7em;
   text-transform: uppercase; }
 
-/*# sourceMappingURL=master.css.map */
+.banner-text {
+  color: #cccccc; }
