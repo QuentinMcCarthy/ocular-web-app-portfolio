@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   $(".scroll-down").click(function(){
       $("html, body").animate({
-          scrollTop:$(".our-goals").offset().top
+          scrollTop:$(".our-goal").offset().top
       }, 3000);
   });
 
