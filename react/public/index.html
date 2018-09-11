@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="theme-color" content="#000000">
-		<!--
-		  manifest.json provides metadata used when your web app is added to the
-		  homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-		-->
-		<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-		<link rel="stylesheet" href="http://192.168.33.10:4000/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/master.min.css">
-		<!--
-		  Notice the use of %PUBLIC_URL% in the tags above.
-		  It will be replaced with the URL of the `public` folder during the build.
-		  Only files inside the `public` folder can be referenced from the HTML.
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
 
-		  Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-		  work correctly both with client-side routing and a non-root public URL.
-		  Learn how to configure a non-root public URL by running `npm run build`.
-		-->
-		<title>React App</title>
-	</head>
-	<body>
-		<noscript>
-		  You need to enable JavaScript to run this app.
-		</noscript>
-		<div id="root"></div>
-		<!--
-		  This HTML file is a template.
-		  If you open it directly in the browser, you will see an empty page.
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
-		  You can add webfonts, meta tags, or analytics to this file.
-		  The build step will place the bundled scripts into the <body> tag.
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://192.168.33.10:4000/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.min.css">
 
-		  To begin the development, run `npm start` or `yarn start`.
-		  To create a production bundle, use `npm run build` or `yarn build`.
-		-->
-	</body>
+    <title>Ocular - Designer Porfolio</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div class="container1">
+
+      <!-- Nav -->
+      <div class="header fixed-top">
+        <div class="header-bar">
+          <img src="img/Ocular-Logo.png" width="150" class="logo"/>
+          <button type="button" name="button" class="menu-btn"><i class="fas fa-bars fa-2x"></i>Menu</button>
+        </div>
+
+        <ol class="menu">
+          <li class="menu-item">Home</li>
+          <!-- <li class="menu-item">Designers</li> -->
+          <!-- <li class="menu-item">Contact</li> -->
+        </ol>
+
+      </div>
+
+      <div class="banner">
+        <div class="main-image">
+            <div class="transparent-layer"></div>
+            <div class="banner-content">
+              <h1 class="banner-title">Hi, We're Ocular</h1>
+              <p class="banner-text">WEB STRATEGY BRAND DESIGN VIDEO</p>
+            </div>
+        </div>
+      </div><!--banner ends-->
+    </div>
+
+    <div class="container">
+        <div class="our-goals">
+          <h2 class="second-heading">Our Goals</h2>
+          <hr class="title-hr"/>
+          <p class="goals-text">Our goal is to provide our clients with an expectional outcome with a insightful and indepth process. We care about our clients wants and needs whilst catering to the audience their business attracts</p>
+        </div>
+
+        <!-- <div class="latest-projects">
+          <div class="project-one">
+            <img src="img/projectOne" alt="Miss Monday"/ width="500" height="500">
+            <h3 class=project></h3>
+          </div>
+        </div> -->
+    </div>
+
+
+    <div id="root"></div>
+
+  </body>
 
 	<script src="http://192.168.33.10:4000/jquery"></script>
 	<script src="http://192.168.33.10:4000/bootstrap/js/bootstrap.min.js"></script>
