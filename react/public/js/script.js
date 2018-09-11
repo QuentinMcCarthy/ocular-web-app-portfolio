@@ -1,12 +1,19 @@
 console.log("JS: Ready");
 
-var menuBtn = document.getElementById('menuBtn');
-
 $(document).ready(function(){
   $(".menu-btn").click(function(){
     $(".menu").toggle();
   });
+
   $(".menu-btn").click(function(){
     $(".menu-btn").toggleClass("btnMenuClicked");
   });
+
+  $(".scroll-down").click(function(){
+      $("html, body").animate({
+          scrollTop:$(".our-goals").offset().top
+      }, 3000);
+  });
+
+
 });
