@@ -9,7 +9,7 @@ const app = express();
 
 // Behance module setup
 // const behance = new Behance({"client_id": `${config.behanceKey}`});
-Behance.initOptions();
+// Behance.initOptions();
 
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
@@ -78,8 +78,8 @@ app.get(`/`, function(req,res){
 // })
 
 // Routes for the node_modules
+app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/dist/popper.min.js`)));
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
-app.use(`/gcharts`, express.static(path.join(__dirname, `node_modules/google-charts/googleCharts.js`)));
 app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
 
