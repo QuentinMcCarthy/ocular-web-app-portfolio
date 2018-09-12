@@ -54,18 +54,18 @@ module.exports = function(grunt){
 				files: ["../react/src/sass/*.scss"],
 				tasks: ["sass:src"]
 			},
-			pubcss: {
-				files: ["../react/public/css/master.css"],
-				tasks: ["cssmin:public"]
-			},
-			srccss: {
-				files: ["../react/src/css/*.css", "!../react/src/css/*.min.css"],
-				tasks: ["cssmin:src"]
-			},
-			pubjs: {
-				files: ["../react/public/js/script.js"],
-				tasks: ["jshint:public", "uglify:public"]
-			}
+			// pubcss: {
+			// 	files: ["../react/public/css/master.css"],
+			// 	tasks: ["cssmin:public"]
+			// },
+			// srccss: {
+			// 	files: ["../react/src/css/*.css", "!../react/src/css/*.min.css"],
+			// 	tasks: ["cssmin:src"]
+			// },
+			// pubjs: {
+			// 	files: ["../react/public/js/script.js"],
+			// 	tasks: ["jshint:public", "uglify:public"]
+			// }
 		}
 	});
 

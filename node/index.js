@@ -22,6 +22,7 @@ app.use(function(req,res,next){
 // Redirect to the React server
 app.get(`/`, function(req,res){
 	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
+	console.log("Redirect to React server http://192.168.33.10:3000");
 	res.end();
 });
 
