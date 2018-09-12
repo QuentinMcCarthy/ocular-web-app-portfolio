@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 // import { Chart } from "react-google-charts";
-import './css/index.min.css';
+import "./css/index.min.css";
 
 class App extends Component {
 	render() {
