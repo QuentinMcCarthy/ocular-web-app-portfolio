@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 		$('#nav').show();
 		$('#menu').hide();
-	})
+	});
 
 	$(".scroll-down").click(function(){
 		$("html, body").animate({
