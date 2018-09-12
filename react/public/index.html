@@ -21,13 +21,19 @@
 			You need to enable JavaScript to run this app.
 		</noscript>
 
-		<div class="container1">
+		<div id="sect-index" style="display:none;">
+			<!-- Nav -->
+			<div class="header fixed-top">
+				<div class="header-bar">
+					<img src="img/Ocular-Logo.png" width="150" class="logo"/>
+					<button type="button" name="button" class="menu-btn"><i class="fas fa-bars fa-2x"></i>Menu</button>
+				</div>
 
-		<!-- Nav -->
-		<div class="header fixed-top">
-			<div class="header-bar">
-				<img src="img/Ocular-Logo.png" width="150" class="logo"/>
-				<button type="button" name="button" class="menu-btn"><i class="fas fa-bars fa-2x"></i>Menu</button>
+				<ol class="menu">
+					<li id="nav-index" class="menu-item">Home</li>
+					<li id="nav-designers" class="menu-item">Designers</li>
+					<!-- <li class="menu-item">Contact</li> -->
+				</ol>
 			</div>
 
 			<ol class="menu">
@@ -67,7 +73,9 @@
 			</div>
 		</div>
 
-		<div id="root"></div>
+		<div id="sect-designers" style="display:block;">
+			<div id="desprofiles"></div>
+		</div>
 	</body>
 
 	<script src="http://192.168.33.10:4000/jquery"></script>

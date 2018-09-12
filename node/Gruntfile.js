@@ -1,4 +1,7 @@
 module.exports = function(grunt){
+	require("time-grunt")(grunt);
+	require("jit-grunt")(grunt);
+
 	grunt.initConfig({
 		sass: {
 			public: {
@@ -67,11 +70,6 @@ module.exports = function(grunt){
 	});
 
 	// grunt.loadNpmTasks();
-	grunt.loadNpmTasks("grunt-contrib-cssmin");
-	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-contrib-uglify");
-	grunt.loadNpmTasks("grunt-contrib-jshint");
-	grunt.loadNpmTasks("grunt-contrib-sass");
 
 	// grunt.registerTask();
 };

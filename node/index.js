@@ -7,6 +7,9 @@ const Behance = require("node-behance-api");
 
 const app = express();
 
+// Allow cors
+app.use(cors());
+
 // Behance module setup
 // const behance = new Behance({"client_id": `${config.behanceKey}`});
 // Behance.initOptions();
@@ -82,6 +85,9 @@ app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/d
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
 app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
+
+// Routes for data requests
+app.use(`/data`, express.static(path.join(__dirname, `data`)));
 
 app.set(`port`, (process.env.PORT || 4000));
 

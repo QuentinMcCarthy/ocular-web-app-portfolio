@@ -38,9 +38,6 @@
   text-transform: uppercase;
   padding: 1em; }
 
-.btnMenuClicked {
-  display: block; }
-
 .banner {
   height: 100vh;
   width: 100vw; }
