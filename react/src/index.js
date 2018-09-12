@@ -7,7 +7,9 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				
+				<div className="designer-profile">
+
+				</div>
 			</div>
 		);
 	}
