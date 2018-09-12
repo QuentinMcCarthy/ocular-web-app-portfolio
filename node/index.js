@@ -83,6 +83,9 @@ app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstra
 app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
 
+// Routes for data requests
+app.use(`/data`, express.static(path.join(__dirname, `data`)));
+
 app.set(`port`, (process.env.PORT || 4000));
 
 app.listen(app.get(`port`), () => { console.log(`Server is running on port ${app.get(`port`)}`) });
