@@ -10,12 +10,19 @@ $(document).ready(function(){
 	$("#nav-index").click(function(){
 		$("#sect-index").show();
 		$("#sect-designers").hide();
+        $("#menu").hide();
 	});
 
 	$("#nav-designers").click(function(){
 		$("#sect-index").hide();
 		$("#sect-designers").show();
 	});
+
+  $(".scroll-down").click(function(){
+      $("html, body").animate({
+          scrollTop:$(".our-goal").offset().top
+      }, 3000);
+  });
 
 	$.ajax({
 		type: "GET",
