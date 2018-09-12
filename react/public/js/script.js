@@ -10,16 +10,29 @@ $(document).ready(function(){
 	$('#navIndex').click(function(){
 		$('#sectIndex').show();
 		$('#sectDesigners').hide();
+		$('#sectContact').hide();
 
+		$('#nav').show();
 		$('#menu').hide();
 	});
 
 	$('#navDesigners').click(function(){
 		$('#sectIndex').hide();
 		$('#sectDesigners').show();
+		$('#sectContact').hide();
 
+		$('#nav').hide();
 		$('#menu').hide();
 	});
+
+	$('#navContact').click(function(){
+		$('#sectIndex').hide();
+		$('#sectDesigners').hide();
+		$('#sectContact').show();
+
+		$('#nav').show();
+		$('#menu').hide();
+	})
 
   $(".scroll-down").click(function(){
       $("html, body").animate({
