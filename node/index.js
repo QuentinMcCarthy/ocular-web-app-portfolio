@@ -7,6 +7,9 @@ const Behance = require("node-behance-api");
 
 const app = express();
 
+// Allow cors
+app.use(cors());
+
 // Behance module setup
 // const behance = new Behance({"client_id": `${config.behanceKey}`});
 // Behance.initOptions();

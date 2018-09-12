@@ -1,5 +1,3 @@
-console.log("JS: Ready");
-
 $(document).ready(function(){
 	$(".menu-btn").click(function(){
 		$(".menu").toggle();
@@ -17,5 +15,18 @@ $(document).ready(function(){
 	$("#nav-designers").click(function(){
 		$("#sect-index").hide();
 		$("#sect-designers").show();
+	});
+
+	$.ajax({
+		type: "GET",
+		url: "http://192.168.33.10:4000/data/staff.json",
+		dataType: "json",
+		success: function(data){
+			console.log(data);
+		},
+		error: function(err){
+			console.log("Error "+err.status);
+			console.log(err);
+		}
 	});
 });
