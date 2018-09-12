@@ -7,7 +7,8 @@
   padding-top: 33%;
   border-radius: 60px;
   background-image: url("http://192.168.33.10:3000/img/darryl_powell_pic.jpg");
-  background-position: center; }
+  background-position: center;
+  background-size: cover; }
 
 .splitv-third {
   height: 33%; }
