@@ -9,19 +9,31 @@ $(document).ready(function(){
 	// Temporary navigation
 	$("#nav-index").click(function(){
 		$("#sect-index").show();
+        $("#sectHome").show();
 		$("#sect-designers").hide();
+        $("#sectContact").hide();
         $("#menu").hide();
 	});
 
 	$("#nav-designers").click(function(){
-		$("#sect-index").hide();
-		$("#sect-designers").show();
+        $("#sect-designers").show();
+        $("#sect-index").hide();
+        $("#sectHome").hide();
+        $("#sectContact").hide();
+        $("#menu").hide();
 	});
 
-  $(".scroll-down").click(function(){
-      $("html, body").animate({
-          scrollTop:$(".our-goal").offset().top
-      }, 3000);
+    $("#navContact").click(function(){
+        $("#sectContact").show();
+        $("#sect-designers").hide();
+        $("#sectHome").hide();
+        $("#menu").hide();
+    });
+
+    $(".scroll-down").click(function(){
+        $("html, body").animate({
+            scrollTop:$(".our-goal").offset().top
+        }, 3000);
   });
 
 	$.ajax({
