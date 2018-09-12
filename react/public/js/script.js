@@ -1,21 +1,24 @@
 $(document).ready(function(){
-	$(".menu-btn").click(function(){
-		$(".menu").toggle();
+	$('.menu-btn').click(function(){
+		$('.menu').toggle();
 	});
-	$(".menu-btn").click(function(){
-		$(".menu-btn").toggleClass("btnMenuClicked");
+	$('.menu-btn').click(function(){
+		$('.menu-btn').toggleClass('btnMenuClicked');
 	});
 
 	// Temporary navigation
-	$("#nav-index").click(function(){
-		$("#sect-index").show();
-		$("#sect-designers").hide();
-        $("#menu").hide();
+	$('#navIndex').click(function(){
+		$('#sectIndex').show();
+		$('#sectDesigners').hide();
+
+		$('#menu').hide();
 	});
 
-	$("#nav-designers").click(function(){
-		$("#sect-index").hide();
-		$("#sect-designers").show();
+	$('#navDesigners').click(function(){
+		$('#sectIndex').hide();
+		$('#sectDesigners').show();
+
+		$('#menu').hide();
 	});
 
   $(".scroll-down").click(function(){
@@ -25,14 +28,14 @@ $(document).ready(function(){
   });
 
 	$.ajax({
-		type: "GET",
-		url: "http://192.168.33.10:4000/data/staff.json",
-		dataType: "json",
+		type: 'GET',
+		url: 'http://192.168.33.10:4000/data/staff.json',
+		dataType: 'json',
 		success: function(data){
 			console.log(data);
 		},
 		error: function(err){
-			console.log("Error "+err.status);
+			console.log('Error '+err.status);
 			console.log(err);
 		}
 	});
