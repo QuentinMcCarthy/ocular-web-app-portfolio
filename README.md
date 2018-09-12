@@ -16,6 +16,6 @@ If running the app on a Vagrant server, you will need to create a .env file insi
 Inside said .env file you will need these lines:
 ```
 CHOKIDAR_USEPOLLING=true
-HOST=<IP>
+HOST=:IP
 ```
-Where <IP> is the IP address of the Vagrant server i.e. 192.168.33.10
+Where :IP is the IP address of the Vagrant server i.e. 192.168.33.10
