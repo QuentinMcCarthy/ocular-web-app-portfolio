@@ -1,12 +1,22 @@
 [
 	{
+		"id": 1,
 		"name": "Darryl Powell",
-		"role": "Designer",
 		"behance": "darryl_powell"
 	},
 	{
+		"id": 2,
 		"name": "Jayna Ravji",
-		"role": "Designer",
 		"behance": "jaynaravji"
+	},
+	{
+		"id": 3,
+		"name": "Sumitra Manga",
+		"behance": "sumitramanga"
+	},
+	{
+		"id": 4,
+		"name": "Quentin McCarthy",
+		"behance": "qmccarthy9cc69"
 	}
 ]
