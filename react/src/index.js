@@ -8,7 +8,9 @@ class App extends Component {
 		return (
 			<div>
 				<div className="designer-profile">
+					<div className="profile-image">
 
+					</div>
 				</div>
 			</div>
 		);
