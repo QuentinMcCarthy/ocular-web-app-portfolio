@@ -8,10 +8,14 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<div className="designer-profile">
-					<div className="profile-image">
+				<div className="designer-profile position-relative">
+					<div className="splitv-third w-100"></div>
+					<div className="splitv-third w-100 d-flex align-items-center flex-column">
+						<div className="profile-image h-100">
 
+						</div>
 					</div>
+					<div className="splitv-third w-100"></div>
 				</div>
 			</div>
 		);
