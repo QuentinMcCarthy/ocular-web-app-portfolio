@@ -10,6 +10,7 @@ $(document).ready(function(){
 	$("#nav-index").click(function(){
 		$("#sect-index").show();
 		$("#sect-designers").hide();
+        $("#menu").hide();
 	});
 
 	$("#nav-designers").click(function(){
