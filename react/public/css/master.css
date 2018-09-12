@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif; }
 
+#sectDesigners,
+#sectContact {
+  display: none; }
+
 .header-bar {
   background-color: #FFFFFF;
   overflow: auto;
@@ -166,7 +170,7 @@
       width: 50%;
       height: 100%; }
     .contact-wrapper .contact-details {
-      width: 50%;
+      width: 52%;
       padding-left: 30px; }
       .contact-wrapper .contact-details i {
         margin: 0px 4px !important; } }

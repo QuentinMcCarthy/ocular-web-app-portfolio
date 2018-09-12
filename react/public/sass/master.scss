@@ -9,6 +9,11 @@ $tertiaryColor: #FF0000;
 	font-family: 'Open Sans', sans-serif;
 }
 
+#sectDesigners,
+#sectContact {
+	display: none;
+}
+
 // MENU ----------------
 
 .header-bar {
@@ -65,7 +70,7 @@ $tertiaryColor: #FF0000;
 
 .main-image {
 	height: 100vh;
-	background-image: url("../img/mainImage.png");
+	background-image: url('../img/mainImage.png');
 	background-position: center;
 	background-size: cover;
 }
@@ -210,7 +215,7 @@ $tertiaryColor: #FF0000;
 			height: 100%;
 		}
 		.contact-details {
-			width: 50%;
+			width: 52%;
 			padding-left: 30px;
 			i {
 				margin: 0px 4px !important;
