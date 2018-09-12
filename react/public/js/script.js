@@ -34,11 +34,11 @@ $(document).ready(function(){
 		$('#menu').hide();
 	})
 
-  $(".scroll-down").click(function(){
-      $("html, body").animate({
-          scrollTop:$(".our-goal").offset().top
-      }, 3000);
-  });
+	$(".scroll-down").click(function(){
+		$("html, body").animate({
+			scrollTop:$(".our-goal").offset().top
+		}, 3000);
+	});
 
 	$.ajax({
 		type: 'GET',
@@ -46,6 +46,21 @@ $(document).ready(function(){
 		dataType: 'json',
 		success: function(data){
 			console.log(data);
+
+			var initProfile = data[0].behance;
+
+			$.ajax({
+				type: "GET",
+				url: "http://192.168.33.10:4000/behance/user/"+initProfile+"/projects/projects",
+				dataType: "json",
+				success: function(projData){
+					console.log(projData);
+				},
+				error: function(projErr){
+					console.log("Error "+projErr.status);
+					console.log(projErr);
+				}
+			});
 		},
 		error: function(err){
 			console.log('Error '+err.status);
@@ -53,3 +68,7 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function setProfileBackground(image){
+
+}
