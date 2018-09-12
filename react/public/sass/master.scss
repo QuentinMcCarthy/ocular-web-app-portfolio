@@ -3,71 +3,78 @@ $secondaryColor: #000000;
 $tertiaryColor: #FF0000;
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Open Sans', sans-serif;
 }
 
+// MENU ----------------
+
 .header-bar {
-	background-color: $primaryColor;
-	overflow: auto;
-	padding: 0.5em 1em;
+		background-color: $primaryColor;
+		overflow: auto;
+		padding: 0.5em 1em;
 }
 
 .logo {
-	padding: 8% 0;
-	float: left;
-	clear: both;
+		padding: 8% 0;
+		float: left;
+		clear: both;
 }
 
 .menu-btn {
-	background-color: $primaryColor;
-	border: $primaryColor;
-	font-weight: 300;
-	padding: 4%;
-	text-transform: uppercase;
-	float: right;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+		background-color: $primaryColor;
+		border: $primaryColor;
+		font-weight: 300;
+		font-size: 0.7em;
+		padding: 3%;
+		text-transform: uppercase;
+		float: right;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 }
 
 .menu {
-	display: none;
-	background-color: white;
-	font-weight: 700;
-	float: right;
-	clear:both;
-	list-style: none;
-	width: 100%;
+		display: none;
+		background-color: white;
+		font-weight: 700;
+		font-size: 0.7em;
+		float: right;
+		clear:both;
+		list-style: none;
+		height: 100vh;
+		width: 100%;
 }
 
 .menu-item {
-	text-transform: uppercase;
-	padding: 1em;
+		text-transform: uppercase;
+		padding: 1em;
+		font-size: 1.25em;
 }
 
 .btnMenuClicked {}
 
+// HOME SCREEN ----------------
+
 .banner {
-	height: 100vh;
-	width: 100vw;
+		height: 100vh;
+		width: 100vw;
 }
 
-
 .main-image {
-	height: 100vh;
-	background-image: url("../img/mainImage.png");
-	background-position: center;
-	background-size: cover;
+		height: 100vh;
+		background-image: url("../img/mainImage.png");
+		background-position: center;
+		background-size: cover;
 }
 
 .transparent-layer {
-	width: 100%;
-	height: 100%;
-	background-color: $secondaryColor;
-	opacity: .5;
+		width: 100%;
+		height: 100%;
+		background-color: $secondaryColor;
+		opacity: .5;
 }
 
 .banner-content {
@@ -79,15 +86,15 @@ $tertiaryColor: #FF0000;
 }
 
 .banner-title {
-	color: $primaryColor;
+		color: $primaryColor;
     font-weight: 700;
     font-size: 1.3em;
-	text-transform: uppercase;
+		text-transform: uppercase;
 }
 
 .banner-text {
-	color: #CCCCCC;
-	font-size: 0.67em;
+		color: #CCCCCC;
+		font-size: 0.67em;
 }
 
 .scroll-down {
@@ -101,19 +108,19 @@ $tertiaryColor: #FF0000;
 }
 
 .second-heading {
-	text-transform: uppercase;
-	margin-top: 0.8em;
-	font-size: 1.5em;
-	font-weight: 700;
-	font-family: 'Open-Sans', sans-serif;
+		text-transform: uppercase;
+		margin-top: 0.8em;
+		font-size: 1.5em;
+		font-weight: 700;
+		font-family: 'Open-Sans', sans-serif;
 }
 
 .title-hr {
-	color: $secondaryColor;
-	background-color: $secondaryColor;
-	border: 0;
-	width: 90%;
-	height: 3px;
+		color: $secondaryColor;
+		background-color: $secondaryColor;
+		border: 0;
+		width: 90%;
+		height: 3px;
     margin: 0;
 }
 
@@ -122,12 +129,16 @@ $tertiaryColor: #FF0000;
 }
 
 .our-goal {
-    margin: 5em 0;
+		display: flex;
+		align-content: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 380px;
 }
 
 .goals-text {
-	margin: 1em 0;
-	font-size: 0.8em;
+		margin: 1em 0;
+		font-size: 0.8em;
 }
 
 .project-img {
@@ -135,6 +146,8 @@ $tertiaryColor: #FF0000;
     width: 250px;
     background-color: pink;
 }
+
+// DESIGNERS ----------------
 
 .latest-projects {
     margin: 1em 0;
