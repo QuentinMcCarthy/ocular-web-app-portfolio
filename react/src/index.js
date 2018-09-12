@@ -6,7 +6,9 @@ import './css/index.min.css';
 class App extends Component {
 	render() {
 		return (
-			<div></div>
+			<div>
+				
+			</div>
 		);
 	}
 }
