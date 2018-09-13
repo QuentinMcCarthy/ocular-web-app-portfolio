@@ -82,7 +82,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 })
 
 // Routes for the node_modules
-app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/dist/popper.min.js`)));
+app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/dist/umd/popper.min.js`)));
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
 app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
