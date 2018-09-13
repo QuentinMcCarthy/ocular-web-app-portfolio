@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 	$('#navDesigners').click(function(){
 		$('#sectIndex').hide();
+		$('#sectContact').hide();
 		$('#sectDesigners').show();
 		$('#sectContact').hide();
 
@@ -39,6 +40,13 @@ $(document).ready(function(){
 			scrollTop:$(".our-goal").offset().top
 		}, 3000);
 	});
+
+	// View stats button
+	$('#viewStats').click(function() {
+		$('#sectDesigners').hide();
+		$('.header-bar').hide();
+		$('#secStatistics').show();
+	})
 
 	$.ajax({
 		type: 'GET',

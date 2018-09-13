@@ -10,7 +10,8 @@ $tertiaryColor: #FF0000;
 }
 
 #sectDesigners,
-#sectContact {
+#sectContact,
+#secStatistics {
 	display: none;
 }
 
@@ -20,6 +21,9 @@ $tertiaryColor: #FF0000;
 	background-color: $primaryColor;
 	overflow: auto;
 	padding: 0.5em 1em;
+	button {
+		outline: none;
+	}
 }
 
 .logo {
@@ -165,46 +169,83 @@ $tertiaryColor: #FF0000;
     margin: 0 auto;
 }
 
-.contact-wrapper {
-	width: 80vw;
-	height: 350px;
-	padding-top: 50px;
-	margin: 0 auto;
-  	.contact {
-		width: 100%;
-		hr {
-		  display: block;
-		  margin-top: 5px;
-		  border: none;
-		  height: 2px;
-		  background-color: black;
-		}
-  	}
-  	.contact-details {
-	    width: 100%;
-	    height: 100%;
-	    margin-top: 10%;
-		#contactInfoP {
-			line-height: 1.3;
-	  	}
 
-	  	.contact-icons {
-		    margin-top: 10%;
-		    i {
-			  	font-size: 35px;
-				margin: 0 13px;
-			  	color: red;
+//CONTACTS-------------
+#sectContact {
+	margin-top: 18%;
+	.contact-wrapper {
+		width: 80vw;
+		height: 350px;
+		padding-top: 50px;
+		margin: 0 auto;
+	  	.contact {
+			width: 100%;
+			hr {
+			  display: block;
+			  margin-top: 5px;
+			  border: none;
+			  height: 2px;
+			  background-color: black;
 			}
-	   	}
- 	}
+	  	}
+	  	.contact-details {
+		    width: 100%;
+		    height: 100%;
+		    margin-top: 10%;
+			#contactInfoP {
+				line-height: 1.3;
+		  	}
+
+		  	.contact-icons {
+			    margin-top: 10%;
+				ul {
+					list-style: none;
+					li {
+						display: inline-block;
+						i {
+							font-size: 35px;
+							margin: 0 13px;
+							color: $tertiaryColor;
+						}
+					}
+				}
+		   	}
+	 	}
+	}
+
+	.contact-map {
+		display: none;
+		position: absolute;
+		bottom: 0;
+	}
+
 }
 
-.contact-map {
-	display: none;
-	position: absolute;
-	bottom: 0;
-}
+// STATSTICS
+#secStatistics{
+	width: 87vw;
+	margin: 0 auto;
+	margin-top: 10%;
+	.close-icon {
+		i {
+			font-size: 45px;
+		}
+	}
+	.stat {
+		margin-top: 8%;
+		hr {
+			width: 100%;
+		}
+		.designer-charts {
+			margin: auto;
+			margin-top: 13%;
+			width: 300px;
+			height: 400px;
+			background-color: red;
+		}
+	}
 
+}
 
 @media only screen and (min-width: 600px) {
     .contact-wrapper {
@@ -222,4 +263,36 @@ $tertiaryColor: #FF0000;
 			}
 		}
 	}
+	#secStatistics {
+		width: 75vw;
+		.designer-charts {
+			width: 100%;
+		}
+	}
+
+}
+@media only screen and (min-width: 1024px){
+	.menu {
+		width: 33%;
+	}
+
+	#sectContact {
+		background-color: $secondaryColor;
+		.contact-wrapper {
+			color: $primaryColor;
+		}
+		hr {
+			background-color: $primaryColor !important;
+		}
+		i {
+			color: $primaryColor !important;
+		}
+	}
+	#secStatistics {
+		width: 75vw;
+		.designer-charts {
+			width: 100%;
+		}
+	}
+
 }
