@@ -1,6 +1,13 @@
 $primaryColor: #FFFFFF;
 $secondaryColor: #000000;
 $tertiaryColor: #FF0000;
+$mainFontFamily: 'Open Sans', sans-serif;
+
+@mixin heading {
+	font-family: $mainFontFamily;
+	font-weight: 800;
+	text-transform: uppercase;
+}
 
 * {
 	padding: 0;
@@ -15,7 +22,7 @@ $tertiaryColor: #FF0000;
 	display: none;
 }
 
-// MENU ----------------
+// MENU ------------------------------------------------------------------------
 
 .header-bar {
 	background-color: $primaryColor;
@@ -47,9 +54,9 @@ $tertiaryColor: #FF0000;
 
 .menu {
 	display: none;
-	background-color: white;
+	background-color: $primaryColor;
 	font-weight: 700;
-	font-size: 0.7em;
+	font-size: 0.6em;
 	float: right;
 	clear:both;
 	list-style: none;
@@ -65,7 +72,20 @@ $tertiaryColor: #FF0000;
 
 .btnMenuClicked {}
 
-// HOME SCREEN ----------------
+// HOME SCREEN -----------------------------------------------------------------
+
+.scroll-up {
+	padding: 0.2em 0.6em;
+	color: $primaryColor;
+	background-color: $secondaryColor;
+	border: none;
+	border-radius: 36px;
+	font-size: 1em;
+
+	margin-bottom: 2.5em;
+	margin-right: 1.7em;
+	float: right;
+}
 
 .banner {
 	height: 100vh;
@@ -95,10 +115,9 @@ $tertiaryColor: #FF0000;
 }
 
 .banner-title {
+	@include heading;
 	color: $primaryColor;
-    font-weight: 700;
     font-size: 1.3em;
-	text-transform: uppercase;
 }
 
 .banner-text {
@@ -107,21 +126,19 @@ $tertiaryColor: #FF0000;
 }
 
 .scroll-down {
-    background-color: black;
+    background-color: $secondaryColor;
     border: none;
     padding: 1em 4em;
     margin-top: 0.9em;
-    color: white;
+    color: $primaryColor;
     text-transform: uppercase;
     font-size: 0.7em;
 }
 
 .second-heading {
-	text-transform: uppercase;
+	@include heading;
 	margin-top: 0.8em;
 	font-size: 1.5em;
-	font-weight: 700;
-	font-family: 'Open-Sans', sans-serif;
 }
 
 .title-hr {
@@ -131,10 +148,6 @@ $tertiaryColor: #FF0000;
 	width: 90%;
 	height: 3px;
     margin: 0;
-}
-
-.space {
-	margin: 0 2em;
 }
 
 .our-goal {
@@ -150,16 +163,23 @@ $tertiaryColor: #FF0000;
 	font-size: 0.8em;
 }
 
+.third-heading {
+	@include heading;
+	font-size: 1.25em;
+	margin-top: 0.6em;
+    margin-bottom: 1.3em;
+}
+
 .project-img {
     height: 250px;
     width: 250px;
-    background-color: pink;
+    background-color: $secondaryColor;
     background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg');
     background-size: cover;
     background-position: center;
 }
 
-// DESIGNERS ----------------
+// DESIGNERS -------------------------------------------------------------------
 
 .latest-projects {
     margin: 1em 0;
@@ -170,7 +190,8 @@ $tertiaryColor: #FF0000;
 }
 
 
-//CONTACTS-------------
+//CONTACTS ---------------------------------------------------------------------
+
 #sectContact {
 	margin-top: 18%;
 	.contact-wrapper {
@@ -221,7 +242,8 @@ $tertiaryColor: #FF0000;
 
 }
 
-// STATSTICS
+// STATSTICS -------------------------------------------------------------------
+
 #secStatistics{
 	width: 87vw;
 	margin: 0 auto;
@@ -241,7 +263,7 @@ $tertiaryColor: #FF0000;
 			margin-top: 13%;
 			width: 300px;
 			height: 400px;
-			background-color: red;
+			background-color: $tertiaryColor;
 		}
 	}
 

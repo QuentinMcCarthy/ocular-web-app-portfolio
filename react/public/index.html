@@ -23,7 +23,7 @@
 		</noscript>
 
 		<!-- Nav -->
-		<div id="nav" class='header fixed-top'>
+		<div id='nav' class='header fixed-top'>
 			<div class='header-bar'>
 				<img src='img/Ocular-Logo.png' width='120' class='logo'/>
 				<button type='button' name='button' class='menu-btn'><i class='fas fa-bars fa-3x'></i>Menu</button>
@@ -32,8 +32,12 @@
 			<ol class='menu' id='menu'>
 				<li id='navIndex' class='menu-item'>Home</li>
 				<li id='navDesigners' class='menu-item'>Designers</li>
-				<!-- <li class='menu-item'>Contact</li> -->
+				<li id="navContact" class="menu-item">Contact</li>
 			</ol>
+		</div>
+
+		<div class="scroll-down-btn-wrapper fixed-bottom">
+			<button type="button" name="button" class="scroll-up"><i class="fas fa-angle-up"></i></button>
 		</div>
 
 		<div id='sectIndex'>
@@ -42,7 +46,7 @@
                 <div class='main-image'>
                     <div class='transparent-layer'></div>
                     <div class='banner-content'>
-                      <h1 class='banner-title'>Hi, We're Ocular</h1>
+                      <h1 class='banner-title'>Hi, We're Ocular.</h1>
                       <p class='banner-text'>WEB STRATEGY BRAND DESIGN VIDEO</p>
                       <button type='button' name='button' class='scroll-down'>Find out more <i class='fas fa-angle-down'></i></button>
                     </div>
@@ -60,10 +64,20 @@
                 <!-- Our latest projects section -->
                 <h2 class='second-heading'>Our Latest Projects</h2>
                 <hr class='title-hr'/>
-                <div class='latest-projects'>
-                	<div class='project-indiviudal'>
+                <div class='row latest-projects'>
+                	<div class='col-sm project-indiviudal'>
                 		<div class='project-img' id='projectImg' title='Miss Monday'></div>
-                		<h3 class='project second-heading' id='projectTitle'>Miss Monday</h3>
+                		<h3 class='third-heading' id='projectTitle'>Ocular Christmas Present</h3>
+                	</div>
+
+					<div class='col-sm project-indiviudal'>
+                		<div class='project-img' id='projectImg2' title='Miss Monday'></div>
+                		<h3 class='third-heading' id='projectTitle2'>Miss Monday</h3>
+                	</div>
+
+					<div class='col-sm project-indiviudal'>
+                		<div class='project-img' id='projectImg3' title='Miss Monday'></div>
+                		<h3 class='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
                 	</div>
                 </div>
         	</div>
@@ -72,6 +86,7 @@
 		<div id='sectDesigners'>
 			<div id='desProfiles'></div>
 		</div>
+
 
 		<div id='sectContact'>
 			<div class='contact-wrapper'>

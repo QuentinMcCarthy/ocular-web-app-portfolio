@@ -10,7 +10,7 @@
   display: none; }
 
 .header-bar {
-  background-color: #FFFFFF;
+  background-color: white;
   overflow: auto;
   padding: 0.5em 1em; }
   .header-bar button {
@@ -22,8 +22,8 @@
   clear: both; }
 
 .menu-btn {
-  background-color: #FFFFFF;
-  border: #FFFFFF;
+  background-color: white;
+  border: white;
   font-weight: 300;
   font-size: 0.7em;
   padding: 3%;
@@ -37,7 +37,7 @@
   display: none;
   background-color: white;
   font-weight: 700;
-  font-size: 0.7em;
+  font-size: 0.6em;
   float: right;
   clear: both;
   list-style: none;
@@ -48,6 +48,17 @@
   text-transform: uppercase;
   padding: 1em;
   font-size: 1.25em; }
+
+.scroll-up {
+  padding: 0.2em 0.6em;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 36px;
+  font-size: 1em;
+  margin-bottom: 2.5em;
+  margin-right: 1.7em;
+  float: right; }
 
 .banner {
   height: 100vh;
@@ -62,7 +73,7 @@
 .transparent-layer {
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   opacity: .5; }
 
 .banner-content {
@@ -73,10 +84,11 @@
   width: 80%; }
 
 .banner-title {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.3em;
-  text-transform: uppercase; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3em; }
 
 .banner-text {
   color: #CCCCCC;
@@ -92,22 +104,19 @@
   font-size: 0.7em; }
 
 .second-heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
   margin-top: 0.8em;
-  font-size: 1.5em;
-  font-weight: 700;
-  font-family: 'Open-Sans', sans-serif; }
+  font-size: 1.5em; }
 
 .title-hr {
-  color: #000000;
-  background-color: #000000;
+  color: black;
+  background-color: black;
   border: 0;
   width: 90%;
   height: 3px;
   margin: 0; }
-
-.space {
-  margin: 0 2em; }
 
 .our-goal {
   display: flex;
@@ -120,10 +129,18 @@
   margin: 1em 0;
   font-size: 0.8em; }
 
+.third-heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin-top: 0.6em;
+  margin-bottom: 1.3em; }
+
 .project-img {
   height: 250px;
   width: 250px;
-  background-color: pink;
+  background-color: black;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg");
   background-size: cover;
   background-position: center; }
@@ -164,7 +181,7 @@
             #sectContact .contact-wrapper .contact-details .contact-icons ul li i {
               font-size: 35px;
               margin: 0 13px;
-              color: #FF0000; }
+              color: red; }
   #sectContact .contact-map {
     display: none;
     position: absolute;
@@ -209,17 +226,15 @@
     width: 33%; }
 
   #sectContact {
-    background-color: #000000; }
+    background-color: black; }
     #sectContact .contact-wrapper {
-      color: #FFFFFF; }
+      color: white; }
     #sectContact hr {
-      background-color: #FFFFFF !important; }
+      background-color: white !important; }
     #sectContact i {
-      color: #FFFFFF !important; }
+      color: white !important; }
 
   #secStatistics {
     width: 75vw; }
     #secStatistics .designer-charts {
       width: 100%; } }
-
-/*# sourceMappingURL=master.css.map */

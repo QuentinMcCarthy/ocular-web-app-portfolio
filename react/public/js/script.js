@@ -10,36 +10,35 @@ $(document).ready(function(){
 	$('#navIndex').click(function(){
 		$('#sectIndex').show();
 		$('#sectDesigners').hide();
-		$('#sectContact').hide();
-
-		$('#nav').show();
-		$('#menu').hide();
+        $('#sectContact').hide();
+        $('#menu').hide();
 	});
 
 	$('#navDesigners').click(function(){
+        $('#sectDesigners').show();
+        $('#sectIndex').hide();
+        $('#sectContact').hide();
+        $('#nav').hide();
+	});
+
+    $('#navContact').click(function(){
+        $('#sectContact').show();
 		$('#sectIndex').hide();
-		$('#sectContact').hide();
-		$('#sectDesigners').show();
-		$('#sectContact').hide();
+        $('#sectDesigners').hide();
+        $('#menu').hide();
+    });
 
-		$('#nav').hide();
-		$('#menu').hide();
-	});
+    $('.scroll-down').click(function(){
+        $('html, body').animate({
+            scrollTop:$('.our-goal').offset().top
+        }, 3000);
+ 	});
 
-	$('#navContact').click(function(){
-		$('#sectIndex').hide();
-		$('#sectDesigners').hide();
-		$('#sectContact').show();
-
-		$('#nav').show();
-		$('#menu').hide();
-	});
-
-	$(".scroll-down").click(function(){
-		$("html, body").animate({
-			scrollTop:$(".our-goal").offset().top
-		}, 3000);
-	});
+	$('.scroll-up').click(function(){
+        $('html, body').animate({
+            scrollTop:$('.banner').offset().top
+        }, 3000);
+ 	});
 
 	// View stats button
 	$('#viewStats').click(function() {
