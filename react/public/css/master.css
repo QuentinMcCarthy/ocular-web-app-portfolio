@@ -157,10 +157,14 @@
         line-height: 1.3; }
       #sectContact .contact-wrapper .contact-details .contact-icons {
         margin-top: 10%; }
-        #sectContact .contact-wrapper .contact-details .contact-icons i {
-          font-size: 35px;
-          margin: 0 13px;
-          color: #FF0000; }
+        #sectContact .contact-wrapper .contact-details .contact-icons ul {
+          list-style: none; }
+          #sectContact .contact-wrapper .contact-details .contact-icons ul li {
+            display: inline-block; }
+            #sectContact .contact-wrapper .contact-details .contact-icons ul li i {
+              font-size: 35px;
+              margin: 0 13px;
+              color: #FF0000; }
   #sectContact .contact-map {
     display: none;
     position: absolute;
