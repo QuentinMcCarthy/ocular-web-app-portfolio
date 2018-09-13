@@ -1,5 +1,14 @@
 @import '_variables.scss';
 
+@mixin projectLayout {
+	height: 250px;
+	width: 250px;
+	background-color: $secondaryColor;
+	background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -128,7 +137,7 @@
 
 .second-heading {
 	@include heading;
-	margin-top: 0.8em;
+	margin: 0;
 	font-size: 1.5em;
 }
 
@@ -137,8 +146,8 @@
 	background-color: $secondaryColor;
 	border: 0;
 	width: 90%;
-	height: 3px;
-    margin: 0;
+	height: 2px;
+    margin: 0.3em 0;
 }
 
 .our-goal {
@@ -149,7 +158,7 @@
 	height: 380px;
 }
 
-.goals-text {
+.body-text {
 	margin: 1em 0;
 	font-size: 0.8em;
 }
@@ -162,12 +171,7 @@
 }
 
 .project-img {
-    height: 250px;
-    width: 250px;
-    background-color: $secondaryColor;
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg');
-    background-size: cover;
-    background-position: center;
+	@include projectLayout
 }
 
 // DESIGNERS -------------------------------------------------------------------
@@ -218,8 +222,8 @@
 					li {
 						display: inline-block;
 						i {
-							font-size: 35px;
-							margin: 0 13px;
+							font-size: 1.5em;
+							margin-right: 0.6em;
 							color: $tertiaryColor;
 						}
 						.fa-facebook {
@@ -232,6 +236,8 @@
 	}
 
 	.contact-map {
+		width: 100%;
+	    height: 200px;
 		display: none;
 		position: absolute;
 		bottom: 0;
