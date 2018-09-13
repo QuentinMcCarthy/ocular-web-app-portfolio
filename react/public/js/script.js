@@ -20,7 +20,7 @@ $(document).ready(function(){
         $('#sectIndex').hide();
         $('#sectHome').hide();
         $('#sectContact').hide();
-        $('#menu').hide();
+        $('#nav').hide();
 	});
 
     $('#navContact').click(function(){
@@ -34,6 +34,12 @@ $(document).ready(function(){
     $('.scroll-down').click(function(){
         $('html, body').animate({
             scrollTop:$('.our-goal').offset().top
+        }, 3000);
+ 	});
+
+	$('.scroll-up').click(function(){
+        $('html, body').animate({
+            scrollTop:$('.banner').offset().top
         }, 3000);
  	});
 
