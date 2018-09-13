@@ -16,16 +16,34 @@ $(document).ready(function(){
 
 	$('#navDesigners').click(function(){
 		$('#sectIndex').hide();
+		$('#sectContact').hide();
 		$('#sectDesigners').show();
 
 		$('#menu').hide();
 	});
 
-  $(".scroll-down").click(function(){
-      $("html, body").animate({
-          scrollTop:$(".our-goal").offset().top
-      }, 3000);
-  });
+	$('#navContact').click(function() {
+		$('#sectIndex').hide();
+		$('#sectDesigners').hide();
+		// $('#sectContact').show();
+		$('#secStatistics').show();
+		$('#menu').hide();
+	})
+
+	$(".scroll-down").click(function(){
+	    $("html, body").animate({
+	        scrollTop:$(".our-goal").offset().top
+	    }, 3000);
+	});
+
+	$('#viewStats').click(function() {
+		$('#sectDesigners').hide();
+		$('.header-bar').hide();
+		$('#secStatistics').show();
+	})
+  //view stats button
+
+
 
 	$.ajax({
 		type: 'GET',

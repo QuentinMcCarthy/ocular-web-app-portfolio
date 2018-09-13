@@ -5,13 +5,16 @@
   font-family: 'Open Sans', sans-serif; }
 
 #sectDesigners,
-#sectContact {
+#sectContact,
+#secStatistics {
   display: none; }
 
 .header-bar {
   background-color: #FFFFFF;
   overflow: auto;
   padding: 0.5em 1em; }
+  .header-bar button {
+    outline: none; }
 
 .logo {
   padding: 8% 0;
@@ -131,36 +134,54 @@
 .project-indiviudal {
   margin: 0 auto; }
 
-.contact-wrapper {
-  width: 80vw;
-  height: 350px;
-  padding-top: 50px;
-  margin: 0 auto; }
-  .contact-wrapper .contact {
-    width: 100%; }
-    .contact-wrapper .contact hr {
-      display: block;
-      margin-top: 5px;
-      border: none;
-      height: 2px;
-      background-color: black; }
-  .contact-wrapper .contact-details {
-    width: 100%;
-    height: 100%;
-    margin-top: 10%; }
-    .contact-wrapper .contact-details #contactInfoP {
-      line-height: 1.3; }
-    .contact-wrapper .contact-details .contact-icons {
+#sectContact {
+  margin-top: 18%; }
+  #sectContact .contact-wrapper {
+    width: 80vw;
+    height: 350px;
+    padding-top: 50px;
+    margin: 0 auto; }
+    #sectContact .contact-wrapper .contact {
+      width: 100%; }
+      #sectContact .contact-wrapper .contact hr {
+        display: block;
+        margin-top: 5px;
+        border: none;
+        height: 2px;
+        background-color: black; }
+    #sectContact .contact-wrapper .contact-details {
+      width: 100%;
+      height: 100%;
       margin-top: 10%; }
-      .contact-wrapper .contact-details .contact-icons i {
-        font-size: 35px;
-        margin: 0 13px;
-        color: red; }
+      #sectContact .contact-wrapper .contact-details #contactInfoP {
+        line-height: 1.3; }
+      #sectContact .contact-wrapper .contact-details .contact-icons {
+        margin-top: 10%; }
+        #sectContact .contact-wrapper .contact-details .contact-icons i {
+          font-size: 35px;
+          margin: 0 13px;
+          color: #FF0000; }
+  #sectContact .contact-map {
+    display: none;
+    position: absolute;
+    bottom: 0; }
 
-.contact-map {
-  display: none;
-  position: absolute;
-  bottom: 0; }
+#secStatistics {
+  width: 87vw;
+  margin: 0 auto;
+  margin-top: 10%; }
+  #secStatistics .close-icon i {
+    font-size: 45px; }
+  #secStatistics .stat {
+    margin-top: 8%; }
+    #secStatistics .stat hr {
+      width: 100%; }
+    #secStatistics .stat .designer-charts {
+      margin: auto;
+      margin-top: 13%;
+      width: 300px;
+      height: 400px;
+      background-color: red; }
 
 @media only screen and (min-width: 600px) {
   .contact-wrapper {
@@ -173,6 +194,28 @@
       width: 52%;
       padding-left: 30px; }
       .contact-wrapper .contact-details i {
-        margin: 0px 4px !important; } }
+        margin: 0px 4px !important; }
+
+  #secStatistics {
+    width: 75vw; }
+    #secStatistics .designer-charts {
+      width: 100%; } }
+@media only screen and (min-width: 1024px) {
+  .menu {
+    width: 33%; }
+
+  #sectContact {
+    background-color: #000000; }
+    #sectContact .contact-wrapper {
+      color: #FFFFFF; }
+    #sectContact hr {
+      background-color: #FFFFFF !important; }
+    #sectContact i {
+      color: #FFFFFF !important; }
+
+  #secStatistics {
+    width: 75vw; }
+    #secStatistics .designer-charts {
+      width: 100%; } }
 
 /*# sourceMappingURL=master.css.map */
