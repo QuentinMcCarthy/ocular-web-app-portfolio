@@ -57,14 +57,16 @@ $(document).ready(function(){
 			var initProfile = data[0].behance;
 
 			$.ajax({
-				type: "GET",
-				url: "http://192.168.33.10:4000/behance/user/"+initProfile+"/projects/projects",
-				dataType: "json",
+				type: 'GET',
+				url: 'http://192.168.33.10:4000/behance/user/'+initProfile+'/projects',
+				dataType: 'json',
 				success: function(projData){
 					console.log(projData);
+
+					setProfileBackground(projData.projects[0].covers.original);
 				},
 				error: function(projErr){
-					console.log("Error "+projErr.status);
+					console.log('Error '+projErr.status);
 					console.log(projErr);
 				}
 			});
