@@ -35,7 +35,14 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop:$('.our-goal').offset().top
         }, 3000);
-  });
+ 	});
+
+	$('#viewStats').click(function() {
+		$('#sectDesigners').hide();
+		$('.header-bar').hide();
+		$('#secStatistics').show();
+	})
+   //view stats button
 
 	$.ajax({
 		type: 'GET',
