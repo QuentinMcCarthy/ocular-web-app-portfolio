@@ -9,6 +9,7 @@ class App extends Component {
 		return (
 			<div>
 				<div className='designer-profile position-relative'>
+					<div className='profile-bg-image'></div>
 					<div className='splitv-third w-100'></div>
 					<div className='splitv-third w-100 d-flex align-items-center flex-column'>
 						<div className='profile-image h-100'>
