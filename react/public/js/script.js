@@ -25,8 +25,7 @@ $(document).ready(function(){
 	$('#navContact').click(function() {
 		$('#sectIndex').hide();
 		$('#sectDesigners').hide();
-		// $('#sectContact').show();
-		$('#secStatistics').show();
+		$('#sectContact').show();
 		$('#menu').hide();
 	})
 
