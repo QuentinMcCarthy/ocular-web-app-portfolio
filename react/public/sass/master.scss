@@ -198,16 +198,10 @@ $tertiaryColor: #FF0000;
 
 		  	.contact-icons {
 			    margin-top: 10%;
-				ul {
-					list-style: none;
-					li{
-						display: inline-block;
-						i {
-							font-size: 35px;
-							margin: 0 13px;
-							color: $tertiaryColor;
-						}
-					}
+			    i {
+				  	font-size: 35px;
+					margin: 0 13px;
+				  	color: $tertiaryColor;
 				}
 		   	}
 	 	}
