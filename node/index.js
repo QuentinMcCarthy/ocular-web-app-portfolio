@@ -37,9 +37,9 @@ app.get(`/behance/user/:user`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	})
 });
@@ -55,9 +55,9 @@ app.get(`/behance/user/:user/projects`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	})
 });
@@ -74,9 +74,9 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	});
 })
