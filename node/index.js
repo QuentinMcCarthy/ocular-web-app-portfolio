@@ -37,9 +37,9 @@ app.get(`/behance/user/:user`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	})
 });
@@ -55,9 +55,9 @@ app.get(`/behance/user/:user/projects`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	})
 });
@@ -74,15 +74,15 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 		// Set the header to specify JSON content
 		res.setHeader("Content-Type", "application/json");
 		if(err){
-			res.send(JSON.stringify(err));
+			res.send(err);
 		} else{
-			res.send(JSON.stringify(response));
+			res.send(response);
 		}
 	});
 })
 
 // Routes for the node_modules
-app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/dist/popper.min.js`)));
+app.use(`/popper`, express.static(path.join(__dirname, `node_modules/popper.js/dist/umd/popper.min.js`)));
 app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
 app.use(`/gmaps`, express.static(path.join(__dirname, `node_modules/google-maps/lib/Google.min.js`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));

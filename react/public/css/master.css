@@ -160,6 +160,10 @@
     margin: 0 auto; }
     #sectContact .contact-wrapper .contact {
       width: 100%; }
+      #sectContact .contact-wrapper .contact h2 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase; }
       #sectContact .contact-wrapper .contact hr {
         display: block;
         margin-top: 5px;
