@@ -6,55 +6,36 @@ module.exports = function(grunt){
 		sass: {
 			src: {
 				files: {
-					"src/css/index.css": [
-						"src/sass/index.scss",
-						"src/sass/master.scss"
-					]
+					'src/css/index.css': 'src/sass/index.scss'
 				}
 			}
 		},
 		cssmin: {
 			src: {
-				files: [{
-					expand: true,
-					cwd: 'src/css',
-					src: ['*.css', '!*.min.css'],
-					dest: 'src/css',
-					ext: '.min.css'
-				}]
+				files: {
+					'src/css/index.min.css': 'src/css/index.css'
+				}
 			}
 		},
 		jshint: {
-			public: ['rc/js/script.js']
+			src: ['src/js/script.js']
 		},
 		uglify: {
-			public: {
+			src: {
 				files: {
-					'src/js/script.min.js': ['src/js/script.js']
+					'src/js/script.min.js': 'src/js/script.js'
 				}
 			}
 		},
 		watch: {
-			pubsass: {
-				files: ['public/sass/master.scss'],
-				tasks: ['sass']
-			},
-			srcsass: {
+			sass: {
 				files: ['src/sass/*.scss'],
-				tasks: ['sass']
+				tasks: ['sass', 'cssmin']
 			},
-			// pubcss: {
-			// 	files: ['public/css/master.css'],
-			// 	tasks: ['cssmin']
-			// },
-			// srccss: {
-			// 	files: ['src/css/*.css', '!src/css/*.min.css'],
-			// 	tasks: ['cssmin']
-			// },
-			// pubjs: {
-			// 	files: ['public/js/script.js'],
-			// 	tasks: ['jshint', 'uglify']
-			// }
+			js: {
+				files: ['src/js/script.js'],
+				tasks: ['jshint', 'uglify']
+			}
 		}
 	});
 

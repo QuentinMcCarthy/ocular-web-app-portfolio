@@ -1,14 +1,5 @@
 @import '_variables.scss';
 
-@mixin projectLayout {
-	height: 250px;
-	width: 250px;
-	background-color: $secondaryColor;
-	background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg');
-	background-size: cover;
-	background-position: center;
-}
-
 * {
 	padding: 0;
 	margin: 0;

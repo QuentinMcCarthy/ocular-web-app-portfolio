@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+$(document).ready(function(){
 	// $('.menu-btn').click(function(){
 	// 	$('.menu').toggle();
 	// });
@@ -78,6 +78,6 @@ jQuery(document).ready(function(){
 	// });
 });
 
-function setProfileBackground(image){
-
-}
+// function setProfileBackground(image){
+//
+// }
