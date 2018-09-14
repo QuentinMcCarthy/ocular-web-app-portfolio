@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Designers extends Component {
 	render(){
 		return (
-			<div id='sectDesigners'>
+			<div id='sectDesigners' style={this.props.designersOpen}>
 				<div className='designer-profile position-relative'>
 					<div className='profile-bg-image'></div>
 					<div className='splitv-third w-100'></div>

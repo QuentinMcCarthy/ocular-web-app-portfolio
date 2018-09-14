@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Contact extends Component {
 	render(){
 		return (
-			<div id='sectContact'>
+			<div id='sectContact' style={this.props.contactOpen}>
 				<div className='contact-wrapper'>
 					<div className='contact'>
 						<h2 className='second-heading'>Contact Us</h2>

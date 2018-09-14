@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Home extends Component {
 	render(){
 		return (
-			<div id='sectIndex'>
+			<div id='sectIndex' style={this.props.homeOpen}>
 	            {/* Banner */}
 	            <div className='banner'>
 	                <div className='main-image'>

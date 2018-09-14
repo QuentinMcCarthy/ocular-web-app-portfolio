@@ -1,33 +1,4 @@
 $(document).ready(function(){
-	// $('.menu-btn').click(function(){
-	// 	$('.menu').toggle();
-	// });
-	// $('.menu-btn').click(function(){
-	// 	$('.menu-btn').toggleClass('btnMenuClicked');
-	// });
-	//
-	// // Temporary navigation
-	// $('#navIndex').click(function(){
-	// 	$('#sectIndex').show();
-	// 	$('#sectDesigners').hide();
-    //     $('#sectContact').hide();
-    //     $('#menu').hide();
-	// });
-	//
-	// $('#navDesigners').click(function(){
-    //     $('#sectDesigners').show();
-    //     $('#sectIndex').hide();
-    //     $('#sectContact').hide();
-    //     $('#nav').hide();
-	// });
-	//
-    // $('#navContact').click(function(){
-    //     $('#sectContact').show();
-	// 	$('#sectIndex').hide();
-    //     $('#sectDesigners').hide();
-    //     $('#menu').hide();
-    // });
-	//
     // $('.scroll-down').click(function(){
     //     $('html, body').animate({
     //         scrollTop:$('.our-goal').offset().top
@@ -39,13 +10,6 @@ $(document).ready(function(){
     //         scrollTop:$('.banner').offset().top
     //     }, 3000);
  	// });
-	//
-	// // View stats button
-	// $('#viewStats').click(function() {
-	// 	$('#sectDesigners').hide();
-	// 	$('.header-bar').hide();
-	// 	$('#secStatistics').show();
-	// });
 	//
 	// $.ajax({
 	// 	type: 'GET',

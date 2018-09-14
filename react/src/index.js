@@ -22,24 +22,32 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			menuOpen: 'display: none;'
+			navOpen: {display: 'none'},
+			homeOpen: {display: 'block'},
+			designersOpen: {display: 'none'},
+			contactOpen: {display: 'none'}
 		}
+
+		this.navToggle = this.navToggle.bind(this);
+		this.navToHome = this.navToHome.bind(this);
+		this.navToDesigners = this.navToDesigners.bind(this);
+		this.navToContact = this.navToContact.bind(this);
 	}
 
-	render() {
+	render(){
 		return (
 			<div>
 				{/* Nav */}
 				<div id='nav' className='header fixed-top'>
 					<div className='header-bar'>
 						<img alt='Ocular Logo' src='img/Ocular-Logo.png' width='120' className='logo'/>
-						<button type='button' name='button' className='menu-btn'><i className='fas fa-bars fa-3x'></i>Menu</button>
+						<button type='button' name='button' className='menu-btn' onClick={this.navToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
 					</div>
 
-					<ul className='menu' id='menu'>
-						<li id='navIndex' className='menu-item'>Home</li>
-						<li id='navDesigners' className='menu-item'>Designers</li>
-						<li id='navContact' className='menu-item'>Contact</li>
+					<ul className='menu' id='menu' style={this.state.navOpen}>
+						<li id='navIndex' className='menu-item' onClick={this.navToHome}>Home</li>
+						<li id='navDesigners' className='menu-item' onClick={this.navToDesigners}>Designers</li>
+						<li id='navContact' className='menu-item' onClick={this.navToContact}>Contact</li>
 					</ul>
 				</div>
 
@@ -47,11 +55,85 @@ class App extends Component {
 					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
 				</div>
 
-				<Home />
-				<Designers />
-				<Contact />
+				<Home
+					{...this.state}
+				/>
+				<Designers
+					{...this.state}
+				/>
+				<Contact
+					{...this.state}
+				/>
 			</div>
 		);
+	}
+
+	navToggle(e){
+		e.preventDefault();
+
+		if(this.state.navOpen.display === 'none'){
+			this.setState({
+				navOpen: {display: 'block'}
+			});
+		} else{
+			this.setState({
+				navOpen: {display: 'none'}
+			});
+		}
+	}
+
+	navToHome(e){
+		e.preventDefault();
+
+		if(this.state.homeOpen.display === 'none'){
+			this.setState({
+				navOpen: {display: 'none'},
+				homeOpen: {display: 'block'},
+				designersOpen: {display: 'none'},
+				contactOpen: {display: 'none'}
+			});
+		} else{
+			this.setState({
+				navOpen: {display: 'none'},
+				homeOpen: {display: 'none'}
+			});
+		}
+	}
+
+	navToDesigners(e){
+		e.preventDefault();
+
+		if(this.state.designersOpen.display === 'none'){
+			this.setState({
+				navOpen: {display: 'none'},
+				homeOpen: {display: 'none'},
+				designersOpen: {display: 'block'},
+				contactOpen: {display: 'none'}
+			});
+		} else{
+			this.setState({
+				navOpen: {display: 'none'},
+				designersOpen: {display: 'none'}
+			});
+		}
+	}
+
+	navToContact(e){
+		e.preventDefault();
+
+		if(this.state.contactOpen.display === 'none'){
+			this.setState({
+				navOpen: {display: 'none'},
+				homeOpen: {display: 'none'},
+				designersOpen: {display: 'none'},
+				contactOpen: {display: 'block'}
+			});
+		} else{
+			this.setState({
+				navOpen: {display: 'none'},
+				contactOpen: {display: 'none'}
+			});
+		}
 	}
 }
 
