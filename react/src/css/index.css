@@ -66,7 +66,7 @@
 
 .main-image {
   height: 100vh;
-  background-image: url("../img/mainImage.png");
+  background-image: url("http://192.168.33.10:3000/img/mainImage.png");
   background-position: center;
   background-size: cover; }
 
