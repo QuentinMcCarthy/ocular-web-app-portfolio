@@ -8,7 +8,7 @@ module.exports = function(grunt){
 				files: {
 					"src/css/index.css": [
 						"src/sass/index.scss",
-						"src/sass/index.css"
+						"src/sass/master.scss"
 					]
 				}
 			}
