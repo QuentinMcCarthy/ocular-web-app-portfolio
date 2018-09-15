@@ -83,7 +83,7 @@
 
 .main-image {
 	height: 100vh;
-	background-image: url('http://192.168.33.10:3000/img/mainImage.png');
+	background-image: url('http://192.168.33.10:3000/img/main_image.png');
 	background-position: center;
 	background-size: cover;
 }
@@ -112,6 +112,7 @@
 .banner-text {
 	color: #CCCCCC;
 	font-size: 0.67em;
+	text-transform: uppercase;
 }
 
 .scroll-down {
@@ -163,6 +164,11 @@
 	@include projectLayout
 }
 
+.behance-logo {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
 // DESIGNERS -------------------------------------------------------------------
 
 .latest-projects {
@@ -172,7 +178,6 @@
 .project-indiviudal{
     margin: 0 auto;
 }
-
 
 //CONTACTS ---------------------------------------------------------------------
 
@@ -262,6 +267,61 @@
 }
 
 @media only screen and (min-width: 600px) {
+
+	.header-bar {
+		height: 10vh;
+		.logo {
+			padding: 4% 0;
+		}
+		.menu-btn {
+			padding: 2%;
+		}
+	}
+
+	.menu {
+		width: 40%;
+		font-size: 0.77em;
+		.menu-item {
+			padding: 1.9em 1em 0.8em;
+			font-weight: 800;
+		}
+	}
+
+	.scroll-up {
+		margin-bottom: 3.5em;
+    	margin-right: 3em;
+	}
+
+	.banner {
+		.banner-title {
+			font-size: 2.3em;
+			font-weight: 700;
+		}
+
+		.banner-text {
+			word-spacing: 36px;
+		}
+
+		.scroll-down {
+			margin-top: 4.4em;
+			font-size: 0.8em;
+			padding: 1.4em 5.7em;
+		}
+	}
+
+	.our-goal-text {
+	 	margin-top: 4em;
+		width: 370px;
+	}
+
+	.latest-projects-hr {
+		width: 40%;
+	}
+
+	.latest-projects {
+		margin-top: 3em;
+	}
+
     .contact-wrapper {
 		width: 70vw;
 		display: flex;
