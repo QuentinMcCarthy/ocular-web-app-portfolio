@@ -26,7 +26,8 @@ class App extends Component {
 			navMenuOpen: { display: 'none' },
 			homeOpen: { display: 'block' },
 			designersOpen: { display: 'none' },
-			contactOpen: { display: 'none' }
+			contactOpen: { display: 'none' },
+			scrollUpDisply: { display: 'block' }
 		}
 
 		this.navMenuToggle = this.navMenuToggle.bind(this);
@@ -52,7 +53,7 @@ class App extends Component {
 					</ul>
 				</div>
 
-				<div className='scroll-up-btn-wrapper fixed-bottom'>
+				<div className='scroll-up-btn-wrapper fixed-bottom' style={this.state.scrollUpDisply}>
 					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
 				</div>
 
@@ -130,7 +131,8 @@ class App extends Component {
 				navMenuOpen: { display: 'none' },
 				homeOpen: { display: 'none' },
 				designersOpen: { display: 'none' },
-				contactOpen: { display: 'block' }
+				contactOpen: { display: 'block' },
+				scrollUpDisply: { display: 'none' }
 			});
 		} else{
 			this.setState({

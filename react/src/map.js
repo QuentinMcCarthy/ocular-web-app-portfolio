@@ -6,7 +6,7 @@ class GoogleMapsContainer extends React.Component {
 
   render() {
 	  	const pos = {
-		 	lat :-41.327793 ,
+		 	lat :-41.328075 ,
 			lng:174.799973
 	  	}
     return (
@@ -14,10 +14,11 @@ class GoogleMapsContainer extends React.Component {
         google = { this.props.google }
 		disableDefaultUI = {true}
         zoom = { 14 }
-        initialCenter = {{ lat: -41.326947, lng: 174.795344 }}
+        initialCenter = {{ lat: -41.328075, lng: 174.797316 }}
       >
         <Marker
-          position = {pos}
+			animation = {this.props.google.maps.Animation.DROP}
+          	position = {pos}
         />
       </Map>
     );
