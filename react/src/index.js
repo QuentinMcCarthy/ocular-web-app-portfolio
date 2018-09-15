@@ -51,7 +51,7 @@ class App extends Component {
 					</ul>
 				</div>
 
-				<div className='scroll-down-btn-wrapper fixed-bottom'>
+				<div className='scroll-up-btn-wrapper fixed-bottom'>
 					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
 				</div>
 

@@ -10,7 +10,7 @@
   display: none; }
 
 .header-bar {
-  background-color: white;
+  background-color: #FFFFFF;
   overflow: auto;
   padding: 0.5em 1em; }
   .header-bar button {
@@ -22,8 +22,8 @@
   clear: both; }
 
 .menu-btn {
-  background-color: white;
-  border: white;
+  background-color: #FFFFFF;
+  border: #FFFFFF;
   font-weight: 300;
   font-size: 0.7em;
   padding: 3%;
@@ -35,7 +35,7 @@
 
 .menu {
   display: none;
-  background-color: white;
+  background-color: #FFFFFF;
   font-weight: 700;
   font-size: 0.6em;
   float: right;
@@ -51,8 +51,8 @@
 
 .scroll-up {
   padding: 0.2em 0.6em;
-  color: white;
-  background-color: black;
+  color: #FFFFFF;
+  background-color: #000000;
   border: none;
   border-radius: 36px;
   font-size: 1em;
@@ -73,7 +73,7 @@
 .transparent-layer {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000000;
   opacity: .5; }
 
 .banner-content {
@@ -87,7 +87,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
   font-size: 1.3em; }
 
 .banner-text {
@@ -96,11 +96,11 @@
   text-transform: uppercase; }
 
 .scroll-down {
-  background-color: black;
+  background-color: #000000;
   border: none;
   padding: 1em 4em;
   margin-top: 0.9em;
-  color: white;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-size: 0.7em; }
 
@@ -112,8 +112,8 @@
   font-size: 1.5em; }
 
 .title-hr {
-  color: black;
-  background-color: black;
+  color: #000000;
+  background-color: #000000;
   border: 0;
   width: 90%;
   height: 2px;
@@ -141,7 +141,7 @@
 .project-img {
   height: 250px;
   width: 250px;
-  background-color: black;
+  background-color: #000000;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg");
   background-size: cover;
   background-position: center; }
@@ -190,7 +190,7 @@
             #sectContact .contact-wrapper .contact-details .contact-icons ul li i {
               font-size: 1.5em;
               margin-right: 0.6em;
-              color: red; }
+              color: #FF0000; }
             #sectContact .contact-wrapper .contact-details .contact-icons ul li .fa-facebook {
               margin-left: 0; }
   #sectContact .contact-map {
@@ -215,18 +215,46 @@
       margin-top: 13%;
       width: 300px;
       height: 400px;
-      background-color: red; }
+      background-color: #FF0000; }
 
 @media only screen and (min-width: 600px) {
   .header-bar {
-    height: 9vh; }
+    height: 10vh; }
     .header-bar .logo {
       padding: 4% 0; }
     .header-bar .menu-btn {
       padding: 2%; }
 
+  .menu {
+    width: 40%;
+    font-size: 0.77em; }
+    .menu .menu-item {
+      padding: 1.9em 1em 0.8em;
+      font-weight: 800; }
+
+  .scroll-up {
+    margin-bottom: 3.5em;
+    margin-right: 3em; }
+
+  .banner .banner-title {
+    font-size: 2.3em;
+    font-weight: 700; }
+  .banner .banner-text {
+    word-spacing: 36px; }
+  .banner .scroll-down {
+    margin-top: 4.4em;
+    font-size: 0.8em;
+    padding: 1.4em 5.7em; }
+
   .our-goal-text {
-    margin-top: 4em; }
+    margin-top: 4em;
+    width: 370px; }
+
+  .latest-projects-hr {
+    width: 40%; }
+
+  .latest-projects {
+    margin-top: 3em; }
 
   .contact-wrapper {
     width: 70vw;
@@ -249,13 +277,13 @@
     width: 33%; }
 
   #sectContact {
-    background-color: black; }
+    background-color: #000000; }
     #sectContact .contact-wrapper {
-      color: white; }
+      color: #FFFFFF; }
     #sectContact hr {
-      background-color: white !important; }
+      background-color: #FFFFFF !important; }
     #sectContact i {
-      color: white !important; }
+      color: #FFFFFF !important; }
 
   #secStatistics {
     width: 75vw; }
@@ -275,3 +303,5 @@
 
 .splitv-third {
   height: 33%; }
+
+/*# sourceMappingURL=index.css.map */

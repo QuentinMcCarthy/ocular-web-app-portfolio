@@ -32,11 +32,11 @@ class Home extends Component {
 
 	                {/* Our latest projects section */}
 	                <h2 className='second-heading'>Our Latest Projects</h2>
-	                <hr className='title-hr'/>
+	                <hr className='title-hr latest-projects-hr'/>
 	                <div className='row latest-projects'>
 	                	<div className='col-sm project-indiviudal'>
 	                		<div className='project-img' id='projectImg' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle'>Ocular Christmas Present</h3>
+	                		<h3 className='third-heading' id='projectTitle'>Ocular - Christmas Present</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
