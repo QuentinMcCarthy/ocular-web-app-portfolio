@@ -78,11 +78,11 @@ class Designers extends Component {
 			<div id='sectDesigners' style={this.props.designersOpen}>
 				<div className='designer-profile position-relative'>
 					<div className='profile-bg-image'></div>
-					<div className='splitv-third w-100'></div>
-					<div className='splitv-third w-100 d-flex align-items-center flex-column'>
+					<div className='splitv-third position-relative w-100'></div>
+					<div className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 						<div className='profile-image h-100' style={this.state.designerPic}></div>
 					</div>
-					<div className='splitv-third w-100'></div>
+					<div className='splitv-third position-relative w-100'></div>
 				</div>
 			</div>
 		)
