@@ -80,7 +80,7 @@ class Designers extends Component {
 				<div className='designer-profile position-relative'>
 					<div className='profile-bg-image'></div>
 					<div className='splitv-third position-relative w-100'>
-						<button type='button' name='button' className='scroll-left'><i className='fas fa-angle-left'></i></button>
+						<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}><i className='fas fa-angle-left'></i></button>
 					</div>
 					<div className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 						<div className='profile-image h-100' style={this.state.designerPic}></div>
