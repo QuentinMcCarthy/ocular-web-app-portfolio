@@ -78,7 +78,7 @@
 
 .banner {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 }
 
 .main-image {
@@ -141,6 +141,7 @@
 }
 
 .our-goal {
+	padding: 0 15px;
 	display: flex;
 	align-content: center;
 	flex-direction: column;
@@ -272,12 +273,12 @@
 @media only screen and (min-width: 600px) {
 
 	.header-bar {
-		height: 10vh;
+		height: 90px;
 		.logo {
-			padding: 4% 0;
+			padding: 1.7em 0;
 		}
 		.menu-btn {
-			padding: 2%;
+			padding: 1.2em;
 		}
 	}
 
@@ -312,10 +313,17 @@
 		}
 	}
 
-	.our-goal-text {
-	 	margin-top: 4em;
-		width: 370px;
+	.our-goal {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 720px;
+
+		.our-goal-text {
+		 	margin-top: 4em;
+			width: 370px;
+		}
 	}
+
 
 	.latest-projects-hr {
 		width: 40%;
@@ -349,8 +357,43 @@
 
 }
 @media only screen and (min-width: 1024px){
+
 	.menu {
 		width: 33%;
+	}
+
+	.header-bar {
+		height: 90px;
+		.logo {
+			margin-left: 2em;
+			padding: 1.6em 0;;
+		}
+		.menu-btn {
+			padding: 1em;
+		}
+	}
+
+	.our-goal {
+		padding: 0 10em;
+		margin-bottom: 7em;
+		max-width: none;
+		background-color: $secondaryColor;
+		color: $primaryColor;
+		.title-hr {
+			color: $primaryColor;
+			background-color: $primaryColor;
+
+		}
+	}
+
+	.latest-projects {
+		margin-bottom: 2em;
+		.project-indiviudal {
+			padding-left: 0;
+		}
+		.col-sm {
+			width: 100px;
+		}
 	}
 
 	#sectContact {
