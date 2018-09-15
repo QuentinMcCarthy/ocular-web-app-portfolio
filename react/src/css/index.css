@@ -260,4 +260,14 @@
 .splitv-third {
   height: 33%; }
 
+.scroll-left {
+  padding: 0.2em 0.6em;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+  border-radius: 36px;
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-left: 0.7em; }
+
 /*# sourceMappingURL=index.css.map */
