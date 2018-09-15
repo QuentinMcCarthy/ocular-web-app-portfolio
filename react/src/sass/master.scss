@@ -185,7 +185,7 @@
 	margin-top: 18%;
 	.contact-wrapper {
 		width: 80vw;
-		height: 350px;
+		height: 50vh;
 		padding-top: 50px;
 		margin: 0 auto;
 	  	.contact {
@@ -228,13 +228,16 @@
 		   	}
 	 	}
 	}
-
 	.contact-map {
-		width: 100%;
-	    height: 200px;
-		display: none;
+		width: 100vw;
+		height: 40vh;
+		background-color: red;
 		position: absolute;
-		bottom: 0;
+		.google-map-div {
+			height: 100%;
+			width: 100%;
+		}
+
 	}
 
 }

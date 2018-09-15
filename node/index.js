@@ -14,6 +14,12 @@ app.use(cors());
 const behance = new Behance({"client_id": `${config.behanceKey}`});
 Behance.initOptions();
 
+// Google Map module setup
+const googleMaps = require('@google/maps').createClient({
+	key: `AIzaSyDDZDbzY30ZhRhi2S4fER5I1HQbskuAs_U`,
+	Promise: Promise 
+});
+
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
 	next();
@@ -24,6 +30,20 @@ app.get(`/`, function(req,res){
 	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
 	console.log("Redirect to React server http://192.168.33.10:3000");
 	res.end();
+});
+
+// Google Map rquest
+
+googleMaps.geocode({
+  address: '7/68 Kingsford Smith St, Rongotai, Wellington 6022'
+}, function(err, response) {
+  	res.setHeader("Content-Type", "application/json");
+	if(err){
+		res.send(err);
+	} else{
+		res.send(response);
+	}
+
 });
 
 // Behance request for userdata
