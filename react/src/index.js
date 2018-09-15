@@ -22,13 +22,14 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			navOpen: {display: 'none'},
-			homeOpen: {display: 'block'},
-			designersOpen: {display: 'none'},
-			contactOpen: {display: 'none'}
+			navHide: { display: 'block' },
+			navMenuOpen: { display: 'none' },
+			homeOpen: { display: 'block' },
+			designersOpen: { display: 'none' },
+			contactOpen: { display: 'none' }
 		}
 
-		this.navToggle = this.navToggle.bind(this);
+		this.navMenuToggle = this.navMenuToggle.bind(this);
 		this.navToHome = this.navToHome.bind(this);
 		this.navToDesigners = this.navToDesigners.bind(this);
 		this.navToContact = this.navToContact.bind(this);
@@ -38,13 +39,13 @@ class App extends Component {
 		return (
 			<div>
 				{/* Nav */}
-				<div id='nav' className='header fixed-top'>
+				<div id='nav' className='header fixed-top' style={this.state.navHide}>
 					<div className='header-bar'>
 						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo'/>
-						<button type='button' name='button' className='menu-btn' onClick={this.navToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
+						<button type='button' name='button' className='menu-btn' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
 					</div>
 
-					<ul className='menu' id='menu' style={this.state.navOpen}>
+					<ul id='menu' className='menu' style={this.state.navMenuOpen}>
 						<li id='navIndex' className='menu-item' onClick={this.navToHome}>Home</li>
 						<li id='navDesigners' className='menu-item' onClick={this.navToDesigners}>Designers</li>
 						<li id='navContact' className='menu-item' onClick={this.navToContact}>Contact</li>
@@ -68,16 +69,16 @@ class App extends Component {
 		);
 	}
 
-	navToggle(e){
+	navMenuToggle(e){
 		e.preventDefault();
 
-		if(this.state.navOpen.display === 'none'){
+		if(this.state.navMenuOpen.display === 'none'){
 			this.setState({
-				navOpen: {display: 'block'}
+				navMenuOpen: { display: 'block' }
 			});
 		} else{
 			this.setState({
-				navOpen: {display: 'none'}
+				navMenuOpen: { display: 'none' }
 			});
 		}
 	}
@@ -87,15 +88,16 @@ class App extends Component {
 
 		if(this.state.homeOpen.display === 'none'){
 			this.setState({
-				navOpen: {display: 'none'},
-				homeOpen: {display: 'block'},
-				designersOpen: {display: 'none'},
-				contactOpen: {display: 'none'}
+				navHide: { display: 'block' },
+				navMenuOpen: { display: 'none' },
+				homeOpen: { display: 'block' },
+				designersOpen: { display: 'none' },
+				contactOpen: { display: 'none' }
 			});
 		} else{
 			this.setState({
-				navOpen: {display: 'none'},
-				homeOpen: {display: 'none'}
+				navMenuOpen: { display: 'none' },
+				homeOpen: { display: 'none' }
 			});
 		}
 	}
@@ -105,15 +107,16 @@ class App extends Component {
 
 		if(this.state.designersOpen.display === 'none'){
 			this.setState({
-				navOpen: {display: 'none'},
-				homeOpen: {display: 'none'},
-				designersOpen: {display: 'block'},
-				contactOpen: {display: 'none'}
+				navHide: { display: 'none' },
+				navMenuOpen: { display: 'none' },
+				homeOpen: { display: 'none' },
+				designersOpen: { display: 'block' },
+				contactOpen: { display: 'none' }
 			});
 		} else{
 			this.setState({
-				navOpen: {display: 'none'},
-				designersOpen: {display: 'none'}
+				navMenuOpen: { display: 'none' },
+				designersOpen: { display: 'none' }
 			});
 		}
 	}
@@ -123,15 +126,16 @@ class App extends Component {
 
 		if(this.state.contactOpen.display === 'none'){
 			this.setState({
-				navOpen: {display: 'none'},
-				homeOpen: {display: 'none'},
-				designersOpen: {display: 'none'},
-				contactOpen: {display: 'block'}
+				navHide: { display: 'block' },
+				navMenuOpen: { display: 'none' },
+				homeOpen: { display: 'none' },
+				designersOpen: { display: 'none' },
+				contactOpen: { display: 'block' }
 			});
 		} else{
 			this.setState({
-				navOpen: {display: 'none'},
-				contactOpen: {display: 'none'}
+				navMenuOpen: { display: 'none' },
+				contactOpen: { display: 'none' }
 			});
 		}
 	}
