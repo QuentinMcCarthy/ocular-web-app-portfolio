@@ -17,3 +17,11 @@ $mainFontFamily: 'Open Sans', sans-serif;
 	background-size: cover;
 	background-position: center;
 }
+
+@mixin grayscale($grayPercent){
+	-webkit-filter: grayscale($grayPercent);
+	-moz-filter: grayscale($grayPercent);
+	-o-filter: grayscale($grayPercent);
+	-ms-filter: grayscale($grayPercent);
+	filter: grayscale($grayPercent);
+}
