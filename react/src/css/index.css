@@ -62,7 +62,7 @@
 
 .banner {
   height: 100vh;
-  width: 100vw; }
+  width: 100%; }
 
 .main-image {
   height: 100vh;
@@ -219,11 +219,11 @@
 
 @media only screen and (min-width: 600px) {
   .header-bar {
-    height: 10vh; }
+    height: 90px; }
     .header-bar .logo {
-      padding: 4% 0; }
+      padding: 1.7em 0; }
     .header-bar .menu-btn {
-      padding: 2%; }
+      padding: 1.2em; }
 
   .menu {
     width: 40%;
@@ -273,6 +273,14 @@
     #secStatistics .designer-charts {
       width: 100%; } }
 @media only screen and (min-width: 1024px) {
+  .header-bar {
+    height: 90px; }
+    .header-bar .logo {
+      margin-left: 2em;
+      padding: 1.6em 0; }
+    .header-bar .menu-btn {
+      padding: 1em; }
+
   .menu {
     width: 33%; }
 

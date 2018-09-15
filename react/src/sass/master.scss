@@ -78,7 +78,7 @@
 
 .banner {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 }
 
 .main-image {
@@ -269,12 +269,12 @@
 @media only screen and (min-width: 600px) {
 
 	.header-bar {
-		height: 10vh;
+		height: 90px;
 		.logo {
-			padding: 4% 0;
+			padding: 1.7em 0;
 		}
 		.menu-btn {
-			padding: 2%;
+			padding: 1.2em;
 		}
 	}
 
@@ -346,6 +346,17 @@
 
 }
 @media only screen and (min-width: 1024px){
+	.header-bar {
+		height: 90px;
+		.logo {
+			margin-left: 2em;
+			padding: 1.6em 0;;
+		}
+		.menu-btn {
+			padding: 1em;
+		}
+	}
+
 	.menu {
 		width: 33%;
 	}
