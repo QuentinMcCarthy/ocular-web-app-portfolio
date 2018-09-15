@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "ajv": "^6.5.3",
     "bootstrap": "^4.1.3",
     "google-maps": "^3.3.0",
     "jquery": "^3.3.1",
