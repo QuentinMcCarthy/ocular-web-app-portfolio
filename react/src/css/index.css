@@ -120,6 +120,7 @@
   margin: 0.3em 0; }
 
 .our-goal {
+  padding: 0 15px;
   display: flex;
   align-content: center;
   flex-direction: column;
@@ -246,9 +247,13 @@
     font-size: 0.8em;
     padding: 1.4em 5.7em; }
 
-  .our-goal-text {
-    margin-top: 4em;
-    width: 370px; }
+  .our-goal {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px; }
+    .our-goal .our-goal-text {
+      margin-top: 4em;
+      width: 370px; }
 
   .latest-projects-hr {
     width: 40%; }
@@ -273,6 +278,9 @@
     #secStatistics .designer-charts {
       width: 100%; } }
 @media only screen and (min-width: 1024px) {
+  .menu {
+    width: 33%; }
+
   .header-bar {
     height: 90px; }
     .header-bar .logo {
@@ -281,15 +289,22 @@
     .header-bar .menu-btn {
       padding: 1em; }
 
+  .our-goal {
+    padding: 0 10em;
+    margin-bottom: 7em;
+    max-width: none;
+    background-color: #000000;
+    color: #FFFFFF; }
+    .our-goal .title-hr {
+      color: #FFFFFF;
+      background-color: #FFFFFF; }
+
   .latest-projects {
     margin-bottom: 2em; }
     .latest-projects .project-indiviudal {
       padding-left: 0; }
     .latest-projects .col-sm {
       width: 100px; }
-
-  .menu {
-    width: 33%; }
 
   #sectContact {
     background-color: #000000; }
