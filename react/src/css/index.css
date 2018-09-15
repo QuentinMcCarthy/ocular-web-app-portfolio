@@ -281,6 +281,13 @@
     .header-bar .menu-btn {
       padding: 1em; }
 
+  .latest-projects {
+    margin-bottom: 2em; }
+    .latest-projects .project-indiviudal {
+      padding-left: 0; }
+    .latest-projects .col-sm {
+      width: 100px; }
+
   .menu {
     width: 33%; }
 
