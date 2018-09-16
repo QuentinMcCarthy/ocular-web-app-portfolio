@@ -100,7 +100,7 @@
   border: none;
   padding: 1em 4em;
   margin-top: 0.9em;
-  color: white;
+  color: white !important;
   text-transform: uppercase;
   font-size: 0.7em; }
 

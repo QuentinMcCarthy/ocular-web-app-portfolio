@@ -36,7 +36,7 @@ class Home extends Component {
 	                    <div className='banner-content'>
 	                      <h1 className='banner-title'>Hi, We're Ocular.</h1>
 	                      <p className='banner-text'>Web Strategy Brand Design Video</p>
-	                      <button type='button' name='button' className='scroll-down' to='ourGoal' onClick={() => scroll.scrollTo(500)}>Find out more <i className='fas fa-angle-down'></i></button>
+	                      <Link name='button' className='scroll-down' to='ourGoal' spy={true} smooth={true} duration={3000}>Find out more <i className='fas fa-angle-down'></i></Link>
 	                    </div>
 	                </div>
 	            </div> {/* banner ends */}
