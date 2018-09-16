@@ -96,6 +96,10 @@
   text-transform: uppercase; }
 
 .scroll-down {
+  display: block;
+  width: 16.6em;
+  margin-right: auto;
+  margin-left: auto;
   background-color: #000000;
   border: none;
   padding: 1em 4em;
@@ -245,6 +249,7 @@
   .banner .banner-text {
     word-spacing: 36px; }
   .banner .scroll-down {
+    width: 20.6em;
     margin-top: 4.4em;
     font-size: 0.8em;
     padding: 1.4em 5.7em; }

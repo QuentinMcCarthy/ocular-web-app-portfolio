@@ -116,6 +116,10 @@
 }
 
 .scroll-down {
+	display: block;
+	width: 16.6em;
+	margin-right: auto;
+	margin-left: auto;
     background-color: $secondaryColor;
     border: none;
     padding: 1em 4em;
@@ -307,6 +311,7 @@
 		}
 
 		.scroll-down {
+			width: 20.6em;
 			margin-top: 4.4em;
 			font-size: 0.8em;
 			padding: 1.4em 5.7em;
