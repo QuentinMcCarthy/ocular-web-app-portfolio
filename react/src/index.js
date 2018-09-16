@@ -7,15 +7,12 @@ import Designers from './designers';
 import Contact from './contact';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'jquery/dist/jquery.min.js';
 // import 'popper.js/dist/umd/popper.min.js';
 // import 'bootstrap/dist/js/bootstrap.min.js';
 // import 'google-maps/lib/Google.min.js';
 
 // import './css/index.min.css';
 import './css/index.css';
-// import './js/script.min.js';
-// import './js/script.js';
 
 import {Events, animateScroll as scroll} from 'react-scroll';
 
