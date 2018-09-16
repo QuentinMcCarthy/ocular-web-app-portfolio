@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMapsContainer from'./map'
 
 class Contact extends Component {
 	render(){
@@ -22,7 +23,7 @@ class Contact extends Component {
 					</div>
 				</div>
 				<div className='contact-map'>
-					<a href='https://placeholder.com'><img alt='placeholder' src='https://via.placeholder.com/320x220' /></a>
+					<GoogleMapsContainer/>
 				</div>
 			</div>
 		)
