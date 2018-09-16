@@ -81,6 +81,10 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 	});
 })
 
+app.get(`/config`, function(req,res){
+	res.send(config);
+})
+
 // Routes for data requests
 app.use(`/data`, express.static(path.join(__dirname, `data`)));
 
