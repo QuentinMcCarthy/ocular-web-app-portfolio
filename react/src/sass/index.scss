@@ -5,11 +5,11 @@
 }
 
 #profileSplitCenter {
-	height: 41%;
+	height: 56%;
 }
 
 #profileSplitBottom {
-	height: 42%;
+	height: 27%;
 }
 
 .designer-profile {
@@ -44,6 +44,12 @@
 	@include grayscale(100%);
 }
 
+.profile-name {
+	@include heading();
+	margin-top: 5px;
+	font-size: 1.4em;
+}
+
 .scroll-left {
 	padding: 0.1em 0.6em;
 	color: $primaryColor;
@@ -53,4 +59,25 @@
 	font-size: 1em;
 	margin-top: 1.5em;
 	margin-left: 1.5em;
+}
+
+.statsRibbon {
+	right: 10%;
+	background-color: #ff0d00;
+	height: 37%;
+	width: 15%;
+	color: white;
+
+	i {
+		font-size: 1.5em;
+	}
+
+	span {
+		font-size: .6875em;
+		width: 80%;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $mainFontFamily;
+		font-weight: 300;
+	}
 }

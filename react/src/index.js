@@ -29,8 +29,7 @@ class App extends Component {
 			navMenuOpen: { display: 'none' },
 			homeOpen: { display: 'block' },
 			designersOpen: { display: 'none' },
-			contactOpen: { display: 'none' },
-			scrollUpDisply: { display: 'block' }
+			contactOpen: { display: 'none' }
 		}
 
 		this.navMenuToggle = this.navMenuToggle.bind(this);
@@ -73,10 +72,6 @@ class App extends Component {
 						<li id='navDesigners' className='menu-item' onClick={this.navToDesigners}>Designers</li>
 						<li id='navContact' className='menu-item' onClick={this.navToContact}>Contact</li>
 					</ul>
-				</div>
-
-				<div className='scroll-up-btn-wrapper fixed-bottom' style={this.state.scrollUpDisply}>
-					<button type='button' name='button' className='scroll-up' onClick={this.scrollToTop}><i className='fas fa-angle-up'></i></button>
 				</div>
 
 				<Home
@@ -154,8 +149,7 @@ class App extends Component {
 				navMenuOpen: { display: 'none' },
 				homeOpen: { display: 'none' },
 				designersOpen: { display: 'none' },
-				contactOpen: { display: 'block' },
-				scrollUpDisply: { display: 'none' }
+				contactOpen: { display: 'block' }
 			});
 		} else{
 			this.setState({

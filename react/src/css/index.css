@@ -330,10 +330,10 @@
   height: 17%; }
 
 #profileSplitCenter {
-  height: 41%; }
+  height: 56%; }
 
 #profileSplitBottom {
-  height: 42%; }
+  height: 27%; }
 
 .designer-profile {
   height: 300px;
@@ -374,6 +374,13 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%); }
 
+.profile-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 1.4em; }
+
 .scroll-left {
   padding: 0.1em 0.6em;
   color: #FFFFFF;
@@ -383,5 +390,21 @@
   font-size: 1em;
   margin-top: 1.5em;
   margin-left: 1.5em; }
+
+.statsRibbon {
+  right: 10%;
+  background-color: #ff0d00;
+  height: 37%;
+  width: 15%;
+  color: white; }
+  .statsRibbon i {
+    font-size: 1.5em; }
+  .statsRibbon span {
+    font-size: .6875em;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
 
 /*# sourceMappingURL=index.css.map */

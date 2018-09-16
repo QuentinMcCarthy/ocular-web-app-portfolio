@@ -65,6 +65,10 @@ class Home extends Component {
 	render(){
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
+				<div className='scroll-up-btn-wrapper fixed-bottom'>
+					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
+				</div>
+
 	            {/* Banner */}
 	            <div className='banner'>
 	                <div className='main-image'>
