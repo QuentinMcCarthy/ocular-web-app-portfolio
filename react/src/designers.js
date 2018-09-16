@@ -90,7 +90,7 @@ class Designers extends Component {
 							error: err
 						});
 					});
-			}, (err)=> {
+			}, (err) => {
 				this.setState({
 					error: err
 				});
@@ -102,16 +102,17 @@ class Designers extends Component {
 			<div id='sectDesigners' style={this.props.designersOpen}>
 
 				<div className='designer-profile position-relative'>
-					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}>
-						<div className='splitv-third position-relative w-100'>
+					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
+					<div className='profile-details position-absolute w-100 h-100'>
+						<div id='profileSplitTop' className='splitv-third position-relative w-100'>
 							<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
 								<i className='fas fa-angle-left'></i>
 							</button>
 						</div>
-						<div className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
+						<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 							<div className='profile-image h-100' style={this.state.designerPic}></div>
 						</div>
-						<div className='splitv-third position-relative w-100'></div>
+						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 					</div>
 				</div>
 			</div>
