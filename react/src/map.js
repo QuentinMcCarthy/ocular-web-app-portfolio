@@ -3,8 +3,29 @@ import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
 
 
 class GoogleMapsContainer extends React.Component {
+	constructor(props){
+		super(props);
 
-  render() {
+		this.state = {
+			map: [],
+		}
+	}
+
+	componentDidMount() {
+		fetch('http://192.168.33.10:4000/config.json')
+		.then(res => res.json())
+		.then((mapData) => {
+			this.setState({
+				map: mapData
+			});
+
+		}, (err)=> {
+			this.setState({
+				error: err
+			});
+		});
+	}
+  	render() {
 	  	const pos = {
 		 	lat :-41.328075 ,
 			lng:174.799973
