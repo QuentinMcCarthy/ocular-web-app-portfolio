@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Stats from './stats';
 
 class Designers extends Component {
 	constructor(props){
@@ -135,6 +136,7 @@ class Designers extends Component {
 						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 					</div>
 				</div>
+				<Stats/>
 			</div>
 		)
 	}

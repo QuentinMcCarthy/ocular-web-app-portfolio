@@ -6,7 +6,7 @@
 
 #sectDesigners,
 #sectContact,
-#secStatistics {
+#sectStatistics {
   display: none; }
 
 .header-bar {
@@ -280,9 +280,9 @@
       .contact-wrapper .contact-details i {
         margin: 0px 4px !important; }
 
-  #secStatistics {
+  #sectStatistics {
     width: 75vw; }
-    #secStatistics .designer-charts {
+    #sectStatistics .designer-charts {
       width: 100%; } }
 @media only screen and (min-width: 1024px) {
   .menu {

@@ -9,7 +9,7 @@
 
 #sectDesigners,
 #sectContact,
-#secStatistics {
+#sectStatistics {
 	display: none;
 }
 
@@ -353,13 +353,12 @@
 			}
 		}
 	}
-	#secStatistics {
+	#sectStatistics {
 		width: 75vw;
 		.designer-charts {
 			width: 100%;
 		}
 	}
-
 }
 @media only screen and (min-width: 1024px){
 
