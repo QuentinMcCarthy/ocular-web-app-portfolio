@@ -104,6 +104,10 @@ class Designers extends Component {
 				<div className='designer-profile position-relative'>
 					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 					<div className='profile-details position-absolute w-100 h-100'>
+						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center'>
+							<i className="far fa-chart-bar"></i>
+							<span>View Stats</span>
+						</div>
 						<div id='profileSplitTop' className='splitv-third position-relative w-100'>
 							<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
 								<i className='fas fa-angle-left'></i>

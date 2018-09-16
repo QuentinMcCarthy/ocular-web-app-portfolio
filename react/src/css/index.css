@@ -379,4 +379,20 @@
   margin-top: 1.5em;
   margin-left: 1.5em; }
 
+.statsRibbon {
+  right: 10%;
+  background-color: #ff0d00;
+  height: 37%;
+  width: 15%;
+  color: white; }
+  .statsRibbon i {
+    font-size: 1.5em; }
+  .statsRibbon span {
+    font-size: .6875em;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
+
 /*# sourceMappingURL=index.css.map */
