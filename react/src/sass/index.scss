@@ -5,16 +5,23 @@
 	background-color: black;
 }
 
+.profile-details {
+	top: 0;
+	z-index: 3;
+}
+
 .profile-bg-image {
 	background-position: center;
 	background-size: cover;
-	z-index: 2;
+	z-index: 1;
+	@include blur(2px);
+	@include scale(1.1);
 }
 
 .splitv-third {
 	background: transparent;
 	height: 33%;
-	z-index: 2
+	z-index: 2;
 }
 
 .profile-image {
@@ -23,8 +30,7 @@
 	border-radius: 60px;
 	background-position: center;
 	background-size: cover;
-	z-index: 3;
-	@include grayscale(100%)
+	@include grayscale(100%);
 }
 
 .scroll-left {
@@ -36,5 +42,4 @@
 	font-size: 1em;
 	margin-top: 1.5em;
 	margin-left: 1.5em;
-	z-index: 3;
 }
