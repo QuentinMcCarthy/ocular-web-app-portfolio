@@ -5,11 +5,11 @@
 }
 
 #profileSplitCenter {
-	height: 41%;
+	height: 56%;
 }
 
 #profileSplitBottom {
-	height: 42%;
+	height: 27%;
 }
 
 .designer-profile {
@@ -42,6 +42,12 @@
 	background-position: center;
 	background-size: cover;
 	@include grayscale(100%);
+}
+
+.profile-name {
+	@include heading();
+	margin-top: 5px;
+	font-size: 1.4em;
 }
 
 .scroll-left {

@@ -7,7 +7,11 @@ class Designers extends Component {
 		this.state = {
 			staff: [],
 			currStaff: {
-				profile: [],
+				profile: {
+					user: {
+						display_name: ''
+					}
+				},
 				projects: {}
 			},
 			isLoaded: false,
@@ -28,7 +32,8 @@ class Designers extends Component {
 				fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}`)
 					.then(res => res.json())
 					.then((userData) => {
-						var userImage = userData.user.images;
+						var userImage = userData.user.images,
+							fields = userData.user.fields;
 
 						switch('string'){
 							case typeof userImage[276]:
@@ -59,9 +64,12 @@ class Designers extends Component {
 								userImage = 'https://placehold.it/230x230';
 						}
 
+						console.log(fields);
+
 						this.setState({
 							isLoaded: true,
 							currStaff: {
+								display_name: userData.user.display_name,
 								profile: userData,
 								projects: this.state.currStaff.projects
 							},
@@ -79,6 +87,7 @@ class Designers extends Component {
 					.then((userProjectData) => {
 						this.setState({
 							currStaff: {
+								display_name: this.state.currStaff.display_name,
 								profile: this.state.currStaff.profile,
 								projects: userProjectData
 							},
@@ -115,6 +124,7 @@ class Designers extends Component {
 						</div>
 						<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 							<div className='profile-image h-100' style={this.state.designerPic}></div>
+							<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
 						</div>
 						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 					</div>

@@ -325,10 +325,10 @@
   height: 17%; }
 
 #profileSplitCenter {
-  height: 41%; }
+  height: 56%; }
 
 #profileSplitBottom {
-  height: 42%; }
+  height: 27%; }
 
 .designer-profile {
   height: 300px;
@@ -368,6 +368,13 @@
   -o-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   filter: grayscale(100%); }
+
+.profile-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 1.4em; }
 
 .scroll-left {
   padding: 0.1em 0.6em;
