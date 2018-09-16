@@ -1,6 +1,31 @@
 import React, { Component } from 'react';
+import {Link, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll';
+
 
 class Home extends Component {
+	componentDidMount() {
+	  Events.scrollEvent.register('begin', function () {
+		console.log("begin", arguments);
+	  });
+
+	  Events.scrollEvent.register('end', function () {
+		console.log("end", arguments);
+	  });
+  }
+
+	  scrollTo() {
+		scroller.scrollTo('scroll-to-element', {
+		  duration: 800,
+		  delay: 0,
+		  smooth: 'easeInOutQuart'
+		})
+	  }
+
+	  componentWillUnmount() {
+		  Events.scrollEvent.remove('begin');
+		  Events.scrollEvent.remove('end');
+	  }
+
 	render(){
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
@@ -11,7 +36,7 @@ class Home extends Component {
 	                    <div className='banner-content'>
 	                      <h1 className='banner-title'>Hi, We're Ocular.</h1>
 	                      <p className='banner-text'>Web Strategy Brand Design Video</p>
-	                      <button type='button' name='button' className='scroll-down'>Find out more <i className='fas fa-angle-down'></i></button>
+	                      <button type='button' name='button' className='scroll-down' onClick={() => scroll.scrollTo(500)}>Find out more <i className='fas fa-angle-down'></i></button>
 	                    </div>
 	                </div>
 	            </div> {/* banner ends */}
