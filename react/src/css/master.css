@@ -321,42 +321,5 @@
     width: 75vw; }
     #secStatistics .designer-charts {
       width: 100%; } }
-.designer-profile {
-  height: 300px;
-  background-color: black; }
 
-.profile-bg-image {
-  background-position: center;
-  background-size: cover;
-  z-index: 2; }
-
-.splitv-third {
-  background: transparent;
-  height: 33%;
-  z-index: 2; }
-
-.profile-image {
-  width: 30%;
-  padding-top: 30%;
-  border-radius: 60px;
-  background-position: center;
-  background-size: cover;
-  z-index: 3;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  filter: grayscale(100%); }
-
-.scroll-left {
-  padding: 0.1em 0.6em;
-  color: #FFFFFF;
-  background-color: #000000;
-  border: none;
-  border-radius: 36px;
-  font-size: 1em;
-  margin-top: 1.5em;
-  margin-left: 1.5em;
-  z-index: 3; }
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=master.css.map */

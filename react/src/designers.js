@@ -28,7 +28,7 @@ class Designers extends Component {
 				fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}`)
 					.then(res => res.json())
 					.then((userData) => {
-						var userImage = userData.user.images
+						var userImage = userData.user.images;
 
 						switch('string'){
 							case typeof userImage[276]:

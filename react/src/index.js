@@ -26,7 +26,8 @@ class App extends Component {
 			navMenuOpen: { display: 'none' },
 			homeOpen: { display: 'block' },
 			designersOpen: { display: 'none' },
-			contactOpen: { display: 'none' }
+			contactOpen: { display: 'none' },
+			scrollUpDisply: { display: 'block' }
 		}
 
 		this.navMenuToggle = this.navMenuToggle.bind(this);
@@ -41,7 +42,7 @@ class App extends Component {
 				{/* Nav */}
 				<div id='nav' className='header fixed-top' style={this.state.navHide}>
 					<div className='header-bar'>
-						<img alt='Ocular Logo' src='img/Ocular-Logo.png' width='120' className='logo'/>
+						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo'/>
 						<button type='button' name='button' className='menu-btn' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
 					</div>
 
@@ -52,7 +53,7 @@ class App extends Component {
 					</ul>
 				</div>
 
-				<div className='scroll-down-btn-wrapper fixed-bottom'>
+				<div className='scroll-up-btn-wrapper fixed-bottom' style={this.state.scrollUpDisply}>
 					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
 				</div>
 
@@ -131,7 +132,8 @@ class App extends Component {
 				navMenuOpen: { display: 'none' },
 				homeOpen: { display: 'none' },
 				designersOpen: { display: 'none' },
-				contactOpen: { display: 'block' }
+				contactOpen: { display: 'block' },
+				scrollUpDisply: { display: 'none' }
 			});
 		} else{
 			this.setState({
