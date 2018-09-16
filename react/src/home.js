@@ -1,9 +1,44 @@
 import React, { Component } from 'react';
-import {Link, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll';
+import {Link, Events, animateScroll as scroller} from 'react-scroll';
 
 
 class Home extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			error: null,
+			isLoaded: false,
+			items: []
+		};
+	}
+
 	componentDidMount() {
+		fetch(`http://192.168.33.10:4000/data/staff.json`)
+		.then(res => res.json())
+		.then((staffResults) => {
+				this.setState({
+					staff:staffResults
+				});
+
+
+		fetch(`http://192.168.33.10:4000/behance/projects/${staffResults[0].behance}`)
+		.then(res => res.json())
+		.then(
+			(result) => {
+				this.setState({
+					isLoaded: true,
+					items: result
+				});
+			},
+			(error) => {
+				this.setState({
+					isLoaded: true,
+					error
+				});
+			});
+		});
+
 	  Events.scrollEvent.register('begin', function () {
 		console.log("begin", arguments);
 	  });
