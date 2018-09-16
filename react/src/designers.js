@@ -12,7 +12,8 @@ class Designers extends Component {
 						display_name: ''
 					}
 				},
-				projects: {}
+				projects: {},
+				fields: ''
 			},
 			isLoaded: false,
 			error: null,
@@ -33,7 +34,7 @@ class Designers extends Component {
 					.then(res => res.json())
 					.then((userData) => {
 						var userImage = userData.user.images,
-							fields = userData.user.fields;
+							fields = '';
 
 						switch('string'){
 							case typeof userImage[276]:
@@ -64,14 +65,18 @@ class Designers extends Component {
 								userImage = 'https://placehold.it/230x230';
 						}
 
-						console.log(fields);
+						fields = userData.user.fields[0];
+
+						for(var i = 1; i < userData.user.fields.length; i++){
+							fields+=`, ${userData.user.fields[i]}`;
+						}
 
 						this.setState({
 							isLoaded: true,
 							currStaff: {
-								display_name: userData.user.display_name,
 								profile: userData,
-								projects: this.state.currStaff.projects
+								projects: this.state.currStaff.projects,
+								fields: fields
 							},
 							designerPic: { backgroundImage: `url(${userImage})` }
 						});
@@ -87,9 +92,9 @@ class Designers extends Component {
 					.then((userProjectData) => {
 						this.setState({
 							currStaff: {
-								display_name: this.state.currStaff.display_name,
 								profile: this.state.currStaff.profile,
-								projects: userProjectData
+								projects: userProjectData,
+								fields: this.state.currStaff.fields
 							},
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
@@ -125,6 +130,7 @@ class Designers extends Component {
 						<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 							<div className='profile-image h-100' style={this.state.designerPic}></div>
 							<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
+							<p className='profile-fields'>{this.state.currStaff.fields}</p>
 						</div>
 						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 					</div>
