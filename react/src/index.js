@@ -84,6 +84,7 @@ class App extends Component {
 				/>
 				<Designers
 					{...this.state}
+					backToHome={this.navToHome}
 				/>
 				<Contact
 					{...this.state}

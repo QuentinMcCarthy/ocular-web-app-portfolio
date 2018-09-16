@@ -5,14 +5,36 @@
 	background-color: black;
 }
 
-.profile-image {
-	width: 33%;
-	padding-top: 33%;
-	border-radius: 60px;
+.profile-bg-image {
 	background-position: center;
 	background-size: cover;
+	z-index: 2;
 }
 
 .splitv-third {
+	background: transparent;
 	height: 33%;
+	z-index: 2
+}
+
+.profile-image {
+	width: 30%;
+	padding-top: 30%;
+	border-radius: 60px;
+	background-position: center;
+	background-size: cover;
+	z-index: 3;
+	@include grayscale(100%)
+}
+
+.scroll-left {
+	padding: 0.1em 0.6em;
+	color: $primaryColor;
+	background-color: $secondaryColor;
+	border: none;
+	border-radius: 36px;
+	font-size: 1em;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	z-index: 3;
 }
