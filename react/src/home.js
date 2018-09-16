@@ -36,14 +36,14 @@ class Home extends Component {
 	                    <div className='banner-content'>
 	                      <h1 className='banner-title'>Hi, We're Ocular.</h1>
 	                      <p className='banner-text'>Web Strategy Brand Design Video</p>
-	                      <button type='button' name='button' className='scroll-down' onClick={() => scroll.scrollTo(500)}>Find out more <i className='fas fa-angle-down'></i></button>
+	                      <button type='button' name='button' className='scroll-down' to='ourGoal' onClick={() => scroll.scrollTo(500)}>Find out more <i className='fas fa-angle-down'></i></button>
 	                    </div>
 	                </div>
 	            </div> {/* banner ends */}
 
 
                 {/* Our goal section */}
-                <div className='our-goal'>
+                <div className='our-goal' name='ourGoal'>
 					<div className='row'>
 						<div className='col-sm'>
 							<h2 className='second-heading'>Our Goal</h2>

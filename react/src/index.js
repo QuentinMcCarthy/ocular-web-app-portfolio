@@ -17,6 +17,9 @@ import './css/index.css';
 // import './js/script.min.js';
 // import './js/script.js';
 
+import {Events, animateScroll as scroll} from 'react-scroll';
+
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -36,6 +39,25 @@ class App extends Component {
 		this.navToContact = this.navToContact.bind(this);
 	}
 
+	componentDidMount() {
+	  Events.scrollEvent.register('begin', function () {
+		console.log("begin", arguments);
+	  });
+
+	  Events.scrollEvent.register('end', function () {
+		console.log("end", arguments);
+	  });
+  	}
+
+	scrollToTop() {
+    	scroll.scrollToTop();
+  	}
+
+	  componentWillUnmount() {
+		  Events.scrollEvent.remove('begin');
+		  Events.scrollEvent.remove('end');
+	  }
+
 	render(){
 		return (
 			<div>
@@ -54,7 +76,7 @@ class App extends Component {
 				</div>
 
 				<div className='scroll-up-btn-wrapper fixed-bottom' style={this.state.scrollUpDisply}>
-					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
+					<button type='button' name='button' className='scroll-up' onClick={this.scrollToTop}><i className='fas fa-angle-up'></i></button>
 				</div>
 
 				<Home
