@@ -1,5 +1,17 @@
 @import 'master.scss';
 
+#profileSplitTop {
+	height: 17%;
+}
+
+#profileSplitCenter {
+	height: 41%;
+}
+
+#profileSplitBottom {
+	height: 42%;
+}
+
 .designer-profile {
 	height: 300px;
 	background-color: black;
@@ -20,14 +32,13 @@
 
 .splitv-third {
 	background: transparent;
-	height: 33%;
 	z-index: 2;
 }
 
 .profile-image {
-	width: 30%;
-	padding-top: 30%;
-	border-radius: 60px;
+	width: 40%;
+	padding-top: 40%;
+	border-radius: 70px;
 	background-position: center;
 	background-size: cover;
 	@include grayscale(100%);
