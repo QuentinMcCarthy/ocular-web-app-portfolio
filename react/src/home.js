@@ -9,6 +9,7 @@ class Home extends Component {
 		this.state = {
 			error: null,
 			isLoaded: false,
+			staff: [],
 			items: []
 		};
 	}
@@ -17,12 +18,12 @@ class Home extends Component {
 		fetch(`http://192.168.33.10:4000/data/staff.json`)
 		.then(res => res.json())
 		.then((staffResults) => {
-				this.setState({
-					staff:staffResults
-				});
+			this.setState({
+				staff:staffResults
+			});
 
 
-		fetch(`http://192.168.33.10:4000/behance/projects/${staffResults[0].behance}`)
+		fetch(`http://192.168.33.10:4000/behance/user/${staffResults[0].behance}`)
 		.then(res => res.json())
 		.then(
 			(result) => {
