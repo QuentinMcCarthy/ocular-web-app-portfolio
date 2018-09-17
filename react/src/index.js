@@ -7,18 +7,11 @@ import Designers from './designers';
 import Contact from './contact';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'jquery/dist/jquery.min.js';
 // import 'popper.js/dist/umd/popper.min.js';
 // import 'bootstrap/dist/js/bootstrap.min.js';
 // import 'google-maps/lib/Google.min.js';
 
-// import './css/index.min.css';
-import './css/index.css';
-// import './js/script.min.js';
-// import './js/script.js';
-
-import {Events, animateScroll as scroll} from 'react-scroll';
-
+import './css/index.min.css';
 
 class App extends Component {
 	constructor(props){
@@ -37,25 +30,6 @@ class App extends Component {
 		this.navToDesigners = this.navToDesigners.bind(this);
 		this.navToContact = this.navToContact.bind(this);
 	}
-
-	componentDidMount() {
-	  Events.scrollEvent.register('begin', function () {
-		console.log("begin", arguments);
-	  });
-
-	  Events.scrollEvent.register('end', function () {
-		console.log("end", arguments);
-	  });
-  	}
-
-	scrollToTop() {
-    	scroll.scrollToTop();
-  	}
-
-	  componentWillUnmount() {
-		  Events.scrollEvent.remove('begin');
-		  Events.scrollEvent.remove('end');
-	  }
 
 	render(){
 		return (

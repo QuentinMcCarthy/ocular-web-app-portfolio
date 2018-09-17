@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Stats from './stats';
 
 class Designers extends Component {
 	constructor(props){
@@ -9,7 +10,12 @@ class Designers extends Component {
 			currStaff: {
 				profile: {
 					user: {
-						display_name: ''
+						display_name: '',
+						stats: {
+							views: 0,
+							appreciations: 0,
+							comments: 0
+						}
 					}
 				},
 				projects: {},
@@ -18,8 +24,11 @@ class Designers extends Component {
 			isLoaded: false,
 			error: null,
 			designerPic: { backgroundImage: ''},
-			designerBg: { backgroundImage: '' }
+			designerBg: { backgroundImage: '' },
+			designersHide: { display: 'block' },
+			viewStatsOpen: { display: 'none' }
 		}
+		this.viewStats = this.viewStats.bind(this);
 	}
 
 	componentDidMount() {
@@ -115,10 +124,10 @@ class Designers extends Component {
 		return (
 			<div id='sectDesigners' style={this.props.designersOpen}>
 
-				<div className='designer-profile position-relative'>
+				<div className='designer-profile position-relative' style={this.state.designersHide}>
 					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 					<div className='profile-details position-absolute w-100 h-100'>
-						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center'>
+						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 							<i className="far fa-chart-bar"></i>
 							<span>View Stats</span>
 						</div>
@@ -132,11 +141,49 @@ class Designers extends Component {
 							<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
 							<p className='profile-fields'>{this.state.currStaff.fields}</p>
 						</div>
-						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
+						<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
+							<div className='h-100 flex-fill'>
+								<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
+									<i className="far fa-eye"></i>
+									<span>{this.state.currStaff.profile.user.stats.views}</span>
+								</div>
+							</div>
+							<div className='h-100 flex-fill'>
+								<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
+									<i className="fas fa-thumbs-up"></i>
+									<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+								</div>
+							</div>
+							<div className='h-100 flex-fill'>
+								<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
+									<i className="fas fa-comments"></i>
+									<span>{this.state.currStaff.profile.user.stats.comments}</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<Stats
+					{...this.state}
+				/>
 			</div>
 		)
+	}
+
+	viewStats(e){
+		console.log('working');
+		e.preventDefault();
+		if(this.state.viewStatsOpen.display === 'none'){
+			this.setState({
+				designersHide: { display: 'none' },
+				viewStatsOpen: { display: 'block' }
+			});
+		} else{
+			this.setState({
+				designersHide: { display: 'block' },
+				viewStatsOpen: { display: 'none' }
+			});
+		}
 	}
 }
 
