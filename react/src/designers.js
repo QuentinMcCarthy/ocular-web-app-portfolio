@@ -20,7 +20,7 @@ class Designers extends Component {
 			error: null,
 			designerPic: { backgroundImage: ''},
 			designerBg: { backgroundImage: '' },
-			designersOpen: { display: 'block' },
+			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' }
 		}
 		this.viewStats = this.viewStats.bind(this);
@@ -119,7 +119,7 @@ class Designers extends Component {
 		return (
 			<div id='sectDesigners' style={this.props.designersOpen}>
 
-				<div className='designer-profile position-relative'>
+				<div className='designer-profile position-relative' style={this.state.designersHide}>
 					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 					<div className='profile-details position-absolute w-100 h-100'>
 						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
@@ -151,12 +151,12 @@ class Designers extends Component {
 		e.preventDefault();
 		if(this.state.viewStatsOpen.display === 'none'){
 			this.setState({
-				designersOpen: { display: 'none' },
+				designersHide: { display: 'none' },
 				viewStatsOpen: { display: 'block' }
 			});
 		} else{
 			this.setState({
-				designersOpen: { display: 'block' },
+				designersHide: { display: 'block' },
 				viewStatsOpen: { display: 'none' }
 			});
 		}
