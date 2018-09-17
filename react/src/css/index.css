@@ -213,6 +213,8 @@ button {
 .sect-statistics {
   margin: 0 auto;
   margin-top: 10%; }
+  .sect-statistics .container {
+    margin-top: 2em; }
   .sect-statistics .stats-heading {
     margin-bottom: 0.6em;
     margin-top: 1.6em; }
@@ -323,8 +325,13 @@ button {
     #sectContact i {
       color: white !important; }
 
-  #sectStatistics {
-    width: 75vw; } }
+  .sect-statistics {
+    width: 50vw;
+    margin-top: 5em; }
+    .sect-statistics .chart-stats {
+      margin-top: 7%;
+      width: 48vw;
+      height: 33vw; } }
 #profileSplitTop {
   height: 17%; }
 
