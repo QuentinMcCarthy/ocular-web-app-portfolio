@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Events, animateScroll as scroller} from 'react-scroll';
+import {Link, Events, animateScroll as scroll, scroller} from 'react-scroll';
 
 class Home extends Component {
 
@@ -48,13 +48,17 @@ class Home extends Component {
 	  });
   }
 
-	  scrollTo() {
+	scrollTo() {
 		scroller.scrollTo('scroll-to-element', {
-		  duration: 800,
-		  delay: 0,
-		  smooth: 'easeInOutQuart'
+		duration: 800,
+		delay: 0,
+		smooth: 'easeInOutQuart'
 		})
-	  }
+	}
+
+	scrollToTop() {
+		scroll.scrollToTop();
+	}
 
 	  componentWillUnmount() {
 		  Events.scrollEvent.remove('begin');
@@ -65,7 +69,7 @@ class Home extends Component {
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
 				<div className='scroll-up-btn-wrapper fixed-bottom'>
-					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
+					<button type='button' name='button' className='scroll-up' onClick={this.scrollToTop}><i className='fas fa-angle-up'></i></button>
 				</div>
 
 	            {/* Banner */}

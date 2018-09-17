@@ -13,7 +13,7 @@ button {
   outline: none; }
 
 .header-bar {
-  background-color: #FFFFFF;
+  background-color: white;
   overflow: auto;
   padding: 0.5em 1em; }
   .header-bar button {
@@ -25,8 +25,8 @@ button {
   clear: both; }
 
 .menu-btn {
-  background-color: #FFFFFF;
-  border: #FFFFFF;
+  background-color: white;
+  border: white;
   font-weight: 300;
   font-size: 0.7em;
   padding: 3%;
@@ -38,7 +38,7 @@ button {
 
 .menu {
   display: none;
-  background-color: #FFFFFF;
+  background-color: white;
   font-weight: 700;
   font-size: 0.6em;
   float: right;
@@ -54,8 +54,8 @@ button {
 
 .scroll-up {
   padding: 0.2em 0.6em;
-  color: #FFFFFF;
-  background-color: #000000;
+  color: white;
+  background-color: black;
   border: none;
   border-radius: 36px;
   font-size: 1em;
@@ -76,7 +76,7 @@ button {
 .transparent-layer {
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   opacity: .5; }
 
 .banner-content {
@@ -90,7 +90,7 @@ button {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: white;
   font-size: 1.3em; }
 
 .banner-text {
@@ -103,11 +103,11 @@ button {
   width: 16.6em;
   margin-right: auto;
   margin-left: auto;
-  background-color: #000000;
+  background-color: black;
   border: none;
   padding: 1em 4em;
   margin-top: 0.9em;
-  color: #FFFFFF !important;
+  color: white !important;
   text-transform: uppercase;
   font-size: 0.7em; }
 
@@ -119,8 +119,8 @@ button {
   font-size: 1.5em; }
 
 .title-hr {
-  color: #000000;
-  background-color: #000000;
+  color: black;
+  background-color: black;
   border: 0;
   width: 90%;
   height: 2px;
@@ -149,7 +149,7 @@ button {
 .project-img {
   height: 250px;
   width: 250px;
-  background-color: #000000;
+  background-color: black;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg");
   background-size: cover;
   background-position: center; }
@@ -198,7 +198,7 @@ button {
             #sectContact .contact-wrapper .contact-details .contact-icons ul li i {
               font-size: 1.5em;
               margin-right: 0.6em;
-              color: #FF0000; }
+              color: red; }
             #sectContact .contact-wrapper .contact-details .contact-icons ul li .fa-facebook {
               margin-left: 0; }
   #sectContact .contact-map {
@@ -225,7 +225,7 @@ button {
       margin-top: 13%;
       width: 300px;
       height: 400px;
-      background-color: #FF0000; }
+      background-color: red; }
 
 @media only screen and (min-width: 600px) {
   .header-bar {
@@ -303,11 +303,11 @@ button {
     padding: 0 10em;
     margin-bottom: 7em;
     max-width: none;
-    background-color: #000000;
-    color: #FFFFFF; }
+    background-color: black;
+    color: white; }
     .our-goal .title-hr {
-      color: #FFFFFF;
-      background-color: #FFFFFF; }
+      color: white;
+      background-color: white; }
 
   .latest-projects {
     margin-bottom: 2em; }
@@ -318,13 +318,13 @@ button {
 
   #sectContact {
     margin-top: 9%;
-    background-color: #000000; }
+    background-color: black; }
     #sectContact .contact-wrapper {
-      color: #FFFFFF; }
+      color: white; }
     #sectContact hr {
-      background-color: #FFFFFF !important; }
+      background-color: white !important; }
     #sectContact i {
-      color: #FFFFFF !important; }
+      color: white !important; }
 
   #sectStatistics {
     width: 75vw; }
@@ -387,8 +387,8 @@ button {
 
 .scroll-left {
   padding: 0.1em 0.6em;
-  color: #FFFFFF;
-  background-color: #000000;
+  color: white;
+  background-color: black;
   border: none;
   border-radius: 36px;
   font-size: 1em;
@@ -411,5 +411,3 @@ button {
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-weight: 300; }
-
-/*# sourceMappingURL=index.css.map */
