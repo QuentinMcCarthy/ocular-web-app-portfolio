@@ -13,6 +13,9 @@
 	display: none;
 }
 
+button {
+	outline: none;
+}
 // MENU ------------------------------------------------------------------------
 
 .header-bar {
@@ -401,6 +404,7 @@
 	}
 
 	#sectContact {
+		margin-top: 9%;
 		background-color: $secondaryColor;
 		.contact-wrapper {
 			color: $primaryColor;

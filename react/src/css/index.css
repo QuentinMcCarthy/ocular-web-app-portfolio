@@ -9,6 +9,9 @@
 #sectStatistics {
   display: none; }
 
+button {
+  outline: none; }
+
 .header-bar {
   background-color: #FFFFFF;
   overflow: auto;
@@ -314,6 +317,7 @@
       width: 100px; }
 
   #sectContact {
+    margin-top: 9%;
     background-color: #000000; }
     #sectContact .contact-wrapper {
       color: #FFFFFF; }
