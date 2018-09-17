@@ -14,9 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import './css/index.min.css';
 import './css/index.css';
 
-import {Events, animateScroll as scroll} from 'react-scroll';
-
-
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -34,25 +31,6 @@ class App extends Component {
 		this.navToDesigners = this.navToDesigners.bind(this);
 		this.navToContact = this.navToContact.bind(this);
 	}
-
-	componentDidMount() {
-	  Events.scrollEvent.register('begin', function () {
-		console.log("begin", arguments);
-	  });
-
-	  Events.scrollEvent.register('end', function () {
-		console.log("end", arguments);
-	  });
-  	}
-
-	scrollToTop() {
-    	scroll.scrollToTop();
-  	}
-
-	  componentWillUnmount() {
-		  Events.scrollEvent.remove('begin');
-		  Events.scrollEvent.remove('end');
-	  }
 
 	render(){
 		return (
