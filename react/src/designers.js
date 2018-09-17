@@ -24,6 +24,7 @@ class Designers extends Component {
 			viewStatsOpen: { display: 'none' }
 		}
 		this.viewStats = this.viewStats.bind(this);
+		this.statsHandle = this.statsHandle.bind(this);
 	}
 
 	componentDidMount() {
@@ -144,13 +145,13 @@ class Designers extends Component {
 				</div>
 				<Stats
 					{...this.state}
+					closeStats = {this.statsHandle}
 				/>
 			</div>
 		)
 	}
 
 	viewStats(e){
-		console.log('working');
 		e.preventDefault();
 		if(this.state.viewStatsOpen.display === 'none'){
 			this.setState({
@@ -163,6 +164,14 @@ class Designers extends Component {
 				viewStatsOpen: { display: 'none' }
 			});
 		}
+	}
+
+	statsHandle(e){
+		e.preventDefault();
+		this.setState({
+			viewStatsOpen: { display: 'none' },
+			designersHide: { display: 'block' }
+		});
 	}
 }
 
