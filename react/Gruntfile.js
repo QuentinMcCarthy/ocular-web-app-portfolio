@@ -16,7 +16,7 @@ module.exports = function(grunt){
 					'src/css/index.min.css': 'src/css/index.css'
 				}
 			}
-		}
+		},
 		watch: {
 			sass: {
 				files: ['src/sass/*.scss'],
