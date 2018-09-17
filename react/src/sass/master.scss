@@ -252,28 +252,23 @@ button {
 
 // STATSTICS -------------------------------------------------------------------
 
-#secStatistics{
-	width: 87vw;
+.sectStatistics{
 	margin: 0 auto;
 	margin-top: 10%;
-	.close-icon {
-		i {
-			font-size: 45px;
-		}
+
+	.statsHeading {
+		margin-bottom: 0.6em;
+		margin-top: 1.6em;
 	}
-	.stat {
-		margin-top: 8%;
-		hr {
-			width: 100%;
-		}
-		.designer-charts {
+
+		.chart-stats {
 			margin: auto;
 			margin-top: 13%;
-			width: 300px;
-			height: 400px;
+			width: 91vw;
+			height: 75vw;
 			background-color: $tertiaryColor;
 		}
-	}
+
 
 }
 
@@ -358,9 +353,9 @@ button {
 	}
 	#sectStatistics {
 		width: 75vw;
-		.designer-charts {
-			width: 100%;
-		}
+		// .designer-charts {
+		// 	width: 100%;
+		// }
 	}
 }
 @media only screen and (min-width: 1024px){
@@ -418,9 +413,9 @@ button {
 	}
 	#sectStatistics {
 		width: 75vw;
-		.designer-charts {
-			width: 100%;
-		}
+		// .designer-charts {
+		// 	width: 100%;
+		// }
 	}
 
 }

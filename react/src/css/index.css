@@ -210,22 +210,17 @@ button {
       height: 100%;
       width: 100%; }
 
-#secStatistics {
-  width: 87vw;
-  margin: 0 auto;
+.sectStatistics {
   margin-top: 10%; }
-  #secStatistics .close-icon i {
-    font-size: 45px; }
-  #secStatistics .stat {
-    margin-top: 8%; }
-    #secStatistics .stat hr {
-      width: 100%; }
-    #secStatistics .stat .designer-charts {
-      margin: auto;
-      margin-top: 13%;
-      width: 300px;
-      height: 400px;
-      background-color: red; }
+  .sectStatistics .statsHeading {
+    margin-bottom: 0.6em;
+    margin-top: 1.6em; }
+  .sectStatistics .chart-stats {
+    margin: auto;
+    margin-top: 13%;
+    width: 30vw;
+    height: 40vw;
+    background-color: red; }
 
 @media only screen and (min-width: 600px) {
   .header-bar {
@@ -284,9 +279,7 @@ button {
         margin: 0px 4px !important; }
 
   #sectStatistics {
-    width: 75vw; }
-    #sectStatistics .designer-charts {
-      width: 100%; } }
+    width: 75vw; } }
 @media only screen and (min-width: 1024px) {
   .menu {
     width: 33%; }
@@ -327,9 +320,7 @@ button {
       color: white !important; }
 
   #sectStatistics {
-    width: 75vw; }
-    #sectStatistics .designer-charts {
-      width: 100%; } }
+    width: 75vw; } }
 #profileSplitTop {
   height: 17%; }
 
