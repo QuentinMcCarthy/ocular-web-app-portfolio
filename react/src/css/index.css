@@ -9,6 +9,9 @@
 #secStatistics {
   display: none; }
 
+button {
+  outline: none; }
+
 .header-bar {
   background-color: #FFFFFF;
   overflow: auto;
