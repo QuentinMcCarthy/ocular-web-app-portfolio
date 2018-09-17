@@ -211,6 +211,7 @@ button {
       width: 100%; }
 
 .sectStatistics {
+  margin: 0 auto;
   margin-top: 10%; }
   .sectStatistics .statsHeading {
     margin-bottom: 0.6em;
@@ -218,8 +219,8 @@ button {
   .sectStatistics .chart-stats {
     margin: auto;
     margin-top: 13%;
-    width: 30vw;
-    height: 40vw;
+    width: 91vw;
+    height: 75vw;
     background-color: red; }
 
 @media only screen and (min-width: 600px) {
