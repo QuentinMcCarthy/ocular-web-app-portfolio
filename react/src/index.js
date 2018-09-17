@@ -17,6 +17,9 @@ import './css/index.css';
 // import './js/script.min.js';
 // import './js/script.js';
 
+import {Events, animateScroll as scroll} from 'react-scroll';
+
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -26,8 +29,7 @@ class App extends Component {
 			navMenuOpen: { display: 'none' },
 			homeOpen: { display: 'block' },
 			designersOpen: { display: 'none' },
-			contactOpen: { display: 'none' },
-			scrollUpDisply: { display: 'block' }
+			contactOpen: { display: 'none' }
 		}
 
 		this.navMenuToggle = this.navMenuToggle.bind(this);
@@ -35,6 +37,25 @@ class App extends Component {
 		this.navToDesigners = this.navToDesigners.bind(this);
 		this.navToContact = this.navToContact.bind(this);
 	}
+
+	componentDidMount() {
+	  Events.scrollEvent.register('begin', function () {
+		console.log("begin", arguments);
+	  });
+
+	  Events.scrollEvent.register('end', function () {
+		console.log("end", arguments);
+	  });
+  	}
+
+	scrollToTop() {
+    	scroll.scrollToTop();
+  	}
+
+	  componentWillUnmount() {
+		  Events.scrollEvent.remove('begin');
+		  Events.scrollEvent.remove('end');
+	  }
 
 	render(){
 		return (
@@ -51,10 +72,6 @@ class App extends Component {
 						<li id='navDesigners' className='menu-item' onClick={this.navToDesigners}>Designers</li>
 						<li id='navContact' className='menu-item' onClick={this.navToContact}>Contact</li>
 					</ul>
-				</div>
-
-				<div className='scroll-up-btn-wrapper fixed-bottom' style={this.state.scrollUpDisply}>
-					<button type='button' name='button' className='scroll-up'><i className='fas fa-angle-up'></i></button>
 				</div>
 
 				<Home
@@ -132,8 +149,7 @@ class App extends Component {
 				navMenuOpen: { display: 'none' },
 				homeOpen: { display: 'none' },
 				designersOpen: { display: 'none' },
-				contactOpen: { display: 'block' },
-				scrollUpDisply: { display: 'none' }
+				contactOpen: { display: 'block' }
 			});
 		} else{
 			this.setState({

@@ -81,6 +81,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 	});
 })
 
+// Request for the config data (route for Maps API)
 app.get(`/config`, function(req,res){
 	res.send(config);
 	

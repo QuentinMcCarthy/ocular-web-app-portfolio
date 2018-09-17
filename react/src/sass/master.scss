@@ -116,11 +116,15 @@
 }
 
 .scroll-down {
+	display: block;
+	width: 16.6em;
+	margin-right: auto;
+	margin-left: auto;
     background-color: $secondaryColor;
     border: none;
     padding: 1em 4em;
     margin-top: 0.9em;
-    color: $primaryColor;
+    color: $primaryColor !important;
     text-transform: uppercase;
     font-size: 0.7em;
 }
@@ -183,7 +187,7 @@
 //CONTACTS ---------------------------------------------------------------------
 
 #sectContact {
-	margin-top: 18%;
+	margin-top: 5em;
 	.contact-wrapper {
 		width: 80vw;
 		height: 50vh;
@@ -307,6 +311,7 @@
 		}
 
 		.scroll-down {
+			width: 20.6em;
 			margin-top: 4.4em;
 			font-size: 0.8em;
 			padding: 1.4em 5.7em;

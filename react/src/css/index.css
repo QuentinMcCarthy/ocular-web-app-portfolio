@@ -96,11 +96,15 @@
   text-transform: uppercase; }
 
 .scroll-down {
+  display: block;
+  width: 16.6em;
+  margin-right: auto;
+  margin-left: auto;
   background-color: #000000;
   border: none;
   padding: 1em 4em;
   margin-top: 0.9em;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-transform: uppercase;
   font-size: 0.7em; }
 
@@ -158,7 +162,7 @@
   margin: 0 auto; }
 
 #sectContact {
-  margin-top: 18%; }
+  margin-top: 5em; }
   #sectContact .contact-wrapper {
     width: 80vw;
     height: 50vh;
@@ -245,6 +249,7 @@
   .banner .banner-text {
     word-spacing: 36px; }
   .banner .scroll-down {
+    width: 20.6em;
     margin-top: 4.4em;
     font-size: 0.8em;
     padding: 1.4em 5.7em; }
@@ -326,10 +331,10 @@
   height: 17%; }
 
 #profileSplitCenter {
-  height: 41%; }
+  height: 56%; }
 
 #profileSplitBottom {
-  height: 42%; }
+  height: 27%; }
 
 .designer-profile {
   height: 300px;
@@ -370,6 +375,13 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%); }
 
+.profile-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 1.4em; }
+
 .scroll-left {
   padding: 0.1em 0.6em;
   color: #FFFFFF;
@@ -379,5 +391,21 @@
   font-size: 1em;
   margin-top: 1.5em;
   margin-left: 1.5em; }
+
+.statsRibbon {
+  right: 10%;
+  background-color: #ff0d00;
+  height: 37%;
+  width: 15%;
+  color: white; }
+  .statsRibbon i {
+    font-size: 1.5em; }
+  .statsRibbon span {
+    font-size: .6875em;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
 
 /*# sourceMappingURL=index.css.map */
