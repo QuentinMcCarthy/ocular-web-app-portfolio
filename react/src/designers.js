@@ -18,7 +18,9 @@ class Designers extends Component {
 						}
 					}
 				},
-				projects: {},
+				projects: {
+					projects: []
+				},
 				fields: ''
 			},
 			isLoaded: false,
@@ -160,6 +162,18 @@ class Designers extends Component {
 								</div>
 							</div>
 						</div>
+					</div>
+					<div className='designer-projects w-100'>
+						{
+							this.state.currStaff.projects.projects.map(project => {
+								var bgImage = { backgroundImage: `url(${project.covers.original})` };
+								return(
+									<div key={project.id} data={project} className='projectWrapper'>
+										<div className='project-bg-image' data-url={project.covers.original} stlye={bgImage}></div>
+									</div>
+								)
+							})
+						}
 					</div>
 				</div>
 				<Stats
