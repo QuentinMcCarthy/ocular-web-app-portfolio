@@ -117,7 +117,7 @@ class Designers extends Component {
 
 	render(){
 		return (
-			<div>
+			<div className='sectContainer'>
 				<div id='sectDesigners' style={this.props.designersOpen}>
 
 					<div className='designer-profile position-relative' style={this.state.designersHide}>
@@ -140,7 +140,7 @@ class Designers extends Component {
 							<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 						</div>
 					</div>
-					
+
 				</div>
 				<Stats
 					{...this.state}
