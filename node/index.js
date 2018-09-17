@@ -10,18 +10,6 @@ const app = express();
 // Allow cors
 app.use(cors());
 
-//Google map module setup
-const publicConfig = {
-  key: `${config.mapKey}`,
-  stagger_time:       1000,
-  encode_polylines:   false,
-  secure:             true,
-  proxy:              'http://192.168.33.10:3000'
-};
-
-const gmAPI = new GoogleMapsAPI(publicConfig);
-
-
 // Behance module setup
 const behance = new Behance({"client_id": `${config.behanceKey}`});
 Behance.initOptions();
@@ -95,6 +83,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 
 app.get(`/config`, function(req,res){
 	res.send(config);
+	
 })
 
 // Routes for data requests
