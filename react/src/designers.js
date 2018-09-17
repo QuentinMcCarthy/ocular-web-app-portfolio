@@ -151,6 +151,7 @@ class Designers extends Component {
 		)
 	}
 
+	// Open the stats section on click of 'View Stats'
 	viewStats(e){
 		e.preventDefault();
 		if(this.state.viewStatsOpen.display === 'none'){
@@ -166,6 +167,7 @@ class Designers extends Component {
 		}
 	}
 
+	// Handling the closing of the Stats section
 	statsHandle(e){
 		e.preventDefault();
 		this.setState({
