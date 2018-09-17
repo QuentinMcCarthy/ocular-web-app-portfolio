@@ -210,13 +210,13 @@ button {
       height: 100%;
       width: 100%; }
 
-.sectStatistics {
+.sect-statistics {
   margin: 0 auto;
   margin-top: 10%; }
-  .sectStatistics .statsHeading {
+  .sect-statistics .stats-heading {
     margin-bottom: 0.6em;
     margin-top: 1.6em; }
-  .sectStatistics .chart-stats {
+  .sect-statistics .chart-stats {
     margin: auto;
     margin-top: 13%;
     width: 91vw;
@@ -279,8 +279,11 @@ button {
       .contact-wrapper .contact-details i {
         margin: 0px 4px !important; }
 
-  #sectStatistics {
-    width: 75vw; } }
+  .sect-statistics {
+    width: 75vw; }
+    .sect-statistics .chart-stats {
+      width: 70vw;
+      height: 56vw; } }
 @media only screen and (min-width: 1024px) {
   .menu {
     width: 33%; }

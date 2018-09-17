@@ -252,11 +252,11 @@ button {
 
 // STATSTICS -------------------------------------------------------------------
 
-.sectStatistics{
+.sect-statistics{
 	margin: 0 auto;
 	margin-top: 10%;
 
-	.statsHeading {
+	.stats-heading {
 		margin-bottom: 0.6em;
 		margin-top: 1.6em;
 	}
@@ -351,11 +351,12 @@ button {
 			}
 		}
 	}
-	#sectStatistics {
+	.sect-statistics {
 		width: 75vw;
-		// .designer-charts {
-		// 	width: 100%;
-		// }
+		.chart-stats {
+			width: 70vw;
+			height: 56vw;
+		}
 	}
 }
 @media only screen and (min-width: 1024px){
