@@ -215,6 +215,9 @@ button {
   margin-top: 10%; }
   .sect-statistics .container {
     margin-top: 2em; }
+  .sect-statistics .close-btn {
+    border: none;
+    background-color: transparent; }
   .sect-statistics .stats-heading {
     margin-bottom: 0.6em;
     margin-top: 1.6em; }
