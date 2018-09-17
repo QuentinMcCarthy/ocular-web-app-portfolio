@@ -1,9 +1,9 @@
-const express = require("express");
-const path = require("path");
-const cors = require("cors");
-const request = require("request");
-const Behance = require("node-behance-api");
-const config = require("./config");
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const request = require('request');
+const Behance = require('node-behance-api');
+const config = require('./config');
 
 const app = express();
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 // Behance module setup
-const behance = new Behance({"client_id": `${config.behanceKey}`});
+const behance = new Behance({'client_id': `${config.behanceKey}`});
 Behance.initOptions();
 
 app.use(function(req,res,next){
@@ -21,8 +21,8 @@ app.use(function(req,res,next){
 
 // Redirect to the React server
 app.get(`/`, function(req,res){
-	res.writeHead(302, {"Location": "http://192.168.33.10:3000"});
-	console.log("Redirect to React server http://192.168.33.10:3000");
+	res.writeHead(302, {'Location': 'http://192.168.33.10:3000'});
+	console.log('Redirect to React server http://192.168.33.10:3000');
 	res.end();
 });
 
@@ -35,7 +35,7 @@ app.get(`/behance/user/:user`, function(req,res){
 		}
 	}, function(err, response){
 		// Set the header to specify JSON content
-		res.setHeader("Content-Type", "application/json");
+		res.setHeader('Content-Type', 'application/json');
 		if(err){
 			res.send(err);
 		} else{
@@ -53,7 +53,7 @@ app.get(`/behance/user/:user/projects`, function(req,res){
 		}
 	}, function(err, response){
 		// Set the header to specify JSON content
-		res.setHeader("Content-Type", "application/json");
+		res.setHeader('Content-Type', 'application/json');
 		if(err){
 			res.send(err);
 		} else{
@@ -72,7 +72,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 		}
 	}, function(err, response){
 		// Set the header to specify JSON content
-		res.setHeader("Content-Type", "application/json");
+		res.setHeader('Content-Type', 'application/json');
 		if(err){
 			res.send(err);
 		} else{
@@ -84,7 +84,7 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 // Request for the config data (route for Maps API)
 app.get(`/config`, function(req,res){
 	res.send(config);
-	
+
 })
 
 // Routes for data requests

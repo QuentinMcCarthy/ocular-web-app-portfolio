@@ -40,11 +40,11 @@ class Home extends Component {
 		});
 
 	  Events.scrollEvent.register('begin', function () {
-		console.log("begin", arguments);
+		console.log('begin', arguments);
 	  });
 
 	  Events.scrollEvent.register('end', function () {
-		console.log("end", arguments);
+		console.log('end', arguments);
 	  });
   }
 
@@ -123,8 +123,8 @@ class Home extends Component {
 	                		<h3 className='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
 	                	</div>
 	                </div>
-					<div className="behance-logo">
-						<img alt='behance logo' src="img/behance_logo.png" height='30'></img>
+					<div className='behance-logo'>
+						<img alt='behance logo' src='img/behance_logo.png' height='30'></img>
 					</div>
 	        	</div>
 			</div>
