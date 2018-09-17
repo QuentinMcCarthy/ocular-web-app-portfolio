@@ -11,8 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.min.js';
 // import 'google-maps/lib/Google.min.js';
 
-// import './css/index.min.css';
-import './css/index.css';
+import './css/index.min.css';
 
 class App extends Component {
 	constructor(props){
