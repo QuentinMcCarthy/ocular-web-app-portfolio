@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link, Events, animateScroll as scroller} from 'react-scroll';
 
-
 class Home extends Component {
 
 	constructor(props) {

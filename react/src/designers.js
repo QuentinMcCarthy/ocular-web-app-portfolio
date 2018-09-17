@@ -19,8 +19,10 @@ class Designers extends Component {
 			isLoaded: false,
 			error: null,
 			designerPic: { backgroundImage: ''},
-			designerBg: { backgroundImage: '' }
+			designerBg: { backgroundImage: '' },
+			viewStatsOpen: { display: 'none'}
 		}
+		this.viewStats = this.viewStats.bind(this);
 	}
 
 	componentDidMount() {
@@ -119,7 +121,7 @@ class Designers extends Component {
 				<div className='designer-profile position-relative'>
 					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 					<div className='profile-details position-absolute w-100 h-100'>
-						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center'>
+						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 							<i className="far fa-chart-bar"></i>
 							<span>View Stats</span>
 						</div>
@@ -136,9 +138,27 @@ class Designers extends Component {
 						<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
 					</div>
 				</div>
-				<Stats/>
+				<Stats
+					{...this.state}
+				/>
 			</div>
 		)
+	}
+
+	viewStats(e){
+		console.log('working');
+		e.preventDefault();
+		if(this.state.viewStatsOpen.display === 'none'){
+			this.setState({
+				designersOpen: { display: 'none' },
+				viewStatsOpen: { display: 'block' }
+			});
+		} else{
+			this.setState({
+				designersOpen: { display: 'block' },
+				viewStatsOpen: { display: 'none' }
+			});
+		}
 	}
 }
 

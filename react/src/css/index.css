@@ -322,9 +322,9 @@
     #sectContact i {
       color: #FFFFFF !important; }
 
-  #secStatistics {
+  #sectStatistics {
     width: 75vw; }
-    #secStatistics .designer-charts {
+    #sectStatistics .designer-charts {
       width: 100%; } }
 #profileSplitTop {
   height: 17%; }
@@ -396,7 +396,8 @@
   background-color: #ff0d00;
   height: 37%;
   width: 15%;
-  color: white; }
+  color: white;
+  z-index: 4; }
   .statsRibbon i {
     font-size: 1.5em; }
   .statsRibbon span {
