@@ -20,7 +20,8 @@ class Designers extends Component {
 			error: null,
 			designerPic: { backgroundImage: ''},
 			designerBg: { backgroundImage: '' },
-			viewStatsOpen: { display: 'none'}
+			designersOpen: { display: 'block' },
+			viewStatsOpen: { display: 'none' }
 		}
 		this.viewStats = this.viewStats.bind(this);
 	}
