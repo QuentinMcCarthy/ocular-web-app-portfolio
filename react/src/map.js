@@ -33,6 +33,8 @@ class GoogleMapsContainer extends React.Component {
 		 	lat :-41.328075 ,
 			lng:174.799973
 	  	}
+
+		const icon = { url :'public/favicon.ico', scaledSize: { width: 32, height: 32 }}
 	    return (
 	      	<Map
 		        google = { this.props.google }
@@ -44,6 +46,7 @@ class GoogleMapsContainer extends React.Component {
 					animation = {this.props.google.maps.Animation.DROP}
 		          	position = {pos}
 					name = {'Ocular'}
+					icon={{ url: 'https://www.hurricanes.co.nz/fileadmin/user_upload/ocular-logo.png' }}
 	        />
 			<InfoWindow
 				onOpen={this.windowHasOpened}
