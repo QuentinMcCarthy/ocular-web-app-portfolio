@@ -46,7 +46,9 @@ class GoogleMapsContainer extends React.Component {
 					animation = {this.props.google.maps.Animation.DROP}
 		          	position = {pos}
 					name = {'Ocular'}
-					icon={{ url: 'https://www.hurricanes.co.nz/fileadmin/user_upload/ocular-logo.png' }}
+					icon={{
+					   url: 'img/eye.jpeg',
+					   }}
 	        />
 			<InfoWindow
 				onOpen={this.windowHasOpened}
