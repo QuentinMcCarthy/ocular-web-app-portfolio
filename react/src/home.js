@@ -11,9 +11,9 @@ class Home extends Component {
 			staff: [],
 			items: [],
 			projects: {
-				project1: { title: 'Hello', image: '' },
-				project2: { title: '', image: '' },
-				project3: { title: '', image: '' }
+				project1: { title: 'Hello', image: '', imageProp: ''},
+				project2: { title: '', image: '', imageProp: '' },
+				project3: { title: '', image: '', imageProp: '' }
 			}
 		};
 	}
@@ -36,9 +36,14 @@ class Home extends Component {
 					isLoaded: true,
 					items: result,
 					projects: {
-						project1: { title: this.state.items.projects},
+						project1: { title: result.projects[0].name,
+									image: result.projects[0].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[0].covers[404]})`}
+						},
 					}
 				});
+				console.log(this.state.projects.project1);
+				console.log(this.state.projects.project1.imgProp);
 			},
 			(error) => {
 				this.setState({
@@ -106,7 +111,7 @@ class Home extends Component {
 	                <hr className='title-hr latest-projects-hr'/>
 	                <div className='row latest-projects'>
 	                	<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg' title='Miss Monday'></div>
+	                		<div className='project-img' id='projectImg' title='Miss Monday' style={this.state.projects.project1.imgProp}></div>
 	                		<h3 className='third-heading' id='projectTitle'>{this.state.projects.project1.title}</h3>
 	                	</div>
 
