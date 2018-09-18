@@ -11,9 +11,10 @@ class Home extends Component {
 			staff: [],
 			items: [],
 			projects: {
-				project1: { title: 'Hello', image: '', imageProp: ''},
+				project1: { title: '', image: '', imageProp: ''},
 				project2: { title: '', image: '', imageProp: '' },
-				project3: { title: '', image: '', imageProp: '' }
+				project3: { title: '', image: '', imageProp: '' },
+				project4: { title: '', image: '', imageProp: '' }
 			}
 		};
 	}
@@ -40,6 +41,18 @@ class Home extends Component {
 									image: result.projects[0].covers[404],
 									imgProp: { backgroundImage: `url(${result.projects[0].covers[404]})`}
 						},
+						project2: { title: result.projects[1].name,
+									image: result.projects[1].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[1].covers[404]})`}
+						},
+						project3: { title: result.projects[2].name,
+									image: result.projects[2].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[2].covers[404]})`}
+						},
+						project4: { title: result.projects[3].name,
+									image: result.projects[3].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[3].covers[404]})`}
+						}
 					}
 				});
 				console.log(this.state.projects.project1);
@@ -68,11 +81,6 @@ class Home extends Component {
 
 
 	render(){
-		// console.log(this.state.items);
-		// console.log(this.state.staff);
-		// console.log(this.state.items.projects[""0""]);
-		// console.log(this.state.items.projects[""0""].covers[404]);
-		// console.log(this.state.items.projects[""0""].name);
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
 				<div className='scroll-up-btn-wrapper fixed-bottom'>
@@ -111,23 +119,23 @@ class Home extends Component {
 	                <hr className='title-hr latest-projects-hr'/>
 	                <div className='row latest-projects'>
 	                	<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg' title='Miss Monday' style={this.state.projects.project1.imgProp}></div>
+	                		<div className='project-img' id='projectImg' title={this.state.projects.project1.title} style={this.state.projects.project1.imgProp}></div>
 	                		<h3 className='third-heading' id='projectTitle'>{this.state.projects.project1.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg2' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle2'>Miss Monday</h3>
+	                		<div className='project-img' id='projectImg2' title={this.state.projects.project2.title} style={this.state.projects.project2.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle2'>{this.state.projects.project2.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg3' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
+	                		<div className='project-img' id='projectImg3' title={this.state.projects.project3.title} style={this.state.projects.project3.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle3'>{this.state.projects.project3.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg3' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
+	                		<div className='project-img' id='projectImg4' title={this.state.projects.project4.title} style={this.state.projects.project4.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle4'>{this.state.projects.project4.title}</h3>
 	                	</div>
 	                </div>
 					<div className="behance-logo">
