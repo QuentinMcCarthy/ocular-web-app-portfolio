@@ -226,8 +226,7 @@ button {
     margin: auto;
     margin-top: 13%;
     width: 91vw;
-    height: 75vw;
-    background-color: #FF0000; }
+    height: 75vw; }
 
 @media only screen and (min-width: 600px) {
   .header-bar {
