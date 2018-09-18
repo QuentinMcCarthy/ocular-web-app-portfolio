@@ -34,7 +34,7 @@ class GoogleMapsContainer extends React.Component {
 			lng:174.799973
 	  	}
 
-		const icon = { url :'public/favicon.ico', scaledSize: { width: 32, height: 32 }}
+
 	    return (
 	      	<Map
 		        google = { this.props.google }
