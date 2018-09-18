@@ -9,7 +9,12 @@ class Home extends Component {
 			error: null,
 			isLoaded: false,
 			staff: [],
-			items: []
+			items: [],
+			projects: {
+				project1: { title: 'Test', image: '' },
+				project2: { title: '', image: '' },
+				project3: { title: '', image: '' }
+			}
 		};
 	}
 
@@ -56,6 +61,9 @@ class Home extends Component {
 	render(){
 		console.log(this.state.items);
 		console.log(this.state.staff);
+		console.log(this.state.items.projects);
+		// console.log(this.state.items.projects[""0""].covers[404]);
+		// console.log(this.state.items.projects[""0""].name);
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
 				<div className='scroll-up-btn-wrapper fixed-bottom'>
@@ -95,7 +103,7 @@ class Home extends Component {
 	                <div className='row latest-projects'>
 	                	<div className='col-sm project-indiviudal'>
 	                		<div className='project-img' id='projectImg' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle'>Ocular - Christmas Present</h3>
+	                		<h3 className='third-heading' id='projectTitle'>{this.state.projects.project1.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
