@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Events, animateScroll as scroll, scroller} from 'react-scroll';
+import {Link, animateScroll as scroll, scroller} from 'react-scroll';
 
 class Home extends Component {
 
@@ -9,7 +9,13 @@ class Home extends Component {
 			error: null,
 			isLoaded: false,
 			staff: [],
-			items: []
+			items: [],
+			projects: {
+				project1: { title: '', image: '', imageProp: ''},
+				project2: { title: '', image: '', imageProp: '' },
+				project3: { title: '', image: '', imageProp: '' },
+				project4: { title: '', image: '', imageProp: '' }
+			}
 		};
 	}
 
@@ -22,14 +28,35 @@ class Home extends Component {
 			});
 
 
-		fetch(`http://192.168.33.10:4000/behance/user/${staffResults[0].behance}`)
+		fetch(`http://192.168.33.10:4000/behance/user/${staffResults[0].behance}/projects`)
 		.then(res => res.json())
 		.then(
 			(result) => {
+				console.log(result.projects[0].name);
 				this.setState({
 					isLoaded: true,
-					items: result
+					items: result,
+					projects: {
+						project1: { title: result.projects[0].name,
+									image: result.projects[0].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[0].covers[404]})`}
+						},
+						project2: { title: result.projects[1].name,
+									image: result.projects[1].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[1].covers[404]})`}
+						},
+						project3: { title: result.projects[2].name,
+									image: result.projects[2].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[2].covers[404]})`}
+						},
+						project4: { title: result.projects[3].name,
+									image: result.projects[3].covers[404],
+									imgProp: { backgroundImage: `url(${result.projects[3].covers[404]})`}
+						}
+					}
 				});
+				console.log(this.state.projects.project1);
+				console.log(this.state.projects.project1.imgProp);
 			},
 			(error) => {
 				this.setState({
@@ -38,15 +65,7 @@ class Home extends Component {
 				});
 			});
 		});
-
-	  Events.scrollEvent.register('begin', function () {
-		console.log("begin", arguments);
-	  });
-
-	  Events.scrollEvent.register('end', function () {
-		console.log("end", arguments);
-	  });
-  }
+  	}
 
 	scrollTo() {
 		scroller.scrollTo('scroll-to-element', {
@@ -60,10 +79,6 @@ class Home extends Component {
 		scroll.scrollToTop();
 	}
 
-	  componentWillUnmount() {
-		  Events.scrollEvent.remove('begin');
-		  Events.scrollEvent.remove('end');
-	  }
 
 	render(){
 		return (
@@ -104,23 +119,23 @@ class Home extends Component {
 	                <hr className='title-hr latest-projects-hr'/>
 	                <div className='row latest-projects'>
 	                	<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle'>Ocular - Christmas Present</h3>
+	                		<div className='project-img' id='projectImg' title={this.state.projects.project1.title} style={this.state.projects.project1.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle'>{this.state.projects.project1.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg2' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle2'>Miss Monday</h3>
+	                		<div className='project-img' id='projectImg2' title={this.state.projects.project2.title} style={this.state.projects.project2.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle2'>{this.state.projects.project2.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg3' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
+	                		<div className='project-img' id='projectImg3' title={this.state.projects.project3.title} style={this.state.projects.project3.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle3'>{this.state.projects.project3.title}</h3>
 	                	</div>
 
 						<div className='col-sm project-indiviudal'>
-	                		<div className='project-img' id='projectImg3' title='Miss Monday'></div>
-	                		<h3 className='third-heading' id='projectTitle3'>Seafood New Zealand Website</h3>
+	                		<div className='project-img' id='projectImg4' title={this.state.projects.project4.title} style={this.state.projects.project4.imgProp}></div>
+	                		<h3 className='third-heading' id='projectTitle4'>{this.state.projects.project4.title}</h3>
 	                	</div>
 	                </div>
 					<div className="behance-logo">

@@ -90,7 +90,7 @@ class App extends Component {
 		} else{
 			this.setState({
 				navMenuOpen: { display: 'none' },
-				homeOpen: { display: 'none' }
+				homeOpen: { display: 'block' }
 			});
 		}
 	}

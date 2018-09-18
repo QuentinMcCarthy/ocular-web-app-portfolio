@@ -5,8 +5,6 @@ const request = require("request");
 const Behance = require("node-behance-api");
 const config = require("./config");
 
-require('dotenv').config()
-
 const app = express();
 app.get('/', (req, res) => {
     res.send(process.env.SECRET_KEY);

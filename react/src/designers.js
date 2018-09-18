@@ -29,6 +29,7 @@ class Designers extends Component {
 			viewStatsOpen: { display: 'none' }
 		}
 		this.viewStats = this.viewStats.bind(this);
+		this.statsHandle = this.statsHandle.bind(this);
 	}
 
 	componentDidMount() {
@@ -122,42 +123,44 @@ class Designers extends Component {
 
 	render(){
 		return (
-			<div id='sectDesigners' style={this.props.designersOpen}>
+			<div className='sectContainer'>
+				<div id='sectDesigners' style={this.props.designersOpen}>
 
-				<div className='designer-profile position-relative' style={this.state.designersHide}>
-					<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
-					<div className='profile-details position-absolute w-100 h-100'>
-						<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
-							<i className="far fa-chart-bar"></i>
-							<span>View Stats</span>
-						</div>
-						<div id='profileSplitTop' className='splitv-third position-relative w-100'>
-							<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
-								<i className='fas fa-angle-left'></i>
-							</button>
-						</div>
-						<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
-							<div className='profile-image h-100' style={this.state.designerPic}></div>
-							<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
-							<p className='profile-fields'>{this.state.currStaff.fields}</p>
-						</div>
-						<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
-							<div className='h-100 flex-fill'>
-								<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="far fa-eye"></i>
-									<span>{this.state.currStaff.profile.user.stats.views}</span>
-								</div>
+					<div className='designer-profile position-relative' style={this.state.designersHide}>
+						<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
+						<div className='profile-details position-absolute w-100 h-100'>
+							<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
+								<i className="far fa-chart-bar"></i>
+								<span>View Stats</span>
 							</div>
-							<div className='h-100 flex-fill'>
-								<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="fas fa-thumbs-up"></i>
-									<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
-								</div>
+							<div id='profileSplitTop' className='splitv-third position-relative w-100'>
+								<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
+									<i className='fas fa-angle-left'></i>
+								</button>
 							</div>
-							<div className='h-100 flex-fill'>
-								<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="fas fa-comments"></i>
-									<span>{this.state.currStaff.profile.user.stats.comments}</span>
+							<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
+								<div className='profile-image h-100' style={this.state.designerPic}></div>
+								<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
+								<p className='profile-fields'>{this.state.currStaff.fields}</p>
+							</div>
+							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
+								<div className='h-100 flex-fill'>
+									<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="far fa-eye"></i>
+										<span>{this.state.currStaff.profile.user.stats.views}</span>
+									</div>
+								</div>
+								<div className='h-100 flex-fill'>
+									<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="fas fa-thumbs-up"></i>
+										<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+									</div>
+								</div>
+								<div className='h-100 flex-fill'>
+									<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="fas fa-comments"></i>
+										<span>{this.state.currStaff.profile.user.stats.comments}</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -165,13 +168,14 @@ class Designers extends Component {
 				</div>
 				<Stats
 					{...this.state}
+					closeStats = {this.statsHandle}
 				/>
 			</div>
 		)
 	}
 
+	// Open the stats section on click of 'View Stats'
 	viewStats(e){
-		console.log('working');
 		e.preventDefault();
 		if(this.state.viewStatsOpen.display === 'none'){
 			this.setState({
@@ -184,6 +188,15 @@ class Designers extends Component {
 				viewStatsOpen: { display: 'none' }
 			});
 		}
+	}
+
+	// Handling the closing of the Stats section
+	statsHandle(e){
+		e.preventDefault();
+		this.setState({
+			viewStatsOpen: { display: 'none' },
+			designersHide: { display: 'block' }
+		});
 	}
 }
 
