@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Chart } from 'react-google-charts';
+// import { Chart } from 'react-google-charts';
 
 import Home from './home';
 import Designers from './designers';
