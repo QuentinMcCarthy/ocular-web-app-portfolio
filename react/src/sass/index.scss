@@ -5,11 +5,21 @@
 }
 
 #profileSplitCenter {
-	height: 56%;
+	height: 61%;
 }
 
 #profileSplitBottom {
-	height: 27%;
+	height: 22%;
+
+	div {
+		padding: 5px;
+	}
+	i {
+		font-size: 1.3em;
+	}
+	span {
+		font-size: .9em;
+	}
 }
 
 .designer-profile {
@@ -35,6 +45,11 @@
 	z-index: 2;
 }
 
+.splith-third {
+	width: 33%;
+	background: transparent;
+}
+
 .profile-image {
 	width: 40%;
 	padding-top: 40%;
@@ -47,11 +62,27 @@
 .profile-name {
 	@include heading();
 	margin-top: 5px;
+	margin-bottom: 0;
 	font-size: 1.4em;
 }
 
+.profile-fields {
+	font-family: $mainFontFamily;
+	font-size: .9em;
+}
+
+.profile-views {
+	border-right: 2px solid black;
+}
+
+.profile-appreciations {}
+
+.profile-comments {
+	border-left: 2px solid black;
+}
+
 .scroll-left {
-	padding: 0.1em 0.6em;
+	padding: .1em .6em;
 	color: $primaryColor;
 	background-color: $secondaryColor;
 	border: none;

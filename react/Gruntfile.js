@@ -17,29 +17,16 @@ module.exports = function(grunt){
 				}
 			}
 		},
-		jshint: {
-			src: ['src/js/script.js']
-		},
-		uglify: {
-			src: {
-				files: {
-					'src/js/script.min.js': 'src/js/script.js'
-				}
-			}
-		},
 		watch: {
 			sass: {
 				files: ['src/sass/*.scss'],
-				tasks: ['sass']//, 'cssmin']
-			}//,
-			// js: {
-			// 	files: ['src/js/script.js'],
-			// 	tasks: ['jshint', 'uglify']
-			// }
+				tasks: ['sass', 'cssmin']
+			}
 		}
 	});
 
 	// grunt.loadNpmTasks();
 
 	// grunt.registerTask();
+	grunt.registerTask('loadcss', ['sass', 'cssmin']);
 };

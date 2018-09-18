@@ -239,8 +239,9 @@ button {
 	.contact-map {
 		width: 100vw;
 		height: 40vh;
-		background-color: red;
 		position: absolute;
+		-webkit-filter: grayscale(96%);
+		filter: grayscale(96%);
 		.google-map-div {
 			height: 100%;
 			width: 100%;
@@ -360,6 +361,9 @@ button {
 			}
 		}
 	}
+	.contact-map {
+		height: 42vh;
+	}
 	.sect-statistics {
 		width: 75vw;
 		.chart-stats {
@@ -424,7 +428,6 @@ button {
 	.sect-statistics {
 		width: 50vw;
 		margin-top: 5em;
-
 		.chart-stats {
 			margin-top: 7%;
 			width: 48vw;
