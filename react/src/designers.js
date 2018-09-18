@@ -169,7 +169,7 @@ class Designers extends Component {
 								var bgImage = { backgroundImage: `url(${project.covers.original})` };
 								return(
 									<div key={project.id} data={project} className='projectWrapper'>
-										<div className='project-bg-image' data-url={project.covers.original} stlye={bgImage}></div>
+										<div className='project-bg-image' data-url={project.covers.original} style={bgImage}></div>
 									</div>
 								)
 							})
