@@ -143,40 +143,28 @@ class Designers extends Component {
 								<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
 								<p className='profile-fields'>{this.state.currStaff.fields}</p>
 							</div>
-							<div id='profileSplitBottom' className='splitv-third position-relative w-100'></div>
-						</div>
-						<div id='profileSplitTop' className='splitv-third position-relative w-100'>
-							<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
-								<i className='fas fa-angle-left'></i>
-							</button>
-						</div>
-						<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
-							<div className='profile-image h-100' style={this.state.designerPic}></div>
-							<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
-							<p className='profile-fields'>{this.state.currStaff.fields}</p>
-						</div>
-						<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
-							<div className='h-100 flex-fill'>
-								<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="far fa-eye"></i>
-									<span>{this.state.currStaff.profile.user.stats.views}</span>
+							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
+								<div className='h-100 flex-fill'>
+									<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="far fa-eye"></i>
+										<span>{this.state.currStaff.profile.user.stats.views}</span>
+									</div>
 								</div>
-							</div>
-							<div className='h-100 flex-fill'>
-								<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="fas fa-thumbs-up"></i>
-									<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+								<div className='h-100 flex-fill'>
+									<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="fas fa-thumbs-up"></i>
+										<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+									</div>
 								</div>
-							</div>
-							<div className='h-100 flex-fill'>
-								<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
-									<i className="fas fa-comments"></i>
-									<span>{this.state.currStaff.profile.user.stats.comments}</span>
+								<div className='h-100 flex-fill'>
+									<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
+										<i className="fas fa-comments"></i>
+										<span>{this.state.currStaff.profile.user.stats.comments}</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 				<Stats
 					{...this.state}
