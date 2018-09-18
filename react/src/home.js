@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Events, animateScroll as scroll, scroller} from 'react-scroll';
+import {Link, animateScroll as scroll, scroller} from 'react-scroll';
 
 class Home extends Component {
 
@@ -38,15 +38,7 @@ class Home extends Component {
 				});
 			});
 		});
-
-	  Events.scrollEvent.register('begin', function () {
-		console.log("begin", arguments);
-	  });
-
-	  Events.scrollEvent.register('end', function () {
-		console.log("end", arguments);
-	  });
-  }
+  	}
 
 	scrollTo() {
 		scroller.scrollTo('scroll-to-element', {
@@ -60,10 +52,6 @@ class Home extends Component {
 		scroll.scrollToTop();
 	}
 
-	  componentWillUnmount() {
-		  Events.scrollEvent.remove('begin');
-		  Events.scrollEvent.remove('end');
-	  }
 
 	render(){
 		return (
