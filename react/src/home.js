@@ -22,7 +22,7 @@ class Home extends Component {
 			});
 
 
-		fetch(`http://192.168.33.10:4000/behance/user/${staffResults[0].behance}`)
+		fetch(`http://192.168.33.10:4000/behance/user/${staffResults[0].behance}/projects`)
 		.then(res => res.json())
 		.then(
 			(result) => {
@@ -54,6 +54,8 @@ class Home extends Component {
 
 
 	render(){
+		console.log(this.state.items);
+		console.log(this.state.staff);
 		return (
 			<div id='sectIndex' style={this.props.homeOpen}>
 				<div className='scroll-up-btn-wrapper fixed-bottom'>
