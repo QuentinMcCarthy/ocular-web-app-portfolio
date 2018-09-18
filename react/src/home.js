@@ -11,7 +11,7 @@ class Home extends Component {
 			staff: [],
 			items: [],
 			projects: {
-				project1: { title: 'Test', image: '' },
+				project1: { title: 'Hello', image: '' },
 				project2: { title: '', image: '' },
 				project3: { title: '', image: '' }
 			}
@@ -31,9 +31,13 @@ class Home extends Component {
 		.then(res => res.json())
 		.then(
 			(result) => {
+				console.log(result.projects[0].name);
 				this.setState({
 					isLoaded: true,
-					items: result
+					items: result,
+					projects: {
+						project1: { title: this.state.items.projects},
+					}
 				});
 			},
 			(error) => {
@@ -59,9 +63,9 @@ class Home extends Component {
 
 
 	render(){
-		console.log(this.state.items);
-		console.log(this.state.staff);
-		console.log(this.state.items.projects);
+		// console.log(this.state.items);
+		// console.log(this.state.staff);
+		// console.log(this.state.items.projects[""0""]);
 		// console.log(this.state.items.projects[""0""].covers[404]);
 		// console.log(this.state.items.projects[""0""].name);
 		return (
