@@ -42,22 +42,22 @@ class GoogleMapsContainer extends React.Component {
 		        zoom = { 14 }
 		        initialCenter = {{ lat: -41.328075, lng: 174.797316 }}
 	      	>
-	        <Marker onclick = {this.onMarkerClick}
-					animation = {this.props.google.maps.Animation.DROP}
-		          	position = {pos}
-					name = {'Ocular'}
-					icon={{
-					   url: 'img/eye.jpeg',
-					   }}
-	        />
-			<InfoWindow
-				onOpen={this.windowHasOpened}
-				marker = {this.state.activeMarker}
-		        visible = {this.state.showingInfoWindow}>
-		        <div>
-		            <h1> {this.state.selectedPlace.name} </h1>
-		        </div>
-	        </InfoWindow>
+		        <Marker onclick = {this.onMarkerClick}
+						animation = {this.props.google.maps.Animation.DROP}
+			          	position = {pos}
+						name = {'Ocular'}
+						icon={{
+						   url: 'img/eye.jpeg',
+						   }}
+		        />
+				<InfoWindow
+					onOpen={this.windowHasOpened}
+					marker = {this.state.activeMarker}
+			        visible = {this.state.showingInfoWindow}>
+			        <div>
+			            <h1> {this.state.selectedPlace.name} </h1>
+			        </div>
+		        </InfoWindow>
 			</Map>
 	    );
   	}
