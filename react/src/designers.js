@@ -19,7 +19,8 @@ class Designers extends Component {
 					}
 				},
 				projects: {},
-				fields: ''
+				fields: '',
+				userProjectStats: []
 			},
 			isLoaded: false,
 			error: null,
@@ -103,11 +104,17 @@ class Designers extends Component {
 						this.setState({
 							currStaff: {
 								profile: this.state.currStaff.profile,
-								projects: userProjectData,
-								fields: this.state.currStaff.fields
+								projects: userProjectData.projects,
+								fields: this.state.currStaff.fields,
 							},
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
+
+						for(var j = 0; j < this.state.currStaff.projects.length; j++){
+							console.log(userProjectData.projects[j].name);
+							console.log(userProjectData.projects[j].stats);
+						}
+
 					}, (err) => {
 						this.setState({
 							isLoaded: true,
@@ -122,6 +129,8 @@ class Designers extends Component {
 	}
 
 	render(){
+		console.log(this.state.currStaff.projects[0]);
+		console.log(this.state.currStaff.userProjectStats);
 		return (
 			<div className='sectContainer'>
 				<div id='sectDesigners' style={this.props.designersOpen}>

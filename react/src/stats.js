@@ -24,7 +24,7 @@ class Stats extends Component {
 	}
 
 	render() {
-		console.log(thedata);
+		// console.log(thedata);
 		return(
 			<div id='sectStatistics' className='sect-statistics container' style={this.props.viewStatsOpen}>
 				<button type='button' className='close-btn' onClick={this.props.closeStats}>
