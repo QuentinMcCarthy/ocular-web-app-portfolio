@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleApiWrapper, Map, Marker, InfoWindow } from 'google-maps-react';
 
+
 class GoogleMapsContainer extends React.Component {
 	constructor(props){
 		super(props);
@@ -14,19 +15,13 @@ class GoogleMapsContainer extends React.Component {
 		this.onMarkerClick = this.onMarkerClick.bind(this);
 	}
 
-	componentDidMount() {
-		fetch('http://192.168.33.10:4000/config')
-		.then(res => res.json())
-		.then((mapData) => {
-			this.setState({
-				map: mapData
-			});
-
-		}, (err)=> {
-			this.setState({
-				error: err
-			});
-		});
+	componentWillUnmount() {
+		const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+		const script = document.createElement('script');
+		script.src = `https://maps.googleapis.com/maps/api/js?${API_KEY}&callback=initMap`;
+		script.async = true;
+		script.defer = true;
+		document.head.append(script);
 	}
 
   	render() {
@@ -72,9 +67,5 @@ class GoogleMapsContainer extends React.Component {
 
 }
 
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-const MapExport = GoogleApiWrapper({
-   apiKey: API_KEY
-})(GoogleMapsContainer);
-
-export default MapExport
+export default GoogleApiWrapper({
+})(GoogleMapsContainer)
