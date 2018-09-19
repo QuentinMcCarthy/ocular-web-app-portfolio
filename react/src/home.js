@@ -32,7 +32,6 @@ class Home extends Component {
 		.then(res => res.json())
 		.then(
 			(result) => {
-				console.log(result.projects[0].name);
 				this.setState({
 					isLoaded: true,
 					items: result,
@@ -55,8 +54,6 @@ class Home extends Component {
 						}
 					}
 				});
-				console.log(this.state.projects.project1);
-				console.log(this.state.projects.project1.imgProp);
 			},
 			(error) => {
 				this.setState({

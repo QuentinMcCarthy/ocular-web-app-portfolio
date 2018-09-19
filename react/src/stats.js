@@ -1,9 +1,30 @@
 import React, { Component } from 'react';
 import { Chart } from "react-google-charts";
 
+var thedata =  [
+	['Project Name', 'Appreciations', 'Comments', 'Views'],
+	['hello', 10, 10, 100],
+	['world', 20, 70, 500],
+	['my name is', 30, 19, 300],
+	['sun', 40, 80, 400]
+];
+
 class Stats extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			projects: [
+				['Project Name', 'Appreciations', 'Comments', 'Views'],
+				['hello', 10, 10, 100],
+				['world', 20, 70, 500],
+				['my name is', 30, 19, 300],
+				['sun', 40, 80, 400]
+			]
+		}
+	}
 
 	render() {
+		console.log(thedata);
 		return(
 			<div id='sectStatistics' className='sect-statistics container' style={this.props.viewStatsOpen}>
 				<button type='button' className='close-btn' onClick={this.props.closeStats}>
@@ -17,16 +38,9 @@ class Stats extends Component {
 						width='100%'
 						height='400px'
 						legendToggle
-						data={[
-						    ['Project Name', 'Appreciations', 'Comments', 'Views'],
-						    ['2014', 1000, 400, 200],
-						    ['2015', 1170, 460, 250],
-						    ['2016', 660, 1120, 300],
-						    ['2017', 1030, 540, 350],
-						]}
-
+						data={this.state.projects}
 						options={{
-						  title: 'Darylls Project Stats',
+						  title: 'Designers Project Stats',
 						}}
 					/>
 				</div>
