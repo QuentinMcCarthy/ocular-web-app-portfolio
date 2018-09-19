@@ -20,6 +20,7 @@ class Designers extends Component {
 				},
 				projects: {},
 				fields: '',
+				singlePushProjectStats: [],
 				userProjectStats: []
 			},
 			isLoaded: false,
@@ -101,6 +102,13 @@ class Designers extends Component {
 				fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}/projects`)
 					.then(res => res.json())
 					.then((userProjectData) => {
+						userProjectStats: [];
+						for(var j = 0; j < userProjectData.projects.length; j++){
+							console.log(userProjectData.projects[j].name);
+							console.log(userProjectData.projects[j].stats.appreciations);
+							console.log(userProjectData.projects[j].stats.comments);
+							console.log(userProjectData.projects[j].stats.views);
+						}
 						this.setState({
 							currStaff: {
 								profile: this.state.currStaff.profile,
@@ -109,11 +117,6 @@ class Designers extends Component {
 							},
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
-
-						for(var j = 0; j < this.state.currStaff.projects.length; j++){
-							console.log(userProjectData.projects[j].name);
-							console.log(userProjectData.projects[j].stats);
-						}
 
 					}, (err) => {
 						this.setState({
@@ -129,8 +132,8 @@ class Designers extends Component {
 	}
 
 	render(){
-		console.log(this.state.currStaff.projects[0]);
-		console.log(this.state.currStaff.userProjectStats);
+		// console.log(this.state.currStaff.projects[0]);
+		// console.log(this.state.currStaff.userProjectStats);
 		return (
 			<div className='sectContainer'>
 				<div id='sectDesigners' style={this.props.designersOpen}>
