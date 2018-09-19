@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleApiWrapper, Map, Marker, InfoWindow } from 'google-maps-react';
 
+
 class GoogleMapsContainer extends React.Component {
 	constructor(props){
 		super(props);
@@ -11,21 +12,16 @@ class GoogleMapsContainer extends React.Component {
 			selectedPlace: {},
 			visible: false,
 		}
+		this.onMarkerClick = this.onMarkerClick.bind(this);
 	}
 
-	componentDidMount() {
-		fetch('http://192.168.33.10:4000/config')
-		.then(res => res.json())
-		.then((mapData) => {
-			this.setState({
-				map: mapData
-			});
-
-		}, (err)=> {
-			this.setState({
-				error: err
-			});
-		});
+	componentWillUnmount() {
+		const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+		const script = document.createElement('script');
+		script.src = `https://maps.googleapis.com/maps/api/js?${API_KEY}&callback=initMap`;
+		script.async = true;
+		script.defer = true;
+		document.head.append(script);
 	}
 
   	render() {
@@ -36,28 +32,28 @@ class GoogleMapsContainer extends React.Component {
 
 
 	    return (
-	      	<Map
-		        google = { this.props.google }
-				disableDefaultUI = {true}
-		        zoom = { 14 }
-		        initialCenter = {{ lat: -41.328075, lng: 174.797316 }}
-	      	>
-	        <Marker onclick = {this.onMarkerClick}
-					animation = {this.props.google.maps.Animation.DROP}
-		          	position = {pos}
-					name = {'Ocular'}
+			<Map
+				google = { this.props.google }
+				disableDefaultUI = {false}
+				zoom = { 14}
+				initialCenter = {{ lat: -41.328075, lng: 174.797316 }}
+			>
+			    <Marker onClick={this.onMarkerClick}
 					icon={{
 					   url: 'img/eye.jpeg',
-					   }}
-	        />
-			<InfoWindow
-				onOpen={this.windowHasOpened}
-				marker = {this.state.activeMarker}
-		        visible = {this.state.showingInfoWindow}>
-		        <div>
-		            <h1> {this.state.selectedPlace.name} </h1>
-		        </div>
-	        </InfoWindow>
+					}}
+					animation = {this.props.google.maps.Animation.DROP}
+				    position = {pos}
+					name = {'Ocular'}
+			    />
+				<InfoWindow
+					onOpen={this.windowHasOpened}
+					marker = {this.state.activeMarker}
+				    visible = {this.state.showingInfoWindow}>
+				    <div>
+				        <p> {this.state.selectedPlace.name} </p>
+				    </div>
+			    </InfoWindow>
 			</Map>
 	    );
   	}
@@ -71,9 +67,5 @@ class GoogleMapsContainer extends React.Component {
 
 }
 
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-const MapExport = GoogleApiWrapper({
-   apiKey: API_KEY
-})(GoogleMapsContainer);
-
-export default MapExport
+export default GoogleApiWrapper({
+})(GoogleMapsContainer)
