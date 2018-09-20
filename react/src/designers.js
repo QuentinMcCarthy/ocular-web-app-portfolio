@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Stats from './stats';
 
 var singleProjectStats = [];
-var allTheStats = [];
+var allTheStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
 
 class Designers extends Component {
 	constructor(props){
@@ -31,8 +31,10 @@ class Designers extends Component {
 			designerBg: { backgroundImage: '' },
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
-			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']]
+			singleProject: [],
+			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']],
 		}
+
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
 	}
@@ -109,11 +111,10 @@ class Designers extends Component {
 							currStaff: {
 								profile: this.state.currStaff.profile,
 								projects: userProjectData.projects,
-								fields: this.state.currStaff.fields,
+								fields: this.state.currStaff.fields
 							},
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
-
 					}, (err) => {
 						this.setState({
 							isLoaded: true,
@@ -170,6 +171,12 @@ class Designers extends Component {
 								</div>
 							</div>
 						</div>
+						<div className='row latest-projects'>
+							<div className='col-sm project-indiviudal'>
+		                		<div className='project-img'></div>
+		                		<h3 className='third-heading'>Ocular Christmas Gift</h3>
+		                	</div>
+						</div>
 					</div>
 				</div>
 				<Stats
@@ -205,8 +212,22 @@ class Designers extends Component {
 
 			allTheStats.push(singleProjectStats);
 
+			// singleProjectStats.length = 0;
+
 			break;
 
+ // ----------------------------------------------------------------------------
+
+			// this.setState ({
+			// 	singleProject: [this.state.currStaff.projects[j].name
+			// 					this.state.currStaff.projects[j].stats.appreciations,
+			// 					this.state.currStaff.projects[j].stats.comments,
+			// 					this.state.currStaff.projects[j].stats.views
+			// 	],
+			// 	allStats: singleProject
+			// });
+
+ // ----------------------------------------------------------------------------
 
 			// The code here should push a single projects stats into an array (singleProjectStats).
 			// The array is then carried over into another array will contains a bunch of
