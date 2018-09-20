@@ -7,10 +7,10 @@ class Stats extends Component {
 		this.state = {
 			projects: [
 				['Project Name', 'Appreciations', 'Comments', 'Views'],
-				['hello', 10, 10, 100],
-				['world', 20, 70, 500],
-				['my name is', 30, 19, 300],
-				['sun', 40, 80, 400]
+				['Miss Monday', 10, 10, 100],
+				['Seafood NZ', 20, 70, 500],
+				['Ralph Hotere', 30, 19, 300],
+				['Ocular gift', 40, 80, 400]
 			]
 		}
 	}
@@ -30,7 +30,7 @@ class Stats extends Component {
 						width='100%'
 						height='400px'
 						legendToggle
-						data={this.state.finalAllStats}
+						data={this.state.projects}
 						options={{
 						  title: 'Designers Project Stats',
 						}}

@@ -203,12 +203,23 @@ class Designers extends Component {
 				this.state.currStaff.projects[j].stats.views
 			);
 
+			allTheStats.push(singleProjectStats);
+
 			break;
+
+
+			// The code here should push a single projects stats into an array (singleProjectStats).
+			// The array is then carried over into another array will contains a bunch of
+			// arrays which are the inidivdual project stats. (arraies inside of an array)
+			// Once an inidivudal project is pushed into the final array (allTheStats) the singleProjectStats
+			// array is cleared so that the next project can be pushed into the singleProjectStats and that array
+			// is added to the allTheStats array. This is repeated via a for loop.
 		}
 
-
+		console.log('this is the single stat which complies into one array');
 		console.log(singleProjectStats);
-		// console.log(allStats);
+		console.log('these are all the inidivual stats inside one array');
+		console.log(allTheStats);
 
 	}
 
