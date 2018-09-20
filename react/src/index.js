@@ -128,7 +128,7 @@ class App extends Component {
 		} else{
 			this.setState({
 				navMenuOpen: { display: 'none' },
-				contactOpen: { display: 'none' }
+				contactOpen: { display: 'block' }
 			});
 		}
 	}
