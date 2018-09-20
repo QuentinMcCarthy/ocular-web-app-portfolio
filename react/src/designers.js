@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Stats from './stats';
 
+var singleProjectStats = [];
+var allTheStats = [];
+
 class Designers extends Component {
 	constructor(props){
 		super(props);
@@ -20,15 +23,15 @@ class Designers extends Component {
 				},
 				projects: {},
 				fields: '',
-				singlePushProjectStats: [],
-				userProjectStats: []
+
 			},
 			isLoaded: false,
 			error: null,
 			designerPic: { backgroundImage: ''},
 			designerBg: { backgroundImage: '' },
 			designersHide: { display: 'block' },
-			viewStatsOpen: { display: 'none' }
+			viewStatsOpen: { display: 'none' },
+			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']]
 		}
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
@@ -102,13 +105,6 @@ class Designers extends Component {
 				fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}/projects`)
 					.then(res => res.json())
 					.then((userProjectData) => {
-						userProjectStats: [];
-						for(var j = 0; j < userProjectData.projects.length; j++){
-							console.log(userProjectData.projects[j].name);
-							console.log(userProjectData.projects[j].stats.appreciations);
-							console.log(userProjectData.projects[j].stats.comments);
-							console.log(userProjectData.projects[j].stats.views);
-						}
 						this.setState({
 							currStaff: {
 								profile: this.state.currStaff.profile,
@@ -132,8 +128,6 @@ class Designers extends Component {
 	}
 
 	render(){
-		// console.log(this.state.currStaff.projects[0]);
-		// console.log(this.state.currStaff.userProjectStats);
 		return (
 			<div className='sectContainer'>
 				<div id='sectDesigners' style={this.props.designersOpen}>
@@ -200,6 +194,22 @@ class Designers extends Component {
 				viewStatsOpen: { display: 'none' }
 			});
 		}
+
+		for(var j = 0; j < this.state.currStaff.projects.length; j++) {
+			singleProjectStats.push(
+				this.state.currStaff.projects[j].name,
+				this.state.currStaff.projects[j].stats.appreciations,
+				this.state.currStaff.projects[j].stats.comments,
+				this.state.currStaff.projects[j].stats.views
+			);
+
+			break;
+		}
+
+
+		console.log(singleProjectStats);
+		// console.log(allStats);
+
 	}
 
 	// Handling the closing of the Stats section

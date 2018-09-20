@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 import { Chart } from "react-google-charts";
 
-var thedata =  [
-	['Project Name', 'Appreciations', 'Comments', 'Views'],
-	['hello', 10, 10, 100],
-	['world', 20, 70, 500],
-	['my name is', 30, 19, 300],
-	['sun', 40, 80, 400]
-];
-
 class Stats extends Component {
 	constructor(props) {
 		super(props);
@@ -38,7 +30,7 @@ class Stats extends Component {
 						width='100%'
 						height='400px'
 						legendToggle
-						data={this.state.projects}
+						data={this.state.finalAllStats}
 						options={{
 						  title: 'Designers Project Stats',
 						}}
