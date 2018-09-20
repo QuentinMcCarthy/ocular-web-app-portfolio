@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Stats from './stats';
 
 var singleProjectStats = [];
-var allTheStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
+var allStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
 
 class Designers extends Component {
 	constructor(props){
@@ -32,7 +32,7 @@ class Designers extends Component {
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
 			singleProject: [],
-			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']],
+			dataTable: []
 		}
 
 		this.viewStats = this.viewStats.bind(this);
@@ -113,6 +113,7 @@ class Designers extends Component {
 								projects: userProjectData.projects,
 								fields: this.state.currStaff.fields
 							},
+							dataTable: allStats,
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
 					}, (err) => {
@@ -182,6 +183,7 @@ class Designers extends Component {
 				<Stats
 					{...this.state}
 					closeStats = {this.statsHandle}
+					theData = {this.state.dataTable}
 				/>
 			</div>
 		)
@@ -202,33 +204,34 @@ class Designers extends Component {
 			});
 		}
 
-		for(var j = 0; j < this.state.currStaff.projects.length; j++) {
+ // ----------------------------------------------------------------------------
+
+		for(var i = 0; i < this.state.currStaff.projects.length; i++) {
 			singleProjectStats.push(
-				this.state.currStaff.projects[j].name,
-				this.state.currStaff.projects[j].stats.appreciations,
-				this.state.currStaff.projects[j].stats.comments,
-				this.state.currStaff.projects[j].stats.views
+				this.state.currStaff.projects[i].name,
+				this.state.currStaff.projects[i].stats.appreciations,
+				this.state.currStaff.projects[i].stats.comments,
+				this.state.currStaff.projects[i].stats.views
 			);
 
-			allTheStats.push(singleProjectStats);
+			allStats.push(singleProjectStats);
 
 			// singleProjectStats.length = 0;
-
-			break;
 
  // ----------------------------------------------------------------------------
 
 			// this.setState ({
-			// 	singleProject: [this.state.currStaff.projects[j].name
-			// 					this.state.currStaff.projects[j].stats.appreciations,
-			// 					this.state.currStaff.projects[j].stats.comments,
-			// 					this.state.currStaff.projects[j].stats.views
+			// 	singleProject: [this.state.currStaff.projects[i].name
+			// 					this.state.currStaff.projects[i].stats.appreciations,
+			// 					this.state.currStaff.projects[i].stats.comments,
+			// 					this.state.currStaff.projects[i].stats.views
 			// 	],
-			// 	allStats: singleProject
+			//	 allStats: singleProject
 			// });
 
  // ----------------------------------------------------------------------------
 
+			break;
 			// The code here should push a single projects stats into an array (singleProjectStats).
 			// The array is then carried over into another array will contains a bunch of
 			// arrays which are the inidivdual project stats. (arraies inside of an array)
@@ -237,10 +240,16 @@ class Designers extends Component {
 			// is added to the allTheStats array. This is repeated via a for loop.
 		}
 
+		console.log(allStats);
+
 		console.log('this is the single stat which complies into one array');
 		console.log(singleProjectStats);
-		console.log('these are all the inidivual stats inside one array');
-		console.log(allTheStats);
+
+		console.log('these are all the indivdual stats inside one array');
+		console.log(allStats);
+
+		console.log('this is the dataTable from this.state');
+		console.log(this.state.dataTable);
 
 	}
 

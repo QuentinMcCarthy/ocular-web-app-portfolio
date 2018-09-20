@@ -16,7 +16,6 @@ class Stats extends Component {
 	}
 
 	render() {
-		// console.log(thedata);
 		return(
 			<div id='sectStatistics' className='sect-statistics container' style={this.props.viewStatsOpen}>
 				<button type='button' className='close-btn' onClick={this.props.closeStats}>
@@ -30,7 +29,7 @@ class Stats extends Component {
 						width='100%'
 						height='400px'
 						legendToggle
-						data={this.state.projects}
+						data={this.props.theData}
 						options={{
 						  title: 'Designers Project Stats',
 						}}
