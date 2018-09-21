@@ -119,20 +119,20 @@ class Designers extends Component {
 						console.log(this.state.currStaff.projects);
 
 						for(var i = 0; i < this.state.currStaff.projects.length; i++){
-							  var createProject = document.createElement('div');
-							  var createProjectImage = document.createElement('div');
-							  var createProjectTitle = document.createElement('h3');
+							var createProject = document.createElement('div');
+							var createProjectImage = document.createElement('div');
+							var createProjectTitle = document.createElement('h3');
 
-							  createProject.className = 'col-sm project-indiviudal';
-							  createProjectImage.className = 'project-img';
-							  createProjectTitle.className = 'third-heading';
+							createProject.className = 'col-sm project-indiviudal';
+							createProjectImage.className = 'project-img';
+							createProjectTitle.className = 'third-heading';
 
-							  this.refs.designerProjectsContainer.appendChild(createProject);
-							  createProject.appendChild(createProjectImage);
-							  createProject.appendChild(createProjectTitle);
+							this.refs.designerProjectsContainer.appendChild(createProject);
+							createProject.appendChild(createProjectImage);
+							createProject.appendChild(createProjectTitle);
+
+							createProjectImage.style.backgroundImage = `url('${this.state.currStaff.projects[i].covers[404]}')`;
 						}
-
-
 
 					}, (err) => {
 						this.setState({
