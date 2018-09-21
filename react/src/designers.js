@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Stats from './stats';
 
-var singleProjectStats = [];
 var allStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
 
 class Designers extends Component {
@@ -205,44 +204,16 @@ class Designers extends Component {
 			});
 		}
 
- // ----------------------------------------------------------
-		for(var i = 0; i < this.state.currStaff.projects.length; i++) {
-			var name = this.state.currStaff.projects[i].name;
-
-			singleProjectStats.push({
-				name: this.state.currStaff.projects[i].name,
-				appreciations: this.state.currStaff.projects[i].stats.appreciations,
-				comments: this.state.currStaff.projects[i].stats.comments,
-				views: this.state.currStaff.projects[i].stats.views
-			})
-
-		}
-
-		var singleArray = [
-			['Project Name', 'Appreciations', 'Comments', 'Views']
-		];
-
-		for(var j = 0; j < singleProjectStats.length; j++){
-
+		// For looping the this.state.currStaff.projects which is compiled into in allStats array
+		// This creates the data table which is needed for the Google Charts API
+		for(var j = 0; j < this.state.currStaff.projects.length; j++){
 			allStats.push([
 				this.state.currStaff.projects[j].name,
 				this.state.currStaff.projects[j].stats.appreciations,
 				this.state.currStaff.projects[j].stats.comments,
 				this.state.currStaff.projects[j].stats.views
 			])
-
 		}
-		console.log(singleArray);
-
-		console.log('this is the single stat which complies into one array');
-		console.log(singleProjectStats);
-
-		// console.log('these are all the indivdual stats inside one array');
-		// console.log(allStats);
-		//
-		// console.log('this is the dataTable from this.state');
-		// console.log(this.state.dataTable);
-
 	}
 
 	// Handling the closing of the Stats section
