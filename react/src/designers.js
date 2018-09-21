@@ -121,7 +121,7 @@ class Designers extends Component {
 							var createProjectImage = document.createElement('div');
 							var createProjectTitle = document.createElement('h3');
 
-							createProject.className = 'col-sm project-indiviudal';
+							createProject.className = 'col-sm project-indiviudal designerProjects';
 							createProjectImage.className = 'project-img';
 							createProjectTitle.className = 'third-heading';
 
@@ -189,12 +189,7 @@ class Designers extends Component {
 								</div>
 							</div>
 						</div>
-						<div className='row latest-projects' ref='designerProjectsContainer'>
-							<div className='col-sm project-indiviudal'>
-		                		<div className='project-img'></div>
-		                		<h3 className='third-heading'>Ocular Christmas Gift</h3>
-		                	</div>
-						</div>
+						<div className='row latest-projects' ref='designerProjectsContainer'></div>
 					</div>
 				</div>
 				<Stats
