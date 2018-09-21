@@ -128,5 +128,9 @@
 		li {
 			font-family: $mainFontFamily;
 		}
+		li:hover {
+			background-color: black;
+			color:$primaryColor;
+		}
 	}
 }

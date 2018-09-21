@@ -452,5 +452,8 @@ button {
     text-align: center; }
     #listOfDesigners ul li {
       font-family: "Open Sans", sans-serif; }
+    #listOfDesigners ul li:hover {
+      background-color: black;
+      color: #FFFFFF; }
 
 /*# sourceMappingURL=index.css.map */

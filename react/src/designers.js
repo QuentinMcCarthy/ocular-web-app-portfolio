@@ -32,7 +32,7 @@ class Designers extends Component {
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
 			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']],
-			disignerDiv : {display: 'none'}
+			disignersListDiv : {display: 'none'}
 		}
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
@@ -151,7 +151,7 @@ class Designers extends Component {
 								<p className='profile-name'>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down" onClick={this.viewDesigners} ></i></p>
 								<p className='profile-fields'>{this.state.currStaff.fields}</p>
 							</div>
-							<div id='listOfDesigners' style= {this.state.disignerDiv}>
+							<div id='listOfDesigners' style= {this.state.disignersListDiv}>
 								<ul className='designersName'>
 									<li className='desingers-name' value='ben'>Ben Mckenzie</li>
 									<li className='desingers-name' value='sophia'>Sophia Ong</li>
@@ -245,14 +245,13 @@ class Designers extends Component {
 	}
 
 	viewDesigners() {
-		console.log('clicked');
-		if(this.state.disignerDiv.display === 'none'){
+		if(this.state.disignersListDiv.display === 'none'){
 			this.setState({
-				disignerDiv: { display: 'block' }
+				disignersListDiv: { display: 'block' }
 			});
 		} else{
 			this.setState({
-				disignerDiv: { display: 'none' }
+				disignersListDiv: { display: 'none' }
 			});
 		}
 	}
