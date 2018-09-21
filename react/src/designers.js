@@ -183,7 +183,7 @@ class Designers extends Component {
 				<Stats
 					{...this.state}
 					closeStats = {this.statsHandle}
-					designerName = {this.state.currStaff.profile.user.display_name}
+					designerName = {this.state.currStaff.profile.user.first_name}
 					theData = {this.state.dataTable}
 				/>
 			</div>

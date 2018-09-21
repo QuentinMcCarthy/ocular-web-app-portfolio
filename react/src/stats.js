@@ -8,7 +8,7 @@ class Stats extends Component {
 				<button type='button' className='close-btn' onClick={this.props.closeStats}>
 					<i className='fas fa-times fa-2x'></i>
 				</button>
-				<h1 className='second-heading stats-heading'>Darryl's Projects Statistics</h1>
+				<h1 className='second-heading stats-heading'>{this.props.designerName}'s Project's Statistics</h1>
 				<hr className='title-hr'/>
 				<div id='googleChart' className='chart-stats'>
 					<Chart
