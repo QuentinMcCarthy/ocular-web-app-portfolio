@@ -134,3 +134,29 @@
 		}
 	}
 }
+
+.project-img {
+	display: block;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+	.profile-image {
+		border-radius: 10em;
+	}
+	#profileSplitBottom {
+		margin-top: 30%;
+	}
+	.latest-projects {
+		margin-top: 18em;
+		h3 {
+			text-align: center;
+		}
+	}
+	.latest-projects {
+		height: 56%;
+		i {
+			font-size: 3.3em;
+		}
+	}
+}

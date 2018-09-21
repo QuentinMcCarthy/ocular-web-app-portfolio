@@ -38,6 +38,7 @@ class Designers extends Component {
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
 		this.viewDesigners = this.viewDesigners.bind(this);
+		this.designerHandle = this.designerHandle.bind(this);
 	}
 
 	componentDidMount() {
@@ -149,16 +150,18 @@ class Designers extends Component {
 							</div>
 							<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 								<div className='profile-image h-100' style={this.state.designerPic}></div>
-								<p className='profile-name'>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down" onClick={this.viewDesigners} ></i></p>
+								<p className='profile-name' onClick={this.viewDesigners}>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down"></i></p>
 								<p className='profile-fields'>{this.state.currStaff.fields}</p>
 							</div>
 							<div id='listOfDesigners' style= {this.state.disignersListDiv}>
 								<ul className='designersName'>
-									<li className='desingers-name' value='ben'>Ben Mckenzie</li>
-									<li className='desingers-name' value='sophia'>Sophia Ong</li>
-									<li className='desingers-name'value='darryl'>Darryl Powell</li>
-									<li className='desingers-name' value='jayna'>Jayna Ravji</li>
-									<li className='desingers-name' value='michael'>Michael Dessoulavy</li>
+									<li className='desingers-name ben' value='qmccarthy9cc69' onClick = {this.designerHandle}>Ben Mckenzie</li>
+									<li className='desingers-name jayna' value='jaynaravji'>Jayna Ravji</li>
+									<li className='desingers-name darryl'value='darryl_powell'>Darryl Powell</li>
+									<li className='desingers-name jojo' value='joannewarren'>JoJo Warren</li>
+									<li className='desingers-name zakary' value='zakarykinnaird'>Zakary Kinnaird</li>
+									<li className='desingers-name elena' value='elenavallverdu'>Elena Vallverdu Pages</li>
+									<li className='desingers-name natalie' value='natalie_seagar'>Natalie Seagar</li>
 								</ul>
 							</div>
 							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
@@ -247,6 +250,14 @@ class Designers extends Component {
 				disignersListDiv: { display: 'none' }
 			});
 		}
+	}
+	// when Ben something is clicked designer list div is hidden
+	designerHandle(e) {
+		e.preventDefault();
+		console.log(this.state.staff[2]);
+		this.setState({
+			disignersListDiv : {display: 'none'},
+		})
 	}
 
 
