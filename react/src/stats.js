@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import { Chart } from "react-google-charts";
 
 class Stats extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			projects: [
-				['Project Name', 'Appreciations', 'Comments', 'Views'],
-				['Miss Monday', 10, 10, 100],
-				['Seafood NZ', 20, 70, 500],
-				['Ralph Hotere', 30, 19, 300],
-				['Ocular gift', 40, 80, 400]
-			]
-		}
-	}
-
 	render() {
 		return(
 			<div id='sectStatistics' className='sect-statistics container' style={this.props.viewStatsOpen}>

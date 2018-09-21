@@ -183,6 +183,7 @@ class Designers extends Component {
 				<Stats
 					{...this.state}
 					closeStats = {this.statsHandle}
+					designerName = {this.state.currStaff.profile.user.display_name}
 					theData = {this.state.dataTable}
 				/>
 			</div>
@@ -204,52 +205,43 @@ class Designers extends Component {
 			});
 		}
 
- // ----------------------------------------------------------------------------
-
+ // ----------------------------------------------------------
 		for(var i = 0; i < this.state.currStaff.projects.length; i++) {
-			singleProjectStats.push(
-				this.state.currStaff.projects[i].name,
-				this.state.currStaff.projects[i].stats.appreciations,
-				this.state.currStaff.projects[i].stats.comments,
-				this.state.currStaff.projects[i].stats.views
-			);
+			var name = this.state.currStaff.projects[i].name;
 
-			allStats.push(singleProjectStats);
+			singleProjectStats.push({
+				name: this.state.currStaff.projects[i].name,
+				appreciations: this.state.currStaff.projects[i].stats.appreciations,
+				comments: this.state.currStaff.projects[i].stats.comments,
+				views: this.state.currStaff.projects[i].stats.views
+			})
 
-			// singleProjectStats.length = 0;
-
- // ----------------------------------------------------------------------------
-
-			// this.setState ({
-			// 	singleProject: [this.state.currStaff.projects[i].name
-			// 					this.state.currStaff.projects[i].stats.appreciations,
-			// 					this.state.currStaff.projects[i].stats.comments,
-			// 					this.state.currStaff.projects[i].stats.views
-			// 	],
-			//	 allStats: singleProject
-			// });
-
- // ----------------------------------------------------------------------------
-
-			break;
-			// The code here should push a single projects stats into an array (singleProjectStats).
-			// The array is then carried over into another array will contains a bunch of
-			// arrays which are the inidivdual project stats. (arraies inside of an array)
-			// Once an inidivudal project is pushed into the final array (allTheStats) the singleProjectStats
-			// array is cleared so that the next project can be pushed into the singleProjectStats and that array
-			// is added to the allTheStats array. This is repeated via a for loop.
 		}
 
-		console.log(allStats);
+		var singleArray = [
+			['Project Name', 'Appreciations', 'Comments', 'Views']
+		];
+
+		for(var j = 0; j < singleProjectStats.length; j++){
+
+			allStats.push([
+				this.state.currStaff.projects[j].name,
+				this.state.currStaff.projects[j].stats.appreciations,
+				this.state.currStaff.projects[j].stats.comments,
+				this.state.currStaff.projects[j].stats.views
+			])
+
+		}
+		console.log(singleArray);
 
 		console.log('this is the single stat which complies into one array');
 		console.log(singleProjectStats);
 
-		console.log('these are all the indivdual stats inside one array');
-		console.log(allStats);
-
-		console.log('this is the dataTable from this.state');
-		console.log(this.state.dataTable);
+		// console.log('these are all the indivdual stats inside one array');
+		// console.log(allStats);
+		//
+		// console.log('this is the dataTable from this.state');
+		// console.log(this.state.dataTable);
 
 	}
 
