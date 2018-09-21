@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Stats from './stats';
 
-var singleProjectStats = [];
-var allTheStats = [];
+var allStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
 
 class Designers extends Component {
 	constructor(props){
@@ -31,9 +30,11 @@ class Designers extends Component {
 			designerBg: { backgroundImage: '' },
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
-			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']],
-			disignersListDiv : {display: 'none'}
+			disignersListDiv : {display: 'none'},
+			singleProject: [],
+			dataTable: []
 		}
+
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
 		this.viewDesigners = this.viewDesigners.bind(this);
@@ -111,11 +112,11 @@ class Designers extends Component {
 							currStaff: {
 								profile: this.state.currStaff.profile,
 								projects: userProjectData.projects,
-								fields: this.state.currStaff.fields,
+								fields: this.state.currStaff.fields
 							},
+							dataTable: allStats,
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
-
 					}, (err) => {
 						this.setState({
 							isLoaded: true,
@@ -182,11 +183,19 @@ class Designers extends Component {
 							</div>
 
 						</div>
+						<div className='row latest-projects'>
+							<div className='col-sm project-indiviudal'>
+		                		<div className='project-img'></div>
+		                		<h3 className='third-heading'>Ocular Christmas Gift</h3>
+		                	</div>
+						</div>
 					</div>
 				</div>
 				<Stats
 					{...this.state}
 					closeStats = {this.statsHandle}
+					designerName = {this.state.currStaff.profile.user.first_name}
+					theData = {this.state.dataTable}
 				/>
 			</div>
 		)
@@ -207,32 +216,16 @@ class Designers extends Component {
 			});
 		}
 
-		for(var j = 0; j < this.state.currStaff.projects.length; j++) {
-			singleProjectStats.push(
+		// For looping the this.state.currStaff.projects which is compiled into in allStats array
+		// This creates the data table which is needed for the Google Charts API
+		for(var j = 0; j < this.state.currStaff.projects.length; j++){
+			allStats.push([
 				this.state.currStaff.projects[j].name,
 				this.state.currStaff.projects[j].stats.appreciations,
 				this.state.currStaff.projects[j].stats.comments,
 				this.state.currStaff.projects[j].stats.views
-			);
-
-			allTheStats.push(singleProjectStats);
-
-			break;
-
-
-			// The code here should push a single projects stats into an array (singleProjectStats).
-			// The array is then carried over into another array will contains a bunch of
-			// arrays which are the inidivdual project stats. (arraies inside of an array)
-			// Once an inidivudal project is pushed into the final array (allTheStats) the singleProjectStats
-			// array is cleared so that the next project can be pushed into the singleProjectStats and that array
-			// is added to the allTheStats array. This is repeated via a for loop.
+			])
 		}
-
-		console.log('this is the single stat which complies into one array');
-		console.log(singleProjectStats);
-		console.log('these are all the inidivual stats inside one array');
-		console.log(allTheStats);
-
 	}
 
 	// Handling the closing of the Stats section
