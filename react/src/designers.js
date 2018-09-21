@@ -31,10 +31,12 @@ class Designers extends Component {
 			designerBg: { backgroundImage: '' },
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
-			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']]
+			allStats: [['Project Name', 'Appreciations', 'Comments', 'Views']],
+			disignerDiv : {display: 'none'}
 		}
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
+		this.viewDesigners = this.viewDesigners.bind(this);
 	}
 
 	componentDidMount() {
@@ -146,8 +148,17 @@ class Designers extends Component {
 							</div>
 							<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 								<div className='profile-image h-100' style={this.state.designerPic}></div>
-								<p className='profile-name'>{this.state.currStaff.profile.user.display_name}</p>
+								<p className='profile-name'>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down" onClick={this.viewDesigners} ></i></p>
 								<p className='profile-fields'>{this.state.currStaff.fields}</p>
+							</div>
+							<div id='listOfDesigners' style= {this.state.disignerDiv}>
+								<ul className='designersName'>
+									<li className='desingers-name' value='ben'>Ben Mckenzie</li>
+									<li className='desingers-name' value='sophia'>Sophia Ong</li>
+									<li className='desingers-name'value='darryl'>Darryl Powell</li>
+									<li className='desingers-name' value='jayna'>Jayna Ravji</li>
+									<li className='desingers-name' value='michael'>Michael Dessoulavy</li>
+								</ul>
 							</div>
 							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
 								<div className='h-100 flex-fill'>
@@ -169,6 +180,7 @@ class Designers extends Component {
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -231,6 +243,21 @@ class Designers extends Component {
 			designersHide: { display: 'block' }
 		});
 	}
+
+	viewDesigners() {
+		console.log('clicked');
+		if(this.state.disignerDiv.display === 'none'){
+			this.setState({
+				disignerDiv: { display: 'block' }
+			});
+		} else{
+			this.setState({
+				disignerDiv: { display: 'none' }
+			});
+		}
+	}
+
+
 }
 
 export default Designers;

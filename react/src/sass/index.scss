@@ -64,6 +64,9 @@
 	margin-top: 5px;
 	margin-bottom: 0;
 	font-size: 1.4em;
+	i {
+		margin-left: 5px;
+	}
 }
 
 .profile-fields {
@@ -111,5 +114,19 @@
 		text-transform: uppercase;
 		font-family: $mainFontFamily;
 		font-weight: 300;
+	}
+}
+
+//////Jiah/////////////////
+#listOfDesigners {
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+	width: 100vw;
+	ul {
+		text-align: center;
+		li {
+			font-family: $mainFontFamily;
+		}
 	}
 }

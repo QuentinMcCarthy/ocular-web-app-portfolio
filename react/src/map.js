@@ -15,15 +15,6 @@ class GoogleMapsContainer extends React.Component {
 		this.onMarkerClick = this.onMarkerClick.bind(this);
 	}
 
-	componentWillUnmount() {
-		const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-		const script = document.createElement('script');
-		script.src = `https://maps.googleapis.com/maps/api/js?${API_KEY}&callback=initMap`;
-		script.async = true;
-		script.defer = true;
-		document.head.append(script);
-	}
-
   	render() {
 	  	const pos = {
 		 	lat :-41.328075 ,
