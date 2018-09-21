@@ -460,6 +460,9 @@ button {
   display: block;
   margin: 0 auto; }
 
+.designerProjects {
+  padding: 1em 2.3em; }
+
 @media only screen and (min-width: 600px) {
   .profile-image {
     border-radius: 10em; }
