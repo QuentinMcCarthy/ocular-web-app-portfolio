@@ -20,7 +20,7 @@ class Designers extends Component {
 						}
 					}
 				},
-				projects: {},
+				projects: [],
 				fields: '',
 
 			},
@@ -115,6 +115,24 @@ class Designers extends Component {
 							dataTable: allStats,
 							backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 						});
+
+						for(var i = 0; i < this.state.currStaff.projects.length; i++){
+							var createProject = document.createElement('div');
+							var createProjectImage = document.createElement('div');
+							var createProjectTitle = document.createElement('h3');
+
+							createProject.className = 'col-sm project-indiviudal designerProjects';
+							createProjectImage.className = 'project-img';
+							createProjectTitle.className = 'third-heading';
+
+							this.refs.designerProjectsContainer.appendChild(createProject);
+							createProject.appendChild(createProjectImage);
+							createProject.appendChild(createProjectTitle);
+
+							createProjectImage.style.backgroundImage = `url('${this.state.currStaff.projects[i].covers[404]}')`;
+							createProjectTitle.textContent = this.state.currStaff.projects[i].name;
+						}
+
 					}, (err) => {
 						this.setState({
 							isLoaded: true,
@@ -135,7 +153,7 @@ class Designers extends Component {
 
 					<div className='designer-profile position-relative' style={this.state.designersHide}>
 						<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
-						<div className='profile-details position-absolute w-100 h-100'>
+						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
 							<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 								<i className="far fa-chart-bar"></i>
 								<span>View Stats</span>
@@ -171,12 +189,7 @@ class Designers extends Component {
 								</div>
 							</div>
 						</div>
-						<div className='row latest-projects'>
-							<div className='col-sm project-indiviudal'>
-		                		<div className='project-img'></div>
-		                		<h3 className='third-heading'>Ocular Christmas Gift</h3>
-		                	</div>
-						</div>
+						<div className='row latest-projects' ref='designerProjectsContainer'></div>
 					</div>
 				</div>
 				<Stats
