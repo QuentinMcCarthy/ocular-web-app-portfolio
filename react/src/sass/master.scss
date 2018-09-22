@@ -84,14 +84,26 @@ button {
 	width: 100%;
 }
 
-.main-image {
+.bg-video-wrapper {
+	width: 100%;
 	height: 100vh;
-	background-image: url('http://192.168.33.10:3000/img/main_image.png');
-	background-position: center;
-	background-size: cover;
+
+}
+
+.background-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .transparent-layer {
+	position: absolute;
+	object-fit: cover;
+    top: 0;
 	width: 100%;
 	height: 100%;
 	background-color: $secondaryColor;
@@ -154,6 +166,10 @@ button {
 	flex-direction: column;
 	justify-content: center;
 	height: 380px;
+}
+
+.our-goal-container {
+	padding: 0;
 }
 
 .body-text {
@@ -343,6 +359,10 @@ button {
 
 	.latest-projects {
 		margin-top: 3em;
+		.projects-individual {
+			padding-right: 2.8em;
+			padding-left: 2.8em;
+		}
 	}
 
     .contact-wrapper {
