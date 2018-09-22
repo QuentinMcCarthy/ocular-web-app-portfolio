@@ -23,7 +23,8 @@ button {
 .logo {
   padding: 8% 0;
   float: left;
-  clear: both; }
+  clear: both;
+  cursor: pointer; }
 
 .contact-icons-list {
   display: none; }

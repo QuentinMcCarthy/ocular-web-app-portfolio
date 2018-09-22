@@ -37,7 +37,7 @@ class App extends Component {
 				{/* Nav */}
 				<div id='nav' className='header fixed-top' style={this.state.navHide}>
 					<div className='header-bar'>
-						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo'/>
+						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo' onClick={this.navToHome}/>
 						<div className='nav-items-right'>
 							<ul className='contact-icons-list'>
 								<li className='inline-icons'><a className='social-link' href='https://www.facebook.com/ocularnz/'><i className='fab fa-facebook-f'></i></a></li>
