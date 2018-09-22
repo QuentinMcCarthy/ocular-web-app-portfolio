@@ -19,6 +19,7 @@ button {
 // MENU ------------------------------------------------------------------------
 
 .header-bar {
+	width: 100%;
 	background-color: $primaryColor;
 	overflow: auto;
 	padding: 0.5em 1em;
@@ -91,17 +92,16 @@ button {
 .bg-video-wrapper {
 	width: 100%;
 	height: 100vh;
-
 }
 
 .background-video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
 }
 
 .transparent-layer {
@@ -317,6 +317,7 @@ button {
 			display: block;
 			float: left;
 			padding: 1.2em;
+			margin-bottom: 0;
 			list-style: none;
 			.inline-icons {
 				display: inline-block;

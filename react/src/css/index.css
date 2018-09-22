@@ -13,6 +13,7 @@ button {
   outline: none; }
 
 .header-bar {
+  width: 100%;
   background-color: #FFFFFF;
   overflow: auto;
   padding: 0.5em 1em; }
@@ -255,6 +256,7 @@ button {
       display: block;
       float: left;
       padding: 1.2em;
+      margin-bottom: 0;
       list-style: none; }
       .header-bar .contact-icons-list .inline-icons {
         display: inline-block; }
