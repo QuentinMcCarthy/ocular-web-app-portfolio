@@ -9,7 +9,7 @@
 #sectStatistics {
   display: none; }
 
-button {
+.button-outline {
   outline: none; }
 
 .header-bar {

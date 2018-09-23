@@ -169,7 +169,7 @@ class Designers extends Component {
 								<span>View Stats</span>
 							</div>
 							<div id='profileSplitTop' className='splitv-third position-relative w-100'>
-								<button type='button' name='button' className='scroll-left' onClick={this.props.backToHome}>
+								<button type='button' name='button' className='scroll-left button-outline' onClick={this.props.backToHome}>
 									<i className='fas fa-angle-left'></i>
 								</button>
 							</div>

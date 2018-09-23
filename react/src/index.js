@@ -45,7 +45,7 @@ class App extends Component {
 								<li className='inline-icons'><a className='social-link' href='https://www.youtube.com/user/OcularNZ'><i className='fab fa-youtube youtube-icon'></i></a></li>
 								<li className='inline-icons'><a className='social-link' href='https://nz.linkedin.com/company/ocular'><i className='fab fa-linkedin-in linkedin-icon'></i></a></li>
 							</ul>
-							<button type='button' name='button' className='menu-btn' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
+							<button type='button' name='button' className='menu-btn button-outline' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
 						</div>
 					</div>
 

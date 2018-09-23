@@ -5,7 +5,7 @@ class Stats extends Component {
 	render() {
 		return(
 			<div id='sectStatistics' className='sect-statistics container' style={this.props.viewStatsOpen}>
-				<button type='button' className='close-btn' onClick={this.props.closeStats}>
+				<button type='button' className='close-btn button-outline' onClick={this.props.closeStats}>
 					<i className='fas fa-times fa-2x'></i>
 				</button>
 				<h1 className='second-heading stats-heading'>{this.props.designerName}'s Project's Statistics</h1>
