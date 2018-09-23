@@ -21,7 +21,14 @@ class Designers extends Component {
 					}
 				},
 				projects: {
-					projects: []
+					projects: [
+						{
+							id: -1,
+							covers: {
+								original: ''
+							}
+						}
+					]
 				},
 				fields: ''
 			},
@@ -52,8 +59,8 @@ class Designers extends Component {
 				this.setState({
 					staff: staffData
 				});
-				for (let k in staffData) {
-					fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}`)
+				// for (let k in staffData) {
+					fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}`)
 						.then(res => res.json())
 						.then((userData) => {
 							this.state.desingerData.push(userData);
@@ -111,36 +118,35 @@ class Designers extends Component {
 							});
 						});
 
-						fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}/projects`)
+						fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}/projects`)
 							.then(res => res.json())
 							.then((userProjectData) => {
-								this.state.projectData.push(userProjectData)
 								this.setState({
 									currStaff: {
 										profile: this.state.currStaff.profile,
-										projects: userProjectData.projects,
+										projects: userProjectData,
 										fields: this.state.currStaff.fields
 									},
 									dataTable: allStats,
 									backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 								});
 
-								for(var i = 0; i < this.state.currStaff.projects.length; i++){
-									var createProject = document.createElement('div');
-									var createProjectImage = document.createElement('div');
-									var createProjectTitle = document.createElement('h3');
-
-									createProject.className = 'col-sm project-indiviudal designerProjects';
-									createProjectImage.className = 'project-img';
-									createProjectTitle.className = 'third-heading';
-
-									this.refs.designerProjectsContainer.appendChild(createProject);
-									createProject.appendChild(createProjectImage);
-									createProject.appendChild(createProjectTitle);
-
-									createProjectImage.style.backgroundImage = `url('${this.state.currStaff.projects[i].covers[404]}')`;
-									createProjectTitle.textContent = this.state.currStaff.projects[i].name;
-								}
+								// for(var i = 0; i < this.state.currStaff.projects.length; i++){
+								// 	var createProject = document.createElement('div');
+								// 	var createProjectImage = document.createElement('div');
+								// 	var createProjectTitle = document.createElement('h3');
+								//
+								// 	createProject.className = 'col-sm project-indiviudal designerProjects';
+								// 	createProjectImage.className = 'project-img';
+								// 	createProjectTitle.className = 'third-heading';
+								//
+								// 	this.refs.designerProjectsContainer.appendChild(createProject);
+								// 	createProject.appendChild(createProjectImage);
+								// 	createProject.appendChild(createProjectTitle);
+								//
+								// 	createProjectImage.style.backgroundImage = `url('${this.state.currStaff.projects[i].covers[404]}')`;
+								// 	createProjectTitle.textContent = this.state.currStaff.projects[i].name;
+								// }
 
 							}, (err) => {
 								this.setState({
@@ -148,7 +154,7 @@ class Designers extends Component {
 									error: err
 								});
 							});
-				}
+				// }
 
 			}, (err) => {
 				this.setState({

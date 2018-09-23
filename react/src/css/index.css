@@ -390,7 +390,8 @@ button {
   height: 61%; }
 
 #profileSplitBottom {
-  height: 22%; }
+  height: 22%;
+  padding-top: 5px; }
   #profileSplitBottom div {
     padding: 5px; }
   #profileSplitBottom i {
