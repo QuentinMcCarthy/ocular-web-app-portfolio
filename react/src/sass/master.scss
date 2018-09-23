@@ -19,6 +19,7 @@ button {
 // MENU ------------------------------------------------------------------------
 
 .header-bar {
+	width: 100%;
 	background-color: $primaryColor;
 	overflow: auto;
 	padding: 0.5em 1em;
@@ -31,6 +32,11 @@ button {
 	padding: 8% 0;
 	float: left;
 	clear: both;
+	cursor: pointer;
+}
+
+.contact-icons-list {
+	display: none;
 }
 
 .menu-btn {
@@ -52,7 +58,7 @@ button {
 	font-weight: 700;
 	font-size: 0.6em;
 	float: right;
-	clear:both;
+	clear: both;
 	list-style: none;
 	height: 100vh;
 	width: 100%;
@@ -84,14 +90,25 @@ button {
 	width: 100%;
 }
 
-.main-image {
+.bg-video-wrapper {
+	width: 100%;
 	height: 100vh;
-	background-image: url('http://192.168.33.10:3000/img/main_image.png');
-	background-position: center;
-	background-size: cover;
+}
+
+.background-video {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
 }
 
 .transparent-layer {
+	position: absolute;
+	object-fit: cover;
+    top: 0;
 	width: 100%;
 	height: 100%;
 	background-color: $secondaryColor;
@@ -154,6 +171,10 @@ button {
 	flex-direction: column;
 	justify-content: center;
 	height: 380px;
+}
+
+.our-goal-container {
+	padding: 0;
 }
 
 .body-text {
@@ -288,6 +309,40 @@ button {
 		.logo {
 			padding: 1.7em 0;
 		}
+
+		.nav-items-right {
+			float: right;
+		}
+
+		.contact-icons-list {
+			display: block;
+			float: left;
+			padding: 1.2em;
+			margin-bottom: 0;
+			list-style: none;
+			.inline-icons {
+				display: inline-block;
+				.social-link{
+					background-color: $secondaryColor;
+				    border-radius: 28px;
+					margin: 0.3em;
+				    padding: 0.1em;
+				}
+				i {
+					font-size: 0.8em;
+					color: $primaryColor;
+					margin: 0.2em;
+					padding: 0.6em 0.45em;
+				}
+				.youtube-icon {
+					font-size: 0.7em;
+				}
+				.linkedin-icon {
+					font-size: 0.7em;
+				}
+			}
+		}
+
 		.menu-btn {
 			padding: 1.2em;
 		}
@@ -343,6 +398,10 @@ button {
 
 	.latest-projects {
 		margin-top: 3em;
+		.projects-individual {
+			padding-right: 2.8em;
+			padding-left: 2.8em;
+		}
 	}
 
     .contact-wrapper {

@@ -86,28 +86,34 @@ class Home extends Component {
 
 	            {/* Banner */}
 	            <div className='banner'>
-	                <div className='main-image'>
-	                    <div className='transparent-layer'></div>
-	                    <div className='banner-content'>
-	                      <h1 className='banner-title'>Hi, We're Ocular.</h1>
-	                      <p className='banner-text'>Web Strategy Brand Design Video</p>
-	                      <Link name='button' className='scroll-down' to='ourGoal' spy={true} smooth={true} duration={3000}>Find out more <i className='fas fa-angle-down'></i></Link>
-	                    </div>
-	                </div>
+					<div className='bg-video-wrapper'>
+						<video autoPlay muted loop className='background-video'>
+							<source src='media/lyall-bay.mp4'></source>
+						</video>
+					</div>
+                    <div className='transparent-layer'></div>
+                    <div className='banner-content'>
+                      <h1 className='banner-title'>Hi, We're Ocular.</h1>
+                      <p className='banner-text'>Web Strategy Brand Design Video</p>
+                      <Link name='button' className='scroll-down' to='ourGoal' spy={true} smooth={true} duration={3000}>Find out more <i className='fas fa-angle-down'></i></Link>
+                	</div>
 	            </div> {/* banner ends */}
 
 
                 {/* Our goal section */}
                 <div className='our-goal' name='ourGoal'>
-					<div className='row'>
-						<div className='col-sm'>
-							<h2 className='second-heading'>Our Goal</h2>
-							<hr className='title-hr'/>
-						</div>
-						<div className='col-sm'>
-	                    	<p className='body-text our-goal-text'>Our goal is to provide our clients with an expectional outcome with a insightful and indepth process. We care about our clients wants and needs whilst catering to the audience their business attracts</p>
+					<div className='container our-goal-container'>
+						<div className='row'>
+							<div className='col-sm'>
+								<h2 className='second-heading'>Our Goal</h2>
+								<hr className='title-hr'/>
+							</div>
+							<div className='col-sm'>
+		                    	<p className='body-text our-goal-text'>Our goal is to provide our clients with an expectional outcome with a insightful and indepth process. We care about our clients wants and needs whilst catering to the audience their business attracts</p>
+							</div>
 						</div>
 					</div>
+
                 </div>
 
 				<div className='container'>
