@@ -572,7 +572,9 @@ button {
     margin-top: -1%; }
 
   #listOfDesigners {
-    margin-top: 14.2%; }
+    margin-top: -0.8%;
+    width: 30vw;
+    margin-left: 48%; }
 
   .view-data-control {
     width: 25vw;
