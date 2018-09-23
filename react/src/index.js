@@ -37,8 +37,16 @@ class App extends Component {
 				{/* Nav */}
 				<div id='nav' className='header fixed-top' style={this.state.navHide}>
 					<div className='header-bar'>
-						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo'/>
-						<button type='button' name='button' className='menu-btn' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
+						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo' onClick={this.navToHome}/>
+						<div className='nav-items-right'>
+							<ul className='contact-icons-list'>
+								<li className='inline-icons'><a className='social-link' href='https://www.facebook.com/ocularnz/'><i className='fab fa-facebook-f'></i></a></li>
+								<li className='inline-icons'><a className='social-link' href='https://www.instagram.com/ocular_nz/'><i className='fab fa-instagram'></i></a></li>
+								<li className='inline-icons'><a className='social-link' href='https://www.youtube.com/user/OcularNZ'><i className='fab fa-youtube youtube-icon'></i></a></li>
+								<li className='inline-icons'><a className='social-link' href='https://nz.linkedin.com/company/ocular'><i className='fab fa-linkedin-in linkedin-icon'></i></a></li>
+							</ul>
+							<button type='button' name='button' className='menu-btn' onClick={this.navMenuToggle}><i className='fas fa-bars fa-3x'></i>Menu</button>
+						</div>
 					</div>
 
 					<ul id='menu' className='menu' style={this.state.navMenuOpen}>
@@ -90,7 +98,7 @@ class App extends Component {
 		} else{
 			this.setState({
 				navMenuOpen: { display: 'none' },
-				homeOpen: { display: 'none' }
+				homeOpen: { display: 'block' }
 			});
 		}
 	}
@@ -116,7 +124,6 @@ class App extends Component {
 
 	navToContact(e){
 		e.preventDefault();
-
 		if(this.state.contactOpen.display === 'none'){
 			this.setState({
 				navHide: { display: 'block' },
@@ -128,7 +135,7 @@ class App extends Component {
 		} else{
 			this.setState({
 				navMenuOpen: { display: 'none' },
-				contactOpen: { display: 'none' }
+				contactOpen: { display: 'block' }
 			});
 		}
 	}

@@ -65,8 +65,16 @@
 	margin-top: 5px;
 	margin-bottom: 0;
 	font-size: 1.4em;
+	i {
+		margin-left: 5px;
+	}
 }
 
+.view-data-control {
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+}
 .profile-fields {
 	font-family: $mainFontFamily;
 	font-size: .9em;
@@ -115,12 +123,107 @@
 	}
 }
 
-.designer-projects {
-	height: fit-content;
+#listOfDesigners {
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+	width: 100vw;
+	ul {
+		text-align: center;
+		li {
+			list-style: none;
+			font-family: $mainFontFamily;
+		}
+		li:hover {
+			background-color: black;
+			color:$primaryColor;
+		}
+	}
 }
 
-.projectWrapper {
-	height: 100px;
-	background-position: center;
-	background-size: cover;
+#profileSplitBottom {
+	margin-top: 6%;
+}
+.project-img {
+	display: block;
+	margin: 0 auto;
+}
+.designerProjects {
+	padding: 1em 2.3em;
+}
+
+@media only screen and (min-width: 600px) {
+	.profile-image {
+		border-radius: 10em;
+	}
+	#profileSplitBottom {
+		margin-top: 30%;
+	}
+
+	#listOfDesigners {
+		margin-top: 21%;
+	}
+
+	.latest-projects {
+		margin-top: 16em;
+		height: 57%;
+		i {
+			font-size: 3.3em;
+		}
+	}
+	.statsRibbon {
+		width: 10%;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.profile-image {
+		border-radius: 50%;
+	    background-repeat: no-repeat;
+	    width: 22%;
+	    padding: 10%;
+	    position: absolute;
+	    margin-left: -15%;
+	}
+	.designers-info-div {
+		position: absolute;
+	    margin-left: 8%;
+	    margin-top: 5%;
+	}
+	.statsRibbon {
+		height: 69%;
+		width: 4%;
+		i {
+			font-size: 1.9em;
+		}
+		span {
+			display: block;
+			margin-top: 5%;
+			font-size: 0.7em;
+		}
+	}
+	.third-heading {
+		margin-left: 4%;
+	}
+
+	.latest-projects {
+		margin-top: 22em;
+	}
+	.designerProjects {
+		width: auto !important;
+	}
+	#profileSplitBottom {
+		margin-top: -1%;
+	}
+	#listOfDesigners {
+
+		margin-top: -0.8%;
+		width: 30vw;
+		margin-left: 48%;
+	}
+	.view-data-control {
+		width: 25vw;
+		margin: 0 auto;
+		margin-right: 26%;
+	}
 }

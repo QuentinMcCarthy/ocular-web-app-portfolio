@@ -11,12 +11,27 @@
 	},
 	{
 		"id": 3,
-		"name": "Sumitra Manga",
-		"behance": "sumitramanga"
+		"name": "Quentin McCarthy",
+		"behance": "qmccarthy9cc69"
 	},
 	{
 		"id": 4,
-		"name": "Quentin McCarthy",
-		"behance": "qmccarthy9cc69"
+		"name": "JoJo Warren",
+		"behance": "joannewarren"
+	},
+	{
+		"id": 5,
+		"name": "Zakary Kinnaird",
+		"behance": "zakarykinnaird"
+	},
+	{
+		"id": 6,
+		"name": "Elena Vallverdu Pages",
+		"behance": "elenavallverdu"
+	},
+	{
+		"id": 7,
+		"name":"Natalie Seagar",
+		"behance": "natalie_seagar"
 	}
 ]

@@ -6,6 +6,9 @@ const Behance = require('node-behance-api');
 const config = require('./config');
 
 const app = express();
+app.get('/', (req, res) => {
+    res.send(process.env.SECRET_KEY);
+})
 
 // Allow cors
 app.use(cors());
