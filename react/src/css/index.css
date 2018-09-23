@@ -496,6 +496,7 @@ button {
   #listOfDesigners ul {
     text-align: center; }
     #listOfDesigners ul li {
+      list-style: none;
       font-family: "Open Sans", sans-serif; }
     #listOfDesigners ul li:hover {
       background-color: black;
@@ -545,6 +546,9 @@ button {
       display: block;
       margin-top: 5%;
       font-size: 0.7em; }
+
+  .third-heading {
+    margin-left: 4%; }
 
   .latest-projects {
     margin-top: 22em; }

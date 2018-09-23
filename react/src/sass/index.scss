@@ -125,6 +125,7 @@
 	ul {
 		text-align: center;
 		li {
+			list-style: none;
 			font-family: $mainFontFamily;
 		}
 		li:hover {
@@ -187,6 +188,9 @@
 			margin-top: 5%;
 			font-size: 0.7em;
 		}
+	}
+	.third-heading {
+		margin-left: 4%;
 	}
 
 	.latest-projects {
