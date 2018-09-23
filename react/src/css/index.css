@@ -476,16 +476,16 @@ button {
   margin-top: 1.5em;
   margin-left: 1.5em; }
 
-.statsRibbon {
+.stats-ribbon {
   right: 10%;
   background-color: #ff0d00;
   height: 37%;
   width: 15%;
   color: white;
   z-index: 4; }
-  .statsRibbon i {
+  .stats-ribbon i {
     font-size: 1.5em; }
-  .statsRibbon span {
+  .stats-ribbon span {
     font-size: .6875em;
     width: 80%;
     text-align: center;
@@ -514,7 +514,7 @@ button {
   display: block;
   margin: 0 auto; }
 
-.designerProjects {
+.project-indiviudal {
   padding: 1em 2.3em; }
 
 @media only screen and (min-width: 600px) {
@@ -527,14 +527,15 @@ button {
   #listOfDesigners {
     margin-top: 21%; }
 
-  .latest-projects {
+  .desingers-latest-projects {
     margin-top: 16em;
     height: 57%; }
-    .latest-projects i {
+    .desingers-latest-projects i {
       font-size: 3.3em; }
 
-  .statsRibbon {
-    width: 10%; } }
+  .stats-ribbon {
+    width: 10%;
+    height: 51%; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
     border-radius: 50%;
@@ -549,12 +550,12 @@ button {
     margin-left: 8%;
     margin-top: 5%; }
 
-  .statsRibbon {
+  .stats-ribbon {
     height: 69%;
     width: 4%; }
-    .statsRibbon i {
+    .stats-ribbon i {
       font-size: 1.9em; }
-    .statsRibbon span {
+    .stats-ribbon span {
       display: block;
       margin-top: 5%;
       font-size: 0.7em; }
@@ -562,10 +563,10 @@ button {
   .third-heading {
     margin-left: 4%; }
 
-  .latest-projects {
+  .desingers-latest-projects {
     margin-top: 22em; }
 
-  .designerProjects {
+  .project-indiviudal {
     width: auto !important; }
 
   #profileSplitBottom {

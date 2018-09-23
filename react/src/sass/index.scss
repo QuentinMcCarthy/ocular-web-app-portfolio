@@ -100,7 +100,7 @@
 	margin-left: 1.5em;
 }
 
-.statsRibbon {
+.stats-ribbon {
 	right: 10%;
 	background-color: #ff0d00;
 	height: 37%;
@@ -147,7 +147,7 @@
 	display: block;
 	margin: 0 auto;
 }
-.designerProjects {
+.project-indiviudal {
 	padding: 1em 2.3em;
 }
 
@@ -163,15 +163,16 @@
 		margin-top: 21%;
 	}
 
-	.latest-projects {
+	.desingers-latest-projects {
 		margin-top: 16em;
 		height: 57%;
 		i {
 			font-size: 3.3em;
 		}
 	}
-	.statsRibbon {
+	.stats-ribbon {
 		width: 10%;
+		height: 51%;
 	}
 }
 
@@ -189,7 +190,7 @@
 	    margin-left: 8%;
 	    margin-top: 5%;
 	}
-	.statsRibbon {
+	.stats-ribbon {
 		height: 69%;
 		width: 4%;
 		i {
@@ -205,10 +206,10 @@
 		margin-left: 4%;
 	}
 
-	.latest-projects {
+	.desingers-latest-projects {
 		margin-top: 22em;
 	}
-	.designerProjects {
+	.project-indiviudal {
 		width: auto !important;
 	}
 	#profileSplitBottom {

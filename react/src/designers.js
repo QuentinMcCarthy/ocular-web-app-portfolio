@@ -51,8 +51,7 @@ class Designers extends Component {
 				this.setState({
 					staff: staffData
 				});
-				for (let k in staffData) {
-					fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}`)
+					fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}`)
 						.then(res => res.json())
 						.then((userData) => {
 							this.state.desingerData.push(userData);
@@ -110,7 +109,7 @@ class Designers extends Component {
 							});
 						});
 
-						fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}/projects`)
+						fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}/projects`)
 							.then(res => res.json())
 							.then((userProjectData) => {
 								this.state.projectData.push(userProjectData)
@@ -147,8 +146,6 @@ class Designers extends Component {
 									error: err
 								});
 							});
-				}
-
 			}, (err) => {
 				this.setState({
 					error: err
@@ -164,7 +161,7 @@ class Designers extends Component {
 					<div className='designer-profile position-relative' style={this.state.designersHide}>
 						<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
-							<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
+							<div className='stats-ribbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 								<i className="far fa-chart-bar"></i>
 								<span>View Stats</span>
 							</div>
@@ -215,7 +212,7 @@ class Designers extends Component {
 							</div>
 
 						</div>
-						<div className='row latest-projects' ref='designerProjectsContainer'></div>
+						<div className='row latest-projects desingers-latest-projects' ref='designerProjectsContainer'></div>
 					</div>
 				</div>
 				<Stats
