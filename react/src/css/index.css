@@ -525,14 +525,16 @@ button {
     margin-top: 16em;
     height: 57%; }
     .latest-projects i {
-      font-size: 3.3em; } }
+      font-size: 3.3em; }
+
+  .statsRibbon {
+    width: 10%; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
     border-radius: 50%;
-    background-size: 300px 300px;
     background-repeat: no-repeat;
     width: 22%;
-    padding-top: 22%; }
+    padding: 10%; }
 
   .statsRibbon {
     height: 69%;
@@ -551,9 +553,9 @@ button {
     width: auto !important; }
 
   #profileSplitBottom {
-    margin-top: 18%; }
+    margin-top: 14%; }
 
   #listOfDesigners {
-    margin-top: 14.5%; } }
+    margin-top: 14.2%; } }
 
 /*# sourceMappingURL=index.css.map */
