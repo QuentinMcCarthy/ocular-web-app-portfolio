@@ -451,6 +451,11 @@ button {
   .profile-name i {
     margin-left: 5px; }
 
+.view-data-control {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around; }
+
 .profile-fields {
   font-family: "Open Sans", sans-serif;
   font-size: .9em; }
@@ -535,11 +540,18 @@ button {
     border-radius: 50%;
     background-repeat: no-repeat;
     width: 22%;
-    padding: 10%; }
+    padding: 10%;
+    position: absolute;
+    margin-left: -15%; }
+
+  .designers-info-div {
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 5%; }
 
   .statsRibbon {
     height: 69%;
-    width: 8%; }
+    width: 4%; }
     .statsRibbon i {
       font-size: 1.9em; }
     .statsRibbon span {
@@ -557,9 +569,14 @@ button {
     width: auto !important; }
 
   #profileSplitBottom {
-    margin-top: 14%; }
+    margin-top: -1%; }
 
   #listOfDesigners {
-    margin-top: 14.2%; } }
+    margin-top: 14.2%; }
+
+  .view-data-control {
+    width: 25vw;
+    margin: 0 auto;
+    margin-right: 26%; } }
 
 /*# sourceMappingURL=index.css.map */

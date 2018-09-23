@@ -32,13 +32,16 @@ class Designers extends Component {
 			viewStatsOpen: { display: 'none' },
 			disignersListDiv : {display: 'none'},
 			singleProject: [],
-			dataTable: []
+			dataTable: [],
+			desingerData:[],
+			projectData:[]
 		}
 
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
 		this.viewDesigners = this.viewDesigners.bind(this);
 		this.designerHandle = this.designerHandle.bind(this);
+		this.jaynaDesinger = this.jaynaDesinger.bind(this);
 	}
 
 	componentDidMount() {
@@ -52,6 +55,7 @@ class Designers extends Component {
 					fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}`)
 						.then(res => res.json())
 						.then((userData) => {
+							this.state.desingerData.push(userData);
 							var userImage = userData.user.images,
 								fields = '';
 
@@ -109,6 +113,7 @@ class Designers extends Component {
 						fetch(`http://192.168.33.10:4000/behance/user/${staffData[k].behance}/projects`)
 							.then(res => res.json())
 							.then((userProjectData) => {
+								this.state.projectData.push(userProjectData)
 								this.setState({
 									currStaff: {
 										profile: this.state.currStaff.profile,
@@ -170,13 +175,15 @@ class Designers extends Component {
 							</div>
 							<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 								<div className='profile-image h-100' style={this.state.designerPic}></div>
-								<p className='profile-name' onClick={this.viewDesigners}>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down"></i></p>
-								<p className='profile-fields'>{this.state.currStaff.fields}</p>
+								<div className='designers-info-div'>
+									<p className='profile-name' onClick={this.viewDesigners}>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down"></i></p>
+									<p className='profile-fields'>{this.state.currStaff.fields}</p>
+								</div>
 							</div>
 							<div id='listOfDesigners' style= {this.state.disignersListDiv}>
 								<ul className='designersName'>
 									<li className='desingers-name ben' value='qmccarthy9cc69' onClick = {this.designerHandle}>Ben Mckenzie</li>
-									<li className='desingers-name jayna' value='jaynaravji'>Jayna Ravji</li>
+									<li className='desingers-name jayna' value='jaynaravji'onClick = {this.jaynaDesinger}>Jayna Ravji</li>
 									<li className='desingers-name darryl'value='darryl_powell'>Darryl Powell</li>
 									<li className='desingers-name jojo' value='joannewarren'>JoJo Warren</li>
 									<li className='desingers-name zakary' value='zakarykinnaird'>Zakary Kinnaird</li>
@@ -184,23 +191,25 @@ class Designers extends Component {
 									<li className='desingers-name natalie' value='natalie_seagar'>Natalie Seagar</li>
 								</ul>
 							</div>
-							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex'>
-								<div className='h-100 flex-fill'>
-									<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
-										<i className="far fa-eye"></i>
-										<span>{this.state.currStaff.profile.user.stats.views}</span>
+							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex veiws'>
+								<div className='view-data-control'>
+									<div className='h-100 flex-fill'>
+										<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
+											<i className="far fa-eye"></i>
+											<span>{this.state.currStaff.profile.user.stats.views}</span>
+										</div>
 									</div>
-								</div>
-								<div className='h-100 flex-fill'>
-									<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
-										<i className="fas fa-thumbs-up"></i>
-										<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+									<div className='h-100 flex-fill'>
+										<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
+											<i className="fas fa-thumbs-up"></i>
+											<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
+										</div>
 									</div>
-								</div>
-								<div className='h-100 flex-fill'>
-									<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
-										<i className="fas fa-comments"></i>
-										<span>{this.state.currStaff.profile.user.stats.comments}</span>
+									<div className='h-100 flex-fill'>
+										<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
+											<i className="fas fa-comments"></i>
+											<span>{this.state.currStaff.profile.user.stats.comments}</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -272,6 +281,14 @@ class Designers extends Component {
 		e.preventDefault();
 		console.log(this.state.staff[2]);
 		console.log(this.state.currStaff);
+		this.setState({
+			disignersListDiv : {display: 'none'},
+		})
+	}
+	jaynaDesinger(e) {
+		if(this.state.staff[1].behance){
+			console.log(this.state.desingerData);
+		}
 		this.setState({
 			disignersListDiv : {display: 'none'}
 		})

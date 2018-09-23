@@ -69,6 +69,11 @@
 	}
 }
 
+.view-data-control {
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+}
 .profile-fields {
 	font-family: $mainFontFamily;
 	font-size: .9em;
@@ -173,13 +178,20 @@
 @media only screen and (min-width: 1024px){
 	.profile-image {
 		border-radius: 50%;
-		background-repeat: no-repeat;
-		width: 22%;
-		padding:10%;
+	    background-repeat: no-repeat;
+	    width: 22%;
+	    padding: 10%;
+	    position: absolute;
+	    margin-left: -15%;
+	}
+	.designers-info-div {
+		position: absolute;
+	    margin-left: 8%;
+	    margin-top: 5%;
 	}
 	.statsRibbon {
 		height: 69%;
-		width: 8%;
+		width: 4%;
 		i {
 			font-size: 1.9em;
 		}
@@ -200,9 +212,14 @@
 		width: auto !important;
 	}
 	#profileSplitBottom {
-		margin-top: 14%;
+		margin-top: -1%;
 	}
 	#listOfDesigners {
 		margin-top: 14.2%;
+	}
+	.view-data-control {
+		width: 25vw;
+		margin: 0 auto;
+		margin-right: 26%;
 	}
 }
