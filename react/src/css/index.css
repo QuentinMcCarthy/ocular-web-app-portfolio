@@ -17,8 +17,6 @@
   background-color: #FFFFFF;
   overflow: auto;
   padding: 0.5em 1em; }
-  .header-bar button {
-    outline: none; }
 
 .logo {
   padding: 8% 0;
@@ -476,16 +474,16 @@
   margin-top: 1.5em;
   margin-left: 1.5em; }
 
-.statsRibbon {
+.stats-ribbon {
   right: 10%;
   background-color: #ff0d00;
   height: 37%;
   width: 15%;
   color: white;
   z-index: 4; }
-  .statsRibbon i {
+  .stats-ribbon i {
     font-size: 1.5em; }
-  .statsRibbon span {
+  .stats-ribbon span {
     font-size: .6875em;
     width: 80%;
     text-align: center;
@@ -533,7 +531,7 @@
     .latest-projects i {
       font-size: 3.3em; }
 
-  .statsRibbon {
+  .stats-ribbon {
     width: 10%; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
@@ -549,12 +547,12 @@
     margin-left: 8%;
     margin-top: 5%; }
 
-  .statsRibbon {
+  .stats-ribbon {
     height: 69%;
     width: 4%; }
-    .statsRibbon i {
+    .stats-ribbon i {
       font-size: 1.9em; }
-    .statsRibbon span {
+    .stats-ribbon span {
       display: block;
       margin-top: 5%;
       font-size: 0.7em; }

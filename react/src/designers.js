@@ -158,13 +158,13 @@ class Designers extends Component {
 
 	render(){
 		return (
-			<div className='sectContainer'>
+			<div className='sect-container'>
 				<div id='sectDesigners' style={this.props.designersOpen}>
 
 					<div className='designer-profile position-relative' style={this.state.designersHide}>
 						<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
 						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
-							<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
+							<div className='stats-ribbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 								<i className="far fa-chart-bar"></i>
 								<span>View Stats</span>
 							</div>
@@ -191,7 +191,7 @@ class Designers extends Component {
 									<li className='desingers-name natalie' value='natalie_seagar'onClick = {this.natalieDesinger}>Natalie Seagar</li>
 								</ul>
 							</div>
-							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex veiws'>
+							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex views'>
 								<div className='view-data-control'>
 									<div className='h-100 flex-fill'>
 										<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
