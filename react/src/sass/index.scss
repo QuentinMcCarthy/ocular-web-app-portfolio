@@ -10,6 +10,7 @@
 
 #profileSplitBottom {
 	height: 22%;
+	padding-top: 5px;
 
 	div {
 		padding: 5px;
@@ -25,11 +26,12 @@
 .designer-profile {
 	height: 300px;
 	background-color: black;
+	margin-bottom: 15px;
 }
 
 .profile-details {
 	top: 0;
-	z-index: 3;
+	z-index: 4;
 }
 
 .profile-bg-image {
@@ -40,9 +42,17 @@
 	@include scale(1.1);
 }
 
+.profile-bg-alter {
+	top: 0;
+	z-index: 2;
+	height: 105%;
+	background-color: white;
+	opacity: .60;
+}
+
 .splitv-third {
 	background: transparent;
-	z-index: 2;
+	z-index: 3;
 }
 
 .splith-third {
@@ -64,6 +74,8 @@
 	margin-top: 5px;
 	margin-bottom: 0;
 	font-size: 1.4em;
+	text-align: center;
+
 	i {
 		margin-left: 5px;
 	}
@@ -77,6 +89,7 @@
 .profile-fields {
 	font-family: $mainFontFamily;
 	font-size: .9em;
+	text-align: center;
 }
 
 .profile-views {
@@ -100,7 +113,7 @@
 	margin-left: 1.5em;
 }
 
-.stats-ribbon {
+.statsRibbon {
 	right: 10%;
 	background-color: #ff0d00;
 	height: 37%;
@@ -124,9 +137,11 @@
 
 #listOfDesigners {
 	position: absolute;
+	top: 220px;
 	z-index: 10;
 	background-color: white;
 	width: 100vw;
+
 	ul {
 		text-align: center;
 		li {
@@ -170,7 +185,7 @@
 			font-size: 3.3em;
 		}
 	}
-	.stats-ribbon {
+	.statsRibbon {
 		width: 10%;
 		height: 51%;
 	}
@@ -190,7 +205,7 @@
 	    margin-left: 8%;
 	    margin-top: 5%;
 	}
-	.stats-ribbon {
+	.statsRibbon {
 		height: 69%;
 		width: 4%;
 		i {
@@ -206,8 +221,8 @@
 		margin-left: 4%;
 	}
 
-	.desingers-latest-projects {
-		margin-top: 22em;
+	.designer-projects {
+		margin-top: 7em;
 	}
 	.project-indiviudal {
 		width: auto !important;
