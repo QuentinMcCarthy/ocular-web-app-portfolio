@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif; }
 
-#sectDesigners,
+#sectDesigners {
+  display: none;
+  overflow-x: hidden; }
+
 #sectContact,
 #sectStatistics {
   display: none; }
