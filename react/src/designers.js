@@ -24,8 +24,9 @@ class Designers extends Component {
 					projects: [
 						{
 							id: -1,
+							name: '',
 							covers: {
-								original: ''
+								404: ''
 							}
 						}
 					]
@@ -130,24 +131,6 @@ class Designers extends Component {
 									dataTable: allStats,
 									backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
 								});
-
-								// for(var i = 0; i < this.state.currStaff.projects.length; i++){
-								// 	var createProject = document.createElement('div');
-								// 	var createProjectImage = document.createElement('div');
-								// 	var createProjectTitle = document.createElement('h3');
-								//
-								// 	createProject.className = 'col-sm project-indiviudal designerProjects';
-								// 	createProjectImage.className = 'project-img';
-								// 	createProjectTitle.className = 'third-heading';
-								//
-								// 	this.refs.designerProjectsContainer.appendChild(createProject);
-								// 	createProject.appendChild(createProjectImage);
-								// 	createProject.appendChild(createProjectTitle);
-								//
-								// 	createProjectImage.style.backgroundImage = `url('${this.state.currStaff.projects[i].covers[404]}')`;
-								// 	createProjectTitle.textContent = this.state.currStaff.projects[i].name;
-								// }
-
 							}, (err) => {
 								this.setState({
 									isLoaded: true,
@@ -227,10 +210,11 @@ class Designers extends Component {
 					<div className='designer-projects w-100'>
 						{
 							this.state.currStaff.projects.projects.map(project => {
-								var bgImage = { backgroundImage: `url(${project.covers.original})` };
+								var bgImage = { backgroundImage: `url(${project.covers[404]})` };
 								return(
-									<div key={project.id} data={project} className='projectWrapper'>
-										<div className='project-bg-image' data-url={project.covers.original} style={bgImage}></div>
+									<div key={project.id} data={project} className='col-sm project-individual designerProjects'>
+										<div className='project-img' data-url={project.covers[404]} style={bgImage}></div>
+										<h3 className='third-heading'>{project.name}</h3>
 									</div>
 								)
 							})

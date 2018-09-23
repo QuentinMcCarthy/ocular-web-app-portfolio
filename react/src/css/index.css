@@ -401,7 +401,8 @@ button {
 
 .designer-profile {
   height: 300px;
-  background-color: black; }
+  background-color: black;
+  margin-bottom: 15px; }
 
 .profile-details {
   top: 0;
