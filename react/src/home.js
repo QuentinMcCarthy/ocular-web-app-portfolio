@@ -141,8 +141,8 @@ class Home extends Component {
 	                		<h3 className='third-heading' id='projectTitle4'>{this.state.projects.project4.title}</h3>
 	                	</div>
 	                </div>
-					<div className="behance-logo">
-						<img alt='behance logo' src="img/behance_logo.png" height='30'></img>
+					<div className='behance-logo'>
+						<img alt='behance logo' src='img/behance_logo.png' height='30'></img>
 					</div>
 	        	</div>
 			</div>
