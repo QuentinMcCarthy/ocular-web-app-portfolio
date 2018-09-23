@@ -42,8 +42,7 @@ class Designers extends Component {
 			disignersListDiv : {display: 'none'},
 			singleProject: [],
 			dataTable: [],
-			desingerData:[],
-			projectData:[]
+			desingerData:[]
 		}
 
 		this.viewStats = this.viewStats.bind(this);
@@ -172,13 +171,13 @@ class Designers extends Component {
 							</div>
 							<div id='listOfDesigners' style= {this.state.disignersListDiv}>
 								<ul className='designersName'>
-									<li className='desingers-name ben' value='qmccarthy9cc69' onClick = {this.designerHandle}>Ben Mckenzie</li>
-									<li className='desingers-name jayna' value='jaynaravji'onClick = {this.jaynaDesinger}>Jayna Ravji</li>
-									<li className='desingers-name darryl'value='darryl_powell'onClick = {this.darrylDesinger}>Darryl Powell</li>
-									<li className='desingers-name jojo' value='joannewarren'onClick = {this.joanneDesinger}>JoJo Warren</li>
-									<li className='desingers-name zakary' value='zakarykinnaird'onClick = {this.zakaryDesinger}>Zakary Kinnaird</li>
-									<li className='desingers-name elena' value='elenavallverdu'onClick = {this.elenaDesinger}>Elena Vallverdu Pages</li>
-									<li className='desingers-name natalie' value='natalie_seagar'onClick = {this.natalieDesinger}>Natalie Seagar</li>
+									{
+										this.state.staff.map(current => {
+											return(
+												<li className='designers-name' key={current.id} data-username={current.behance} onClick={this.switchDesigner}>{current.name}</li>
+											)
+										})
+									}
 								</ul>
 							</div>
 							<div id='profileSplitBottom' className='splitv-third position-relative w-100 d-flex veiws'>
@@ -203,9 +202,7 @@ class Designers extends Component {
 									</div>
 								</div>
 							</div>
-
 						</div>
-						<div className='row latest-projects' ref='designerProjectsContainer'></div>
 					</div>
 					<div className='designer-projects w-100'>
 						{
@@ -296,8 +293,9 @@ class Designers extends Component {
 			disignersListDiv : {display: 'none'}
 		})
 	}
-
-
+	switchDesigner(e){
+		e.preventDefault();
+	}
 }
 
 export default Designers;
