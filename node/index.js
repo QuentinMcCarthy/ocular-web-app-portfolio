@@ -6,9 +6,6 @@ const Behance = require('node-behance-api');
 const config = require('./config');
 
 const app = express();
-app.get('/', (req, res) => {
-    res.send(process.env.SECRET_KEY);
-})
 
 // Allow cors
 app.use(cors());
@@ -82,12 +79,6 @@ app.get(`/behance/project/:project/comments/:page`, function(req,res){
 			res.send(response);
 		}
 	});
-})
-
-// Request for the config data (route for Maps API)
-app.get(`/config`, function(req,res){
-	res.send(config);
-
 })
 
 // Routes for data requests
