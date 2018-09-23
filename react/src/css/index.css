@@ -268,11 +268,22 @@
           font-size: 0.8em;
           color: #FFFFFF;
           margin: 0.2em;
-          padding: 0.6em 0.45em; }
+          padding-top: 0.6em;
+          padding-bottom: 0.6em; }
         .header-bar .contact-icons-list .inline-icons .youtube-icon {
-          font-size: 0.7em; }
+          font-size: 0.7em;
+          padding-left: 0.25em;
+          padding-right: 0.25em; }
         .header-bar .contact-icons-list .inline-icons .linkedin-icon {
-          font-size: 0.7em; }
+          font-size: 0.7em;
+          padding-left: 0.35em;
+          padding-right: 0.35em; }
+        .header-bar .contact-icons-list .inline-icons .insta-icon {
+          padding-left: 0.25em;
+          padding-right: 0.25em; }
+        .header-bar .contact-icons-list .inline-icons .fb-icon {
+          padding-left: 0.45em;
+          padding-right: 0.45em; }
     .header-bar .menu-btn {
       padding: 1.2em; }
 

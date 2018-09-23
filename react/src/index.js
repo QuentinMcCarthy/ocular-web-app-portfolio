@@ -40,8 +40,8 @@ class App extends Component {
 						<img alt='Ocular Logo' src='img/ocular_logo.png' width='120' className='logo' onClick={this.navToHome}/>
 						<div className='nav-items-right'>
 							<ul className='contact-icons-list'>
-								<li className='inline-icons'><a className='social-link' href='https://www.facebook.com/ocularnz/'><i className='fab fa-facebook-f'></i></a></li>
-								<li className='inline-icons'><a className='social-link' href='https://www.instagram.com/ocular_nz/'><i className='fab fa-instagram'></i></a></li>
+								<li className='inline-icons'><a className='social-link' href='https://www.facebook.com/ocularnz/'><i className='fab fa-facebook-f fb-icon'></i></a></li>
+								<li className='inline-icons'><a className='social-link' href='https://www.instagram.com/ocular_nz/'><i className='fab fa-instagram insta-icon'></i></a></li>
 								<li className='inline-icons'><a className='social-link' href='https://www.youtube.com/user/OcularNZ'><i className='fab fa-youtube youtube-icon'></i></a></li>
 								<li className='inline-icons'><a className='social-link' href='https://nz.linkedin.com/company/ocular'><i className='fab fa-linkedin-in linkedin-icon'></i></a></li>
 							</ul>

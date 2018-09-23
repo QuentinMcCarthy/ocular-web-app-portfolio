@@ -330,13 +330,26 @@
 					font-size: 0.8em;
 					color: $primaryColor;
 					margin: 0.2em;
-					padding: 0.6em 0.45em;
+					padding-top: 0.6em;
+					padding-bottom: 0.6em;
 				}
 				.youtube-icon {
 					font-size: 0.7em;
+					padding-left: 0.25em;
+					padding-right: 0.25em;
 				}
 				.linkedin-icon {
 					font-size: 0.7em;
+					padding-left: 0.35em;
+					padding-right: 0.35em;
+				}
+				.insta-icon {
+					padding-left: 0.25em;
+					padding-right: 0.25em;
+				}
+				.fb-icon {
+					padding-left: 0.45em;
+					padding-right: 0.45em;
 				}
 			}
 		}
