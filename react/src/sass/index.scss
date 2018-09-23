@@ -15,9 +15,11 @@
 	div {
 		padding: 5px;
 	}
+
 	i {
 		font-size: 1.3em;
 	}
+
 	span {
 		font-size: .9em;
 	}
@@ -144,10 +146,12 @@
 
 	ul {
 		text-align: center;
+
 		li {
 			list-style: none;
 			font-family: $mainFontFamily;
 		}
+
 		li:hover {
 			background-color: black;
 			color:$primaryColor;
@@ -158,10 +162,12 @@
 #profileSplitBottom {
 	margin-top: 6%;
 }
+
 .project-img {
 	display: block;
 	margin: 0 auto;
 }
+
 .designer-projects {
 	padding: 1em 2.3em;
 }
@@ -170,6 +176,7 @@
 	.profile-image {
 		border-radius: 10em;
 	}
+
 	#profileSplitBottom {
 		margin-top: 30%;
 	}
@@ -181,6 +188,7 @@
 	.latest-projects {
 		margin-top: 16em;
 		height: 57%;
+
 		i {
 			font-size: 3.3em;
 		}
@@ -199,23 +207,28 @@
 	    position: absolute;
 	    margin-left: -15%;
 	}
+
 	.designers-info-div {
 		position: absolute;
 	    margin-left: 8%;
 	    margin-top: 5%;
 	}
+
 	.stats-ribbon {
 		height: 69%;
 		width: 4%;
+
 		i {
 			font-size: 1.9em;
 		}
+
 		span {
 			display: block;
 			margin-top: 5%;
 			font-size: 0.7em;
 		}
 	}
+
 	.third-heading {
 		margin-left: 4%;
 	}
@@ -223,18 +236,21 @@
 	.latest-projects {
 		margin-top: 22em;
 	}
+
 	.designer-projects {
 		width: auto !important;
 	}
+
 	#profileSplitBottom {
 		margin-top: -1%;
 	}
-	#listOfDesigners {
 
+	#listOfDesigners {
 		margin-top: -0.8%;
 		width: 30vw;
 		margin-left: 48%;
 	}
+
 	.view-data-control {
 		width: 25vw;
 		margin: 0 auto;

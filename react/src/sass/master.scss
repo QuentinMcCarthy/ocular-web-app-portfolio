@@ -20,13 +20,15 @@
 button {
 	outline: none;
 }
+
 // MENU ------------------------------------------------------------------------
 
 .header-bar {
 	width: 100%;
 	background-color: $primaryColor;
 	overflow: auto;
-	padding: 0.5em 1em;
+	padding: .5em 1em;
+
 	button {
 		outline: none;
 	}
@@ -47,7 +49,7 @@ button {
 	background-color: $primaryColor;
 	border: $primaryColor;
 	font-weight: 300;
-	font-size: 0.7em;
+	font-size: .7em;
 	padding: 3%;
 	text-transform: uppercase;
 	float: right;
@@ -60,7 +62,7 @@ button {
 	display: none;
 	background-color: $primaryColor;
 	font-weight: 700;
-	font-size: 0.6em;
+	font-size: .6em;
 	float: right;
 	clear: both;
 	list-style: none;
@@ -77,13 +79,12 @@ button {
 // HOME SCREEN -----------------------------------------------------------------
 
 .scroll-up {
-	padding: 0.2em 0.6em;
+	padding: .2em .6em;
 	color: $primaryColor;
 	background-color: $secondaryColor;
 	border: none;
 	border-radius: 36px;
 	font-size: 1em;
-
 	margin-bottom: 2.5em;
 	margin-right: 1.7em;
 	float: right;
@@ -135,7 +136,7 @@ button {
 
 .banner-text {
 	color: #CCCCCC;
-	font-size: 0.67em;
+	font-size: .67em;
 	text-transform: uppercase;
 }
 
@@ -147,10 +148,10 @@ button {
     background-color: $secondaryColor;
     border: none;
     padding: 1em 4em;
-    margin-top: 0.9em;
+    margin-top:.9em;
     color: $primaryColor !important;
     text-transform: uppercase;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 .second-heading {
@@ -165,7 +166,7 @@ button {
 	border: 0;
 	width: 90%;
 	height: 2px;
-    margin: 0.3em 0;
+    margin: .3em 0;
 }
 
 .our-goal {
@@ -183,13 +184,13 @@ button {
 
 .body-text {
 	margin: 1em 0;
-	font-size: 0.8em;
+	font-size: .8em;
 }
 
 .third-heading {
 	@include heading;
 	font-size: 1.25em;
-	margin-top: 0.6em;
+	margin-top: .6em;
     margin-bottom: 1.3em;
 }
 
@@ -216,16 +217,20 @@ button {
 
 #sectContact {
 	margin-top: 5em;
+
 	.contact-wrapper {
 		width: 80vw;
 		height: 50vh;
 		padding-top: 50px;
 		margin: 0 auto;
+
 	  	.contact {
 			width: 100%;
+
 			h2 {
 				@include heading;
 			}
+
 			hr {
 			  display: block;
 			  margin-top: 5px;
@@ -234,25 +239,31 @@ button {
 			  background-color: black;
 			}
 	  	}
+
 	  	.contact-details {
 		    width: 100%;
 		    height: 100%;
 		    margin-top: 10%;
+
 			#contactInfoP {
 				line-height: 1.3;
 		  	}
 
 		  	.contact-icons {
 			    margin-top: 10%;
+
 				ul {
 					list-style: none;
+
 					li {
 						display: inline-block;
+
 						i {
 							font-size: 1.5em;
 							margin-right: 0.6em;
 							color: $tertiaryColor;
 						}
+
 						.fa-facebook {
 							margin-left: 0;
 						}
@@ -261,12 +272,14 @@ button {
 		   	}
 	 	}
 	}
+
 	.contact-map {
 		width: 100vw;
 		height: 40vh;
 		position: absolute;
 		-webkit-filter: grayscale(96%);
 		filter: grayscale(96%);
+
 		.google-map-div {
 			height: 100%;
 			width: 100%;
@@ -296,20 +309,18 @@ button {
 		margin-top: 1.6em;
 	}
 
-		.chart-stats {
-			margin: auto;
-			margin-top: 13%;
-			width: 91vw;
-			height: 75vw;
-		}
-
-
+	.chart-stats {
+		margin: auto;
+		margin-top: 13%;
+		width: 91vw;
+		height: 75vw;
+	}
 }
 
 @media only screen and (min-width: 600px) {
-
 	.header-bar {
 		height: 90px;
+
 		.logo {
 			padding: 1.7em 0;
 		}
@@ -324,25 +335,30 @@ button {
 			padding: 1.2em;
 			margin-bottom: 0;
 			list-style: none;
+
 			.inline-icons {
 				display: inline-block;
+
 				.social-link{
 					background-color: $secondaryColor;
 				    border-radius: 28px;
-					margin: 0.3em;
-				    padding: 0.1em;
+					margin: .3em;
+				    padding: .1em;
 				}
+
 				i {
 					font-size: 0.8em;
 					color: $primaryColor;
-					margin: 0.2em;
-					padding: 0.6em 0.45em;
+					margin: .2em;
+					padding: .6em .45em;
 				}
+
 				.youtube-icon {
-					font-size: 0.7em;
+					font-size: .7em;
 				}
+
 				.linkedin-icon {
-					font-size: 0.7em;
+					font-size: .7em;
 				}
 			}
 		}
@@ -354,9 +370,10 @@ button {
 
 	.menu {
 		width: 40%;
-		font-size: 0.77em;
+		font-size: .77em;
+
 		.menu-item {
-			padding: 1.9em 1em 0.8em;
+			padding: 1.9em 1em .8em;
 			font-weight: 800;
 		}
 	}
@@ -379,7 +396,7 @@ button {
 		.scroll-down {
 			width: 20.6em;
 			margin-top: 4.4em;
-			font-size: 0.8em;
+			font-size: .8em;
 			padding: 1.4em 5.7em;
 		}
 	}
@@ -395,13 +412,13 @@ button {
 		}
 	}
 
-
 	.latest-projects-hr {
 		width: 40%;
 	}
 
 	.latest-projects {
 		margin-top: 3em;
+
 		.projects-individual {
 			padding-right: 2.8em;
 			padding-left: 2.8em;
@@ -411,23 +428,29 @@ button {
     .contact-wrapper {
 		width: 70vw;
 		display: flex;
+
 		.contact {
 			width: 50%;
 			height: 100%;
 		}
+
 		.contact-details {
 			width: 52%;
 			padding-left: 30px;
+
 			i {
 				margin: 0px 4px !important;
 			}
 		}
 	}
+
 	.contact-map {
 		height: 42vh;
 	}
+
 	.sect-statistics {
 		width: 75vw;
+
 		.chart-stats {
 			width: 70vw;
 			height: 56vw;
@@ -435,17 +458,18 @@ button {
 	}
 }
 @media only screen and (min-width: 1024px){
-
 	.menu {
 		width: 33%;
 	}
 
 	.header-bar {
 		height: 90px;
+
 		.logo {
 			margin-left: 2em;
 			padding: 1.6em 0;;
 		}
+
 		.menu-btn {
 			padding: 1em;
 		}
@@ -457,6 +481,7 @@ button {
 		max-width: none;
 		background-color: $secondaryColor;
 		color: $primaryColor;
+
 		.title-hr {
 			color: $primaryColor;
 			background-color: $primaryColor;
@@ -466,9 +491,11 @@ button {
 
 	.latest-projects {
 		margin-bottom: 2em;
+
 		.project-indiviudal {
 			padding-left: 0;
 		}
+
 		.col-sm {
 			width: 100px;
 		}
@@ -477,19 +504,24 @@ button {
 	#sectContact {
 		margin-top: 9%;
 		background-color: $secondaryColor;
+
 		.contact-wrapper {
 			color: $primaryColor;
 		}
+
 		hr {
 			background-color: $primaryColor !important;
 		}
+
 		i {
 			color: $primaryColor !important;
 		}
 	}
+
 	.sect-statistics {
 		width: 50vw;
 		margin-top: 5em;
+
 		.chart-stats {
 			margin-top: 7%;
 			width: 100%;
