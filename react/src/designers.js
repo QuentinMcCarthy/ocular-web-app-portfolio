@@ -39,7 +39,7 @@ class Designers extends Component {
 			designerBg: { backgroundImage: '' },
 			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
-			disignersListDiv : {display: 'none'},
+			designersListDiv : {display: 'none'},
 			singleProject: [],
 			dataTable: [],
 			desingerData:[]
@@ -48,8 +48,6 @@ class Designers extends Component {
 		this.viewStats = this.viewStats.bind(this);
 		this.statsHandle = this.statsHandle.bind(this);
 		this.viewDesigners = this.viewDesigners.bind(this);
-		this.designerHandle = this.designerHandle.bind(this);
-		this.jaynaDesinger = this.jaynaDesinger.bind(this);
 	}
 
 	componentDidMount() {
@@ -59,84 +57,7 @@ class Designers extends Component {
 				this.setState({
 					staff: staffData
 				});
-				// for (let k in staffData) {
-					fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}`)
-						.then(res => res.json())
-						.then((userData) => {
-							this.state.desingerData.push(userData);
-							var userImage = userData.user.images,
-								fields = '';
-
-							switch('string'){
-								case typeof userImage[276]:
-									userImage = userImage[276];
-
-									break;
-								case typeof userImage[230]:
-									userImage = userImage[230];
-
-									break;
-								case typeof userImage[138]:
-									userImage = userImage[138];
-
-									break;
-								case typeof userImage[115]:
-									userImage = userImage[115];
-
-									break;
-								case typeof userImage[100]:
-									userImage = userImage[100];
-
-									break;
-								case typeof userImage[50]:
-									userImage = userImage[50];
-
-									break;
-								default:
-									userImage = 'https://placehold.it/230x230';
-							}
-
-							fields = userData.user.fields[0];
-
-							for(var i = 1; i < userData.user.fields.length; i++){
-								fields+=`, ${userData.user.fields[i]}`;
-							}
-
-							this.setState({
-								isLoaded: true,
-								currStaff: {
-									profile: userData,
-									projects: this.state.currStaff.projects,
-									fields: fields
-								},
-								designerPic: { backgroundImage: `url(${userImage})` }
-							});
-						}, (err) => {
-							this.setState({
-								isLoaded: true,
-								error: err
-							});
-						});
-
-						fetch(`http://192.168.33.10:4000/behance/user/${staffData[0].behance}/projects`)
-							.then(res => res.json())
-							.then((userProjectData) => {
-								this.setState({
-									currStaff: {
-										profile: this.state.currStaff.profile,
-										projects: userProjectData,
-										fields: this.state.currStaff.fields
-									},
-									dataTable: allStats,
-									backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
-								});
-							}, (err) => {
-								this.setState({
-									isLoaded: true,
-									error: err
-								});
-							});
-				// }
+				this.fetchUserData(staffData[0])
 
 			}, (err) => {
 				this.setState({
@@ -151,7 +72,8 @@ class Designers extends Component {
 				<div id='sectDesigners' style={this.props.designersOpen}>
 
 					<div className='designer-profile position-relative' style={this.state.designersHide}>
-						<div className='profile-bg-image position-relative w-100 h-100'  style={this.state.backgroundBg}></div>
+						<div className='profile-bg-image position-relative w-100 h-100' style={this.state.backgroundBg}></div>
+						<div className='profile-bg-alter position-absolute w-100'></div>
 						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
 							<div className='statsRibbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
 								<i className="far fa-chart-bar"></i>
@@ -169,12 +91,12 @@ class Designers extends Component {
 									<p className='profile-fields'>{this.state.currStaff.fields}</p>
 								</div>
 							</div>
-							<div id='listOfDesigners' style= {this.state.disignersListDiv}>
+							<div id='listOfDesigners' style={this.state.designersListDiv}>
 								<ul className='designersName'>
 									{
 										this.state.staff.map(current => {
 											return(
-												<li className='designers-name' key={current.id} data-username={current.behance} onClick={this.switchDesigner}>{current.name}</li>
+												<li className='designers-name' key={current.id} data-username={current.behance} onClick={this.switchDesigner.bind(this, current)}>{current.name}</li>
 											)
 										})
 									}
@@ -265,36 +187,102 @@ class Designers extends Component {
 	}
 
 	viewDesigners() {
-		if(this.state.disignersListDiv.display === 'none'){
+		if(this.state.designersListDiv.display === 'none'){
 			this.setState({
-				disignersListDiv: { display: 'block' }
+				designersListDiv: { display: 'block' }
 			});
 		} else{
 			this.setState({
-				disignersListDiv: { display: 'none' }
+				designersListDiv: { display: 'none' }
 			});
 		}
 	}
 
-	// when Ben something is clicked, designer list div is hidden
-	designerHandle(e) {
-		e.preventDefault();
-		console.log(this.state.staff[2]);
-		console.log(this.state.currStaff);
-		this.setState({
-			disignersListDiv : {display: 'none'},
-		})
+	fetchUserData(staff){
+		fetch(`http://192.168.33.10:4000/behance/user/${staff.behance}`)
+			.then(res => res.json())
+			.then((userData) => {
+				this.state.desingerData.push(userData);
+				var userImage = userData.user.images,
+					fields = '';
+
+				switch('string'){
+					case typeof userImage[276]:
+						userImage = userImage[276];
+
+						break;
+					case typeof userImage[230]:
+						userImage = userImage[230];
+
+						break;
+					case typeof userImage[138]:
+						userImage = userImage[138];
+
+						break;
+					case typeof userImage[115]:
+						userImage = userImage[115];
+
+						break;
+					case typeof userImage[100]:
+						userImage = userImage[100];
+
+						break;
+					case typeof userImage[50]:
+						userImage = userImage[50];
+
+						break;
+					default:
+						userImage = 'https://placehold.it/230x230';
+				}
+
+				fields = userData.user.fields[0];
+
+				for(var i = 1; i < userData.user.fields.length; i++){
+					fields+=`, ${userData.user.fields[i]}`;
+				}
+
+				this.setState({
+					isLoaded: true,
+					currStaff: {
+						profile: userData,
+						projects: this.state.currStaff.projects,
+						fields: fields
+					},
+					designerPic: { backgroundImage: `url(${userImage})` }
+				});
+			}, (err) => {
+				this.setState({
+					isLoaded: true,
+					error: err
+				});
+			});
+
+			fetch(`http://192.168.33.10:4000/behance/user/${staff.behance}/projects`)
+				.then(res => res.json())
+				.then((userProjectData) => {
+					this.setState({
+						currStaff: {
+							profile: this.state.currStaff.profile,
+							projects: userProjectData,
+							fields: this.state.currStaff.fields
+						},
+						dataTable: allStats,
+						backgroundBg: { backgroundImage: `url(${userProjectData.projects[0].covers.original})` }
+					});
+				}, (err) => {
+					this.setState({
+						isLoaded: true,
+						error: err
+					});
+				});
 	}
-	jaynaDesinger(e) {
-		if(this.state.staff[1].behance){
-			console.log(this.state.desingerData);
-		}
+
+	switchDesigner(staff){
 		this.setState({
-			disignersListDiv : {display: 'none'}
+			designersListDiv: { display: 'none' }
 		})
-	}
-	switchDesigner(e){
-		e.preventDefault();
+
+		this.fetchUserData(staff);
 	}
 }
 

@@ -406,7 +406,7 @@ button {
 
 .profile-details {
   top: 0;
-  z-index: 3; }
+  z-index: 4; }
 
 .profile-bg-image {
   background-position: center;
@@ -423,9 +423,16 @@ button {
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
 
+.profile-bg-alter {
+  top: 0;
+  z-index: 2;
+  height: 105%;
+  background-color: white;
+  opacity: .60; }
+
 .splitv-third {
   background: transparent;
-  z-index: 2; }
+  z-index: 3; }
 
 .splith-third {
   width: 33%;
@@ -449,7 +456,8 @@ button {
   text-transform: uppercase;
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  text-align: center; }
   .profile-name i {
     margin-left: 5px; }
 
@@ -460,7 +468,8 @@ button {
 
 .profile-fields {
   font-family: "Open Sans", sans-serif;
-  font-size: .9em; }
+  font-size: .9em;
+  text-align: center; }
 
 .profile-views {
   border-right: 2px solid black; }
@@ -497,6 +506,7 @@ button {
 
 #listOfDesigners {
   position: absolute;
+  top: 220px;
   z-index: 10;
   background-color: white;
   width: 100vw; }
