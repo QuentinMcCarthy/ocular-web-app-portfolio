@@ -490,16 +490,16 @@ button {
   margin-top: 1.5em;
   margin-left: 1.5em; }
 
-.statsRibbon {
+.stats-ribbon {
   right: 10%;
   background-color: #ff0d00;
   height: 37%;
   width: 15%;
   color: white;
   z-index: 4; }
-  .statsRibbon i {
+  .stats-ribbon i {
     font-size: 1.5em; }
-  .statsRibbon span {
+  .stats-ribbon span {
     font-size: .6875em;
     width: 80%;
     text-align: center;
@@ -529,7 +529,7 @@ button {
   display: block;
   margin: 0 auto; }
 
-.designerProjects {
+.designer-projects {
   padding: 1em 2.3em; }
 
 @media only screen and (min-width: 600px) {
@@ -548,7 +548,7 @@ button {
     .latest-projects i {
       font-size: 3.3em; }
 
-  .statsRibbon {
+  .stats-ribbon {
     width: 10%; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
@@ -564,12 +564,12 @@ button {
     margin-left: 8%;
     margin-top: 5%; }
 
-  .statsRibbon {
+  .stats-ribbon {
     height: 69%;
     width: 4%; }
-    .statsRibbon i {
+    .stats-ribbon i {
       font-size: 1.9em; }
-    .statsRibbon span {
+    .stats-ribbon span {
       display: block;
       margin-top: 5%;
       font-size: 0.7em; }
@@ -580,7 +580,7 @@ button {
   .latest-projects {
     margin-top: 22em; }
 
-  .designerProjects {
+  .designer-projects {
     width: auto !important; }
 
   #profileSplitBottom {
