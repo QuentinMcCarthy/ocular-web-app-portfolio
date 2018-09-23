@@ -501,6 +501,9 @@ button {
       background-color: black;
       color: #FFFFFF; }
 
+#profileSplitBottom {
+  margin-top: 6%; }
+
 .project-img {
   display: block;
   margin: 0 auto; }
@@ -515,9 +518,42 @@ button {
   #profileSplitBottom {
     margin-top: 30%; }
 
+  #listOfDesigners {
+    margin-top: 21%; }
+
   .latest-projects {
+    margin-top: 16em;
     height: 57%; }
     .latest-projects i {
       font-size: 3.3em; } }
+@media only screen and (min-width: 1024px) {
+  .profile-image {
+    border-radius: 50%;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    width: 22%;
+    padding-top: 22%; }
+
+  .statsRibbon {
+    height: 69%;
+    width: 8%; }
+    .statsRibbon i {
+      font-size: 1.9em; }
+    .statsRibbon span {
+      display: block;
+      margin-top: 5%;
+      font-size: 0.7em; }
+
+  .latest-projects {
+    margin-top: 22em; }
+
+  .designerProjects {
+    width: auto !important; }
+
+  #profileSplitBottom {
+    margin-top: 18%; }
+
+  #listOfDesigners {
+    margin-top: 14.5%; } }
 
 /*# sourceMappingURL=index.css.map */

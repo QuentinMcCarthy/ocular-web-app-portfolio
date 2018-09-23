@@ -124,7 +124,6 @@ class App extends Component {
 
 	navToContact(e){
 		e.preventDefault();
-
 		if(this.state.contactOpen.display === 'none'){
 			this.setState({
 				navHide: { display: 'block' },
