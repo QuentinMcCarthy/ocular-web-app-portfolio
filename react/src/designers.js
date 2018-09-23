@@ -264,12 +264,13 @@ class Designers extends Component {
 			});
 		}
 	}
+	
 	// when Ben something is clicked designer list div is hidden
 	designerHandle(e) {
 		e.preventDefault();
 		console.log(this.state.staff[2]);
 		this.setState({
-			disignersListDiv : {display: 'none'},
+			disignersListDiv : {display: 'none'}
 		})
 	}
 
