@@ -37,12 +37,10 @@ class Designers extends Component {
 			error: null,
 			designerPic: { backgroundImage: ''},
 			designerBg: { backgroundImage: '' },
-			designersHide: { display: 'block' },
 			viewStatsOpen: { display: 'none' },
 			designersListDiv : {display: 'none'},
 			singleProject: [],
-			dataTable: [],
-			desingerData:[]
+			dataTable: []
 		}
 
 		this.viewStats = this.viewStats.bind(this);
@@ -70,8 +68,7 @@ class Designers extends Component {
 		return (
 			<div className='sectContainer'>
 				<div id='sectDesigners' style={this.props.designersOpen}>
-
-					<div className='designer-profile position-relative' style={this.state.designersHide}>
+					<div className='designer-profile position-relative'>
 						<div className='profile-bg-image position-relative w-100 h-100' style={this.state.backgroundBg}></div>
 						<div className='profile-bg-alter position-absolute w-100'></div>
 						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
@@ -153,37 +150,36 @@ class Designers extends Component {
 	// Open the stats section on click of 'View Stats'
 	viewStats(e){
 		e.preventDefault();
-		if(this.state.viewStatsOpen.display === 'none'){
-			this.setState({
-				designersHide: { display: 'none' },
-				viewStatsOpen: { display: 'block' }
-			});
-		} else{
-			this.setState({
-				designersHide: { display: 'block' },
-				viewStatsOpen: { display: 'none' }
-			});
-		}
+
+		this.setState({
+			viewStatsOpen: { display: 'block' }
+		});
+
+		this.props.hideDesigners();
 
 		// For looping the this.state.currStaff.projects which is compiled into in allStats array
 		// This creates the data table which is needed for the Google Charts API
-		for(var j = 0; j < this.state.currStaff.projects.length; j++){
+		for(var j = 0; j < this.state.currStaff.projects.projects.length; j++){
 			allStats.push([
-				this.state.currStaff.projects[j].name,
-				this.state.currStaff.projects[j].stats.appreciations,
-				this.state.currStaff.projects[j].stats.comments,
-				this.state.currStaff.projects[j].stats.views
+				this.state.currStaff.projects.projects[j].name,
+				this.state.currStaff.projects.projects[j].stats.appreciations,
+				this.state.currStaff.projects.projects[j].stats.comments,
+				this.state.currStaff.projects.projects[j].stats.views
 			])
 		}
+
+		console.log(this.state.dataTable);
 	}
 
 	// Handling the closing of the Stats section
 	statsHandle(e){
 		e.preventDefault();
+
 		this.setState({
-			viewStatsOpen: { display: 'none' },
-			designersHide: { display: 'block' }
+			viewStatsOpen: { display: 'none' }
 		});
+
+		this.props.showDesigners();
 	}
 
 	viewDesigners() {
@@ -202,7 +198,6 @@ class Designers extends Component {
 		fetch(`http://192.168.33.10:4000/behance/user/${staff.behance}`)
 			.then(res => res.json())
 			.then((userData) => {
-				this.state.desingerData.push(userData);
 				var userImage = userData.user.images,
 					fields = '';
 
