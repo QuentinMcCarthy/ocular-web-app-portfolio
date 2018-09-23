@@ -175,6 +175,8 @@ class Designers extends Component {
 	statsHandle(e){
 		e.preventDefault();
 
+		allStats = [['Project Name', 'Appreciations', 'Comments', 'Views']];
+
 		this.setState({
 			viewStatsOpen: { display: 'none' }
 		});
