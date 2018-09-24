@@ -37,6 +37,4 @@ Aside from the dependencies in the package.json some globals will need to be ins
 
 Bear in mind the above globals are only required for development, relating to the compiling of files, you will still need to follow the Instructions for Use section. Only the grunt-cli is able to be installed using npm install -global. Ruby and ruby-sass will need to be installed from the official website.
 
-A .env.local needs to be created in order for the map to load. An example file is avaliable.
-
 On first setup of the filesystem, you will need to run `grunt loadcss` within the react/ folder to load the CSS
