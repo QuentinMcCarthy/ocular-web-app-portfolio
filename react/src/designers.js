@@ -126,10 +126,10 @@ class Designers extends Component {
 					<div className='projects-wrapper w-100'>
 						{
 							this.state.currStaff.projects.projects.map(project => {
-								var bgImage = { backgroundImage: `url(${project.covers[404]})` };
+								var bgImage = { backgroundImage: `url(${project.covers.original})` };
 								return(
 									<div key={project.id} data={project} className='col-sm project-individual designer-projects'>
-										<div className='project-img' data-url={project.covers[404]} style={bgImage}></div>
+										<div className='project-img' data-url={project.covers.original} style={bgImage}></div>
 										<h3 className='third-heading'>{project.name}</h3>
 									</div>
 								)
