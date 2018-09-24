@@ -25,6 +25,10 @@ HOST=:IP
 ```
 Where :IP is the IP address of the Vagrant server i.e. 192.168.33.10
 
+Once everything is setup, the commands to run the individual servers must be run in their respective folders.
+While in the node/ folder, the command to run the node server is `npm run dev:server`
+While in the react/ folder, the command to run the react server is `npm start`
+
 While development is in progress, the instructions below will need to be followed, as certain files are not currently setup.
 
 ### Development
