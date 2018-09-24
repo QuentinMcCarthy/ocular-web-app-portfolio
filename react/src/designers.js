@@ -167,8 +167,6 @@ class Designers extends Component {
 				this.state.currStaff.projects.projects[j].stats.views
 			])
 		}
-
-		console.log(this.state.dataTable);
 	}
 
 	// Handling the closing of the Stats section
