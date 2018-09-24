@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif; }
 
-#sectDesigners,
+#sectDesigners {
+  display: none;
+  overflow-x: hidden; }
+
 #sectContact,
 #sectStatistics {
   display: none; }
@@ -16,7 +19,7 @@ button {
   width: 100%;
   background-color: #FFFFFF;
   overflow: auto;
-  padding: 0.5em 1em; }
+  padding: .5em 1em; }
   .header-bar button {
     outline: none; }
 
@@ -33,7 +36,7 @@ button {
   background-color: #FFFFFF;
   border: #FFFFFF;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: .7em;
   padding: 3%;
   text-transform: uppercase;
   float: right;
@@ -45,7 +48,7 @@ button {
   display: none;
   background-color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.6em;
+  font-size: .6em;
   float: right;
   clear: both;
   list-style: none;
@@ -58,7 +61,7 @@ button {
   font-size: 1.25em; }
 
 .scroll-up {
-  padding: 0.2em 0.6em;
+  padding: .2em .6em;
   color: #FFFFFF;
   background-color: #000000;
   border: none;
@@ -110,7 +113,7 @@ button {
 
 .banner-text {
   color: #CCCCCC;
-  font-size: 0.67em;
+  font-size: .67em;
   text-transform: uppercase; }
 
 .scroll-down {
@@ -121,10 +124,10 @@ button {
   background-color: #000000;
   border: none;
   padding: 1em 4em;
-  margin-top: 0.9em;
+  margin-top: .9em;
   color: #FFFFFF !important;
   text-transform: uppercase;
-  font-size: 0.7em; }
+  font-size: .7em; }
 
 .second-heading {
   font-family: "Open Sans", sans-serif;
@@ -139,7 +142,7 @@ button {
   border: 0;
   width: 90%;
   height: 2px;
-  margin: 0.3em 0; }
+  margin: .3em 0; }
 
 .our-goal {
   padding: 0 15px;
@@ -154,14 +157,14 @@ button {
 
 .body-text {
   margin: 1em 0;
-  font-size: 0.8em; }
+  font-size: .8em; }
 
 .third-heading {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1.25em;
-  margin-top: 0.6em;
+  margin-top: .6em;
   margin-bottom: 1.3em; }
 
 .project-img {
@@ -264,25 +267,25 @@ button {
         .header-bar .contact-icons-list .inline-icons .social-link {
           background-color: #000000;
           border-radius: 28px;
-          margin: 0.3em;
-          padding: 0.1em; }
+          margin: .3em;
+          padding: .1em; }
         .header-bar .contact-icons-list .inline-icons i {
           font-size: 0.8em;
           color: #FFFFFF;
-          margin: 0.2em;
-          padding: 0.6em 0.45em; }
+          margin: .2em;
+          padding: .6em .45em; }
         .header-bar .contact-icons-list .inline-icons .youtube-icon {
-          font-size: 0.7em; }
+          font-size: .7em; }
         .header-bar .contact-icons-list .inline-icons .linkedin-icon {
-          font-size: 0.7em; }
+          font-size: .7em; }
     .header-bar .menu-btn {
       padding: 1.2em; }
 
   .menu {
     width: 40%;
-    font-size: 0.77em; }
+    font-size: .77em; }
     .menu .menu-item {
-      padding: 1.9em 1em 0.8em;
+      padding: 1.9em 1em .8em;
       font-weight: 800; }
 
   .scroll-up {
@@ -297,7 +300,7 @@ button {
   .banner .scroll-down {
     width: 20.6em;
     margin-top: 4.4em;
-    font-size: 0.8em;
+    font-size: .8em;
     padding: 1.4em 5.7em; }
 
   .our-goal {
@@ -390,7 +393,8 @@ button {
   height: 61%; }
 
 #profileSplitBottom {
-  height: 22%; }
+  height: 22%;
+  padding-top: 5px; }
   #profileSplitBottom div {
     padding: 5px; }
   #profileSplitBottom i {
@@ -400,11 +404,12 @@ button {
 
 .designer-profile {
   height: 300px;
-  background-color: black; }
+  background-color: black;
+  margin-bottom: 15px; }
 
 .profile-details {
   top: 0;
-  z-index: 3; }
+  z-index: 4; }
 
 .profile-bg-image {
   background-position: center;
@@ -421,9 +426,16 @@ button {
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
 
+.profile-bg-alter {
+  top: 0;
+  z-index: 2;
+  height: 105%;
+  background-color: white;
+  opacity: .60; }
+
 .splitv-third {
   background: transparent;
-  z-index: 2; }
+  z-index: 3; }
 
 .splith-third {
   width: 33%;
@@ -447,7 +459,8 @@ button {
   text-transform: uppercase;
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  text-align: center; }
   .profile-name i {
     margin-left: 5px; }
 
@@ -458,7 +471,8 @@ button {
 
 .profile-fields {
   font-family: "Open Sans", sans-serif;
-  font-size: .9em; }
+  font-size: .9em;
+  text-align: center; }
 
 .profile-views {
   border-right: 2px solid black; }
@@ -495,6 +509,7 @@ button {
 
 #listOfDesigners {
   position: absolute;
+  top: 220px;
   z-index: 10;
   background-color: white;
   width: 100vw; }
@@ -514,7 +529,7 @@ button {
   display: block;
   margin: 0 auto; }
 
-.project-indiviudal {
+.designer-projects {
   padding: 1em 2.3em; }
 
 @media only screen and (min-width: 600px) {
@@ -534,8 +549,7 @@ button {
       font-size: 3.3em; }
 
   .stats-ribbon {
-    width: 10%;
-    height: 51%; } }
+    width: 10%; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
     border-radius: 50%;
@@ -566,7 +580,7 @@ button {
   .desingers-latest-projects {
     margin-top: 22em; }
 
-  .project-indiviudal {
+  .designer-projects {
     width: auto !important; }
 
   #profileSplitBottom {

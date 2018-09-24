@@ -29,6 +29,8 @@ class App extends Component {
 		this.navToHome = this.navToHome.bind(this);
 		this.navToDesigners = this.navToDesigners.bind(this);
 		this.navToContact = this.navToContact.bind(this);
+		this.openStats = this.openStats.bind(this);
+		this.closeStats = this.closeStats.bind(this);
 	}
 
 	render(){
@@ -62,6 +64,8 @@ class App extends Component {
 				<Designers
 					{...this.state}
 					backToHome={this.navToHome}
+					hideDesigners={this.openStats}
+					showDesigners={this.closeStats}
 				/>
 				<Contact
 					{...this.state}
@@ -138,6 +142,17 @@ class App extends Component {
 				contactOpen: { display: 'block' }
 			});
 		}
+	}
+
+	openStats(e){
+		this.setState({
+			designersOpen: { display: 'none' }
+		})
+	}
+	closeStats(e){
+		this.setState({
+			designersOpen: { display: 'block' }
+		})
 	}
 }
 
