@@ -15,9 +15,11 @@
 	div {
 		padding: 5px;
 	}
+
 	i {
 		font-size: 1.3em;
 	}
+
 	span {
 		font-size: .9em;
 	}
@@ -144,10 +146,12 @@
 
 	ul {
 		text-align: center;
+
 		li {
 			list-style: none;
 			font-family: $mainFontFamily;
 		}
+
 		li:hover {
 			background-color: black;
 			color:$primaryColor;
@@ -158,34 +162,52 @@
 #profileSplitBottom {
 	margin-top: 6%;
 }
+
 .project-img {
 	display: block;
 }
-.designerProjects {
+
+.designer-projects {
 	padding: 1em 2.3em;
 }
-
+.projects-wrapper {
+	width: 100% !important;
+}
 @media only screen and (min-width: 600px) {
 	.profile-image {
 		border-radius: 10em;
 	}
+
 	#profileSplitBottom {
 		margin-top: 30%;
 	}
 
 	#listOfDesigners {
-		margin-top: 21%;
+		margin-top: 23%;
 	}
 
 	.latest-projects {
-		margin-top: 16em;
 		height: 57%;
 		i {
 			font-size: 3.3em;
 		}
 	}
+
 	.stats-ribbon {
 		width: 10%;
+		height: 51%;
+	}
+
+	.projects-wrapper {
+		margin-top: 33%!important;
+		width: 100vw !important;
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+
+	}
+	.project-img {
+		margin:0 !important;
 	}
 }
 
@@ -198,45 +220,56 @@
 	    position: absolute;
 	    margin-left: -15%;
 	}
+
 	.designers-info-div {
 		position: absolute;
 	    margin-left: 8%;
 	    margin-top: 5%;
 	}
+
 	.stats-ribbon {
 		height: 69%;
 		width: 4%;
+
 		i {
 			font-size: 1.9em;
 		}
+
 		span {
 			display: block;
 			margin-top: 5%;
 			font-size: 0.7em;
 		}
 	}
-	.third-heading {
-		margin-left: 4%;
+
+	.projects-wrapper {
+		margin-top: 10% !important;
+		width: 80vw!important;
+		margin: 0 auto;
 	}
 
-	.latest-projects {
-		margin-top: 22em;
-	}
-	.designerProjects {
-		width: auto !important;
-	}
+
 	#profileSplitBottom {
 		margin-top: -1%;
 	}
-	#listOfDesigners {
 
-		margin-top: -0.8%;
-		width: 30vw;
-		margin-left: 48%;
+	#listOfDesigners {
+		margin-top: -1.8%;
+	    width: 30vw;
+	    margin-left: 47%;
+	}
+	.third-heading {
+
 	}
 	.view-data-control {
 		width: 25vw;
 		margin: 0 auto;
 		margin-right: 26%;
+	}
+	.latest-projects .col-sm {
+    width: 300px;
+	}
+	.project-img {
+		margin:0 !important;
 	}
 }

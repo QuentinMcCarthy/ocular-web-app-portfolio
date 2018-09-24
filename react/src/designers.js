@@ -73,7 +73,7 @@ class Designers extends Component {
 						<div className='profile-bg-alter position-absolute w-100'></div>
 						<div className='profile-details position-absolute w-100 h-100' ref='profileDetails'>
 							<div className='stats-ribbon position-absolute d-flex flex-column justify-content-center align-items-center' onClick={this.viewStats}>
-								<i className="far fa-chart-bar"></i>
+								<i className='far fa-chart-bar'></i>
 								<span>View Stats</span>
 							</div>
 							<div id='profileSplitTop' className='splitv-third position-relative w-100'>
@@ -84,7 +84,7 @@ class Designers extends Component {
 							<div id='profileSplitCenter' className='splitv-third position-relative w-100 d-flex align-items-center flex-column'>
 								<div className='profile-image h-100' style={this.state.designerPic}></div>
 								<div className='designers-info-div'>
-									<p className='profile-name' onClick={this.viewDesigners}>{this.state.currStaff.profile.user.display_name} <i className="fas fa-angle-down"></i></p>
+									<p className='profile-name' onClick={this.viewDesigners}>{this.state.currStaff.profile.user.display_name} <i className='fas fa-angle-down'></i></p>
 									<p className='profile-fields'>{this.state.currStaff.fields}</p>
 								</div>
 							</div>
@@ -103,19 +103,19 @@ class Designers extends Component {
 								<div className='view-data-control'>
 									<div className='h-100 flex-fill'>
 										<div className='profile-views h-100 d-flex flex-column justify-content-center align-items-center'>
-											<i className="far fa-eye"></i>
+											<i className='far fa-eye'></i>
 											<span>{this.state.currStaff.profile.user.stats.views}</span>
 										</div>
 									</div>
 									<div className='h-100 flex-fill'>
 										<div className='profile-appreciations h-100 d-flex flex-column justify-content-center align-items-center'>
-											<i className="fas fa-thumbs-up"></i>
+											<i className='fas fa-thumbs-up'></i>
 											<span>{this.state.currStaff.profile.user.stats.appreciations}</span>
 										</div>
 									</div>
 									<div className='h-100 flex-fill'>
 										<div className='profile-comments h-100 d-flex flex-column justify-content-center align-items-center'>
-											<i className="fas fa-comments"></i>
+											<i className='fas fa-comments'></i>
 											<span>{this.state.currStaff.profile.user.stats.comments}</span>
 										</div>
 									</div>
@@ -123,12 +123,12 @@ class Designers extends Component {
 							</div>
 						</div>
 					</div>
-					<div className='designer-projects w-100'>
+					<div className='projects-wrapper w-100'>
 						{
 							this.state.currStaff.projects.projects.map(project => {
 								var bgImage = { backgroundImage: `url(${project.covers[404]})` };
 								return(
-									<div key={project.id} data={project} className='col-sm project-individual designerProjects'>
+									<div key={project.id} data={project} className='col-sm project-individual designer-projects'>
 										<div className='project-img' data-url={project.covers[404]} style={bgImage}></div>
 										<h3 className='third-heading'>{project.name}</h3>
 									</div>

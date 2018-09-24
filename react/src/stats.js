@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Chart } from "react-google-charts";
+import { Chart } from 'react-google-charts';
 
 class Stats extends Component {
 	render() {
