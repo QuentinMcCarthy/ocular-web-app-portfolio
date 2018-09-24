@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif; }
 
-#sectDesigners,
+#sectDesigners {
+  display: none;
+  overflow-x: hidden; }
+
 #sectContact,
 #sectStatistics {
   display: none; }
@@ -16,7 +19,7 @@ button {
   width: 100%;
   background-color: #FFFFFF;
   overflow: auto;
-  padding: 0.5em 1em; }
+  padding: .5em 1em; }
   .header-bar button {
     outline: none; }
 
@@ -33,7 +36,7 @@ button {
   background-color: #FFFFFF;
   border: #FFFFFF;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: .7em;
   padding: 3%;
   text-transform: uppercase;
   float: right;
@@ -45,7 +48,7 @@ button {
   display: none;
   background-color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.6em;
+  font-size: .6em;
   float: right;
   clear: both;
   list-style: none;
@@ -58,7 +61,7 @@ button {
   font-size: 1.25em; }
 
 .scroll-up {
-  padding: 0.2em 0.6em;
+  padding: .2em .6em;
   color: #FFFFFF;
   background-color: #000000;
   border: none;
@@ -110,7 +113,7 @@ button {
 
 .banner-text {
   color: #CCCCCC;
-  font-size: 0.67em;
+  font-size: .67em;
   text-transform: uppercase; }
 
 .scroll-down {
@@ -121,10 +124,10 @@ button {
   background-color: #000000;
   border: none;
   padding: 1em 4em;
-  margin-top: 0.9em;
+  margin-top: .9em;
   color: #FFFFFF !important;
   text-transform: uppercase;
-  font-size: 0.7em; }
+  font-size: .7em; }
 
 .second-heading {
   font-family: "Open Sans", sans-serif;
@@ -139,7 +142,7 @@ button {
   border: 0;
   width: 90%;
   height: 2px;
-  margin: 0.3em 0; }
+  margin: .3em 0; }
 
 .our-goal {
   padding: 0 15px;
@@ -154,14 +157,14 @@ button {
 
 .body-text {
   margin: 1em 0;
-  font-size: 0.8em; }
+  font-size: .8em; }
 
 .third-heading {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1.25em;
-  margin-top: 0.6em;
+  margin-top: .6em;
   margin-bottom: 1.3em; }
 
 .project-img {
@@ -264,25 +267,25 @@ button {
         .header-bar .contact-icons-list .inline-icons .social-link {
           background-color: #000000;
           border-radius: 28px;
-          margin: 0.3em;
-          padding: 0.1em; }
+          margin: .3em;
+          padding: .1em; }
         .header-bar .contact-icons-list .inline-icons i {
           font-size: 0.8em;
           color: #FFFFFF;
-          margin: 0.2em;
-          padding: 0.6em 0.45em; }
+          margin: .2em;
+          padding: .6em .45em; }
         .header-bar .contact-icons-list .inline-icons .youtube-icon {
-          font-size: 0.7em; }
+          font-size: .7em; }
         .header-bar .contact-icons-list .inline-icons .linkedin-icon {
-          font-size: 0.7em; }
+          font-size: .7em; }
     .header-bar .menu-btn {
       padding: 1.2em; }
 
   .menu {
     width: 40%;
-    font-size: 0.77em; }
+    font-size: .77em; }
     .menu .menu-item {
-      padding: 1.9em 1em 0.8em;
+      padding: 1.9em 1em .8em;
       font-weight: 800; }
 
   .scroll-up {
@@ -297,7 +300,7 @@ button {
   .banner .scroll-down {
     width: 20.6em;
     margin-top: 4.4em;
-    font-size: 0.8em;
+    font-size: .8em;
     padding: 1.4em 5.7em; }
 
   .our-goal {
@@ -487,16 +490,16 @@ button {
   margin-top: 1.5em;
   margin-left: 1.5em; }
 
-.statsRibbon {
+.stats-ribbon {
   right: 10%;
   background-color: #ff0d00;
   height: 37%;
   width: 15%;
   color: white;
   z-index: 4; }
-  .statsRibbon i {
+  .stats-ribbon i {
     font-size: 1.5em; }
-  .statsRibbon span {
+  .stats-ribbon span {
     font-size: .6875em;
     width: 80%;
     text-align: center;
@@ -526,8 +529,11 @@ button {
   display: block;
   margin: 0 auto; }
 
-.project-indiviudal {
+.designer-projects {
   padding: 1em 2.3em; }
+
+.projects-wrapper {
+  width: 100% !important; }
 
 @media only screen and (min-width: 600px) {
   .profile-image {
@@ -537,17 +543,21 @@ button {
     margin-top: 30%; }
 
   #listOfDesigners {
-    margin-top: 21%; }
+    margin-top: 23%; }
 
-  .desingers-latest-projects {
-    margin-top: 16em;
-    height: 57%; }
-    .desingers-latest-projects i {
-      font-size: 3.3em; }
-
-  .statsRibbon {
+  .stats-ribbon {
     width: 10%;
-    height: 51%; } }
+    height: 51%; }
+
+  .projects-wrapper {
+    margin-top: 33% !important;
+    width: 100vw !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+  .project-img {
+    margin: 0 !important; } }
 @media only screen and (min-width: 1024px) {
   .profile-image {
     border-radius: 50%;
@@ -562,36 +572,33 @@ button {
     margin-left: 8%;
     margin-top: 5%; }
 
-  .statsRibbon {
+  .stats-ribbon {
     height: 69%;
     width: 4%; }
-    .statsRibbon i {
+    .stats-ribbon i {
       font-size: 1.9em; }
-    .statsRibbon span {
+    .stats-ribbon span {
       display: block;
       margin-top: 5%;
       font-size: 0.7em; }
 
-  .third-heading {
-    margin-left: 4%; }
-
-  .designer-projects {
-    margin-top: 7em; }
-
-  .project-indiviudal {
-    width: auto !important; }
+  .projects-wrapper {
+    margin-top: 10% !important; }
 
   #profileSplitBottom {
     margin-top: -1%; }
 
   #listOfDesigners {
-    margin-top: -0.8%;
+    margin-top: -1.8%;
     width: 30vw;
-    margin-left: 48%; }
+    margin-left: 47%; }
 
   .view-data-control {
     width: 25vw;
     margin: 0 auto;
-    margin-right: 26%; } }
+    margin-right: 26%; }
+
+  .project-img {
+    margin: 0 !important; } }
 
 /*# sourceMappingURL=index.css.map */
