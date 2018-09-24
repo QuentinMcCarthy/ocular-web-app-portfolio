@@ -23,6 +23,10 @@ While development is in progress, the instructions below will need to be followe
 
 You will aloso need to put google map API key in a .env.local.examples inside react / folder to see google map of Ocular
 
+```
+REACT_APP_WEATHER_API_KEY= "YOUR_API_KEY_GOES_HERE"
+```
+
 ### Development
 All dependencies, including dev dependencies must be installed during development via npm from both package.json files in the node/ and react/ folders.
 
