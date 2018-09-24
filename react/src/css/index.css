@@ -583,7 +583,9 @@ button {
       font-size: 0.7em; }
 
   .projects-wrapper {
-    margin-top: 10% !important; }
+    margin-top: 10% !important;
+    width: 80vw !important;
+    margin: 0 auto; }
 
   #profileSplitBottom {
     margin-top: -1%; }
@@ -597,6 +599,9 @@ button {
     width: 25vw;
     margin: 0 auto;
     margin-right: 26%; }
+
+  .latest-projects .col-sm {
+    width: 300px; }
 
   .project-img {
     margin: 0 !important; } }
