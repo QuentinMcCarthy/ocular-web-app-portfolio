@@ -5,7 +5,7 @@ Upon cloning / downloading this repository, you will need to run npm install in 
 
 Alongside the dependencies in the package.json, some globals will be needed to run the servers:
 - react-cli
-- nodemom
+- nodemon
 
 Both of the above must be installed globally using NPM's install -global option.
 
